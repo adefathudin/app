@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MomentaX - Menjaga Momen, Merawat Kenangan | Aplikasi Pengingat Keluarga & Kalender Hijriyah</title>
+  <meta name="description" content="Aplikasi pengingat momen berharga keluarga, haul, milad, hari lahir, dan ulang tahun pernikahan dengan kalender Masehi & Hijriyah. 100% offline-first & aman dengan backup Google Drive.">
+  <meta name="keywords" content="MomentaX, pengingat momen, kalender hijriyah, pengingat haul, milad, kalender islam, buku kenangan, family milestone app, google play">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MomentaX - Menjaga Momen, Merawat Kenangan">
+  <meta property="og:description" content="Pengingat hari istimewa keluarga, haul, dan milad dengan kalender Masehi & Hijriyah. Privasi terjaga, offline-first, unduh gratis di Google Play.">
+  <meta property="og:image" content="assets/icon.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="glow-sphere glow-1" aria-hidden="true"></div>
+  <div class="glow-sphere glow-2" aria-hidden="true"></div>
+  <div class="glow-sphere glow-3" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" id="logo-link">
+        <img src="assets/icon.png" alt="MomentaX Logo" class="brand-icon" width="44" height="44">
+        <div class="brand-text-group">
+          <span class="brand-name">Momenta<span class="brand-highlight">X</span></span>
+          <span class="brand-tagline-mini" data-i18n="nav.tagline">Merawat Kenangan</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Navigasi Utama">
+        <a href="#features" class="nav-link" data-i18n="nav.features">Fitur Unggulan</a>
+        <a href="#campaign" class="nav-link" data-i18n="nav.whyMomenta">Mengapa MomentaX</a>
+        <a href="#how-it-works" class="nav-link" data-i18n="nav.howItWorks">Cara Kerja</a>
+        <a href="#faq" class="nav-link" data-i18n="nav.faq">Tanya Jawab</a>
+      </nav>
+
+      <!-- Language Switcher & Play Store CTA -->
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switch-container" id="lang-switch-box">
+          <button type="button" class="lang-btn active" id="lang-btn-id" data-lang="id" aria-label="Ganti Bahasa Indonesia">
+            <span class="flag-icon">🇮🇩</span> ID
+          </button>
+          <button type="button" class="lang-btn" id="lang-btn-en" data-lang="en" aria-label="Switch to English">
+            <span class="flag-icon">🇬🇧</span> EN
+          </button>
+        </div>
+
+        <a href="https://play.google.com/store/apps/details?id=com.adefathudin.momentax" target="_blank" rel="noopener noreferrer" class="btn btn-primary header-download-btn" id="header-cta-btn">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M3.609 1.814L13.793 12 3.61 22.186a2.38 2.38 0 0 1-.61-.945V2.76c.14-.366.353-.69.61-.946zm11.3 11.3l2.42 2.42-12.04 6.94 9.62-9.36zm2.42-2.42l-2.42-2.42 9.62-9.36-9.62 9.36 2.42 2.42zm1.12 1.12l3.41-1.97c1.15-.66 1.15-1.74 0-2.4l-3.41-1.97-2.12 2.12 2.12 2.22z"/>
+          </svg>
+          <span data-i18n="nav.getApp">Unduh App</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Buka Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <nav class="mobile-nav-links">
+        <a href="#features" class="mobile-nav-link" data-i18n="nav.features">Fitur Unggulan</a>
+        <a href="#campaign" class="mobile-nav-link" data-i18n="nav.whyMomenta">Mengapa MomentaX</a>
+        <a href="#how-it-works" class="mobile-nav-link" data-i18n="nav.howItWorks">Cara Kerja</a>
+        <a href="#faq" class="mobile-nav-link" data-i18n="nav.faq">Tanya Jawab</a>
+        <div class="mobile-drawer-bottom">
+          <a href="https://play.google.com/store/apps/details?id=com.adefathudin.momentax" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+            <span data-i18n="hero.ctaPrimary">Unduh di Google Play</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main id="main-content">
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- Left: Hero Text & Call to Action -->
+        <div class="hero-content">
+          <div class="badge-pill" id="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text" data-i18n="hero.badge">Aplikasi Pengingat Momen & Kalender Hijriyah</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-title">
+            <span data-i18n="hero.titleLine1">Menjaga Momen Berharga,</span><br>
+            <span class="gradient-text" data-i18n="hero.titleLine2">Merawat Setiap Kenangan.</span>
+          </h1>
+
+          <p class="hero-description" id="hero-desc" data-i18n="hero.description">
+            MomentaX memudahkan Anda mencatat dan mengingat tanggal haul kerabat, milad, ulang tahun pernikahan, dan hari istimewa dengan dukungan Kalender Masehi & Hijriyah. Privasi terjaga, 100% offline-first, dan aman dicadangkan ke Google Drive pribadi.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="https://play.google.com/store/apps/details?id=com.adefathudin.momentax" target="_blank" rel="noopener noreferrer" class="btn btn-google-play" id="hero-play-btn" aria-label="Unduh di Google Play">
+              <!-- Google Play SVG Logo -->
+              <svg class="gp-icon" viewBox="0 0 512 512" width="28" height="28" fill="none">
+                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z" fill="#00e3ff"/>
+                <path d="M47 38.8C35.1 52.4 28 72.8 28 97.4v317.2c0 24.6 7.1 45 19 58.6L274.6 246 47 38.8z" fill="#00d478"/>
+                <path d="M385.4 337.8L104.6 499l220.7-221.3 60.1 60.1z" fill="#ff3a44"/>
+                <path d="M480.9 237.9c14.7 8.5 23.1 22.8 23.1 38.1 0 15.3-8.4 29.6-23.1 38.1l-95.5 54.8-60.1-60.1 60.1-60.1 95.5 29.2z" fill="#ffc800"/>
+              </svg>
+              <div class="gp-text">
+                <span class="gp-label" data-i18n="hero.gpAvailable">TERSEDIA DI</span>
+                <span class="gp-store" data-i18n="hero.gpTitle">Google Play</span>
+              </div>
+            </a>
+
+            <a href="#features" class="btn btn-secondary" id="hero-learn-btn">
+              <span data-i18n="hero.ctaSecondary">Pelajari Fitur</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Feature Trust Badges -->
+          <div class="trust-pills">
+            <div class="trust-pill">
+              <span class="trust-icon">🌙</span>
+              <span class="trust-text" data-i18n="hero.trustHijri">Kalender Hijriyah & Masehi</span>
+            </div>
+            <div class="trust-pill">
+              <span class="trust-icon">🔒</span>
+              <span class="trust-text" data-i18n="hero.trustOffline">Offline-First (SQLite)</span>
+            </div>
+            <div class="trust-pill">
+              <span class="trust-icon">☁️</span>
+              <span class="trust-text" data-i18n="hero.trustDrive">Cadangan Google Drive</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Smartphone Preview -->
+        <div class="hero-mockup-wrapper">
+          <div class="phone-device-mockup">
+            <div class="phone-notch">
+              <div class="notch-speaker"></div>
+              <div class="notch-camera"></div>
+            </div>
+
+            <!-- Phone Screen Simulation -->
+            <div class="phone-screen">
+              <!-- App Top Bar -->
+              <div class="app-ui-header">
+                <div class="app-ui-brand">
+                  <img src="assets/icon.png" alt="Icon" class="app-ui-logo">
+                  <div>
+                    <div class="app-ui-title">Momenta<span class="cyan">X</span></div>
+                    <div class="app-ui-subtitle" data-i18n="appMock.subtitle">Menjaga momen, merawat kenangan</div>
+                  </div>
+                </div>
+                <div class="app-ui-dates">
+                  <span class="pill-date pill-greg">📅 23 Mar 2026</span>
+                  <span class="pill-date pill-hijri">🌙 4 Syawal 1447 H</span>
+                </div>
+              </div>
+
+              <!-- Quick Search Mock -->
+              <div class="app-ui-search">
+                <span class="search-icon">🔍</span>
+                <span class="search-placeholder" data-i18n="appMock.searchPlaceholder">Cari momen, haul, milad...</span>
+              </div>
+
+              <!-- Filter Tabs Mock -->
+              <div class="app-ui-tabs">
+                <span class="app-tab active" data-i18n="appMock.tabAll">Semua</span>
+                <span class="app-tab" data-i18n="appMock.tabPriority">⭐ Prioritas</span>
+                <span class="app-tab" data-i18n="appMock.tabHaul">Haul</span>
+                <span class="app-tab" data-i18n="appMock.tabMilad">Milad</span>
+              </div>
+
+              <!-- Cards List Simulation -->
+              <div class="app-ui-cards-container">
+                <!-- Card 1: Haul Prioritas -->
+                <div class="app-ui-card card-priority">
+                  <div class="card-badge-row">
+                    <span class="card-tag tag-islamic">🌙 Hijriyah • Haul</span>
+                    <span class="card-days-badge urgent" data-i18n="appMock.card1Days">2 Hari Lagi</span>
+                  </div>
+                  <div class="card-title-row">
+                    <h4 class="card-name" data-i18n="appMock.card1Title">Haul Akbar Kakek H. Sulaiman</h4>
+                    <span class="star-icon">⭐</span>
+                  </div>
+                  <p class="card-date-info">6 Syawal 1447 H • 25 Maret 2026</p>
+                  <div class="card-meta-row">
+                    <span class="card-relation">👥 Keluarga Inti</span>
+                    <span class="card-alarm">🔔 Notifikasi Aktif</span>
+                  </div>
+                </div>
+
+                <!-- Card 2: Milad / Birthday -->
+                <div class="app-ui-card">
+                  <div class="card-badge-row">
+                    <span class="card-tag tag-greg">📅 Masehi • Milad</span>
+                    <span class="card-days-badge upcoming" data-i18n="appMock.card2Days">12 Hari Lagi</span>
+                  </div>
+                  <div class="card-title-row">
+                    <h4 class="card-name" data-i18n="appMock.card2Title">Milad Bunda Tercinta</h4>
+                  </div>
+                  <p class="card-date-info">4 April 2026 (Genap 54 Tahun)</p>
+                  <div class="card-meta-row">
+                    <span class="card-relation">❤️ Orang Tua</span>
+                    <span class="card-photo-tag">📷 3 Foto Kenangan</span>
+                  </div>
+                </div>
+
+                <!-- Card 3: Wedding Anniversary -->
+                <div class="app-ui-card">
+                  <div class="card-badge-row">
+                    <span class="card-tag tag-celebration">💍 Pernikahan</span>
+                    <span class="card-days-badge" data-i18n="appMock.card3Days">Bulan Depan</span>
+                  </div>
+                  <div class="card-title-row">
+                    <h4 class="card-name" data-i18n="appMock.card3Title">Ulang Tahun Pernikahan ke-10</h4>
+                  </div>
+                  <p class="card-date-info">18 Mei 2026</p>
+                </div>
+              </div>
+
+              <!-- Bottom Floating Action Button Mock -->
+              <div class="app-ui-fab">
+                <span>+</span>
+                <span class="fab-text" data-i18n="appMock.fab">Catat Momen</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Accent Cards -->
+          <div class="floating-bubble bubble-left">
+            <span class="bubble-icon">🔔</span>
+            <div class="bubble-info">
+              <strong data-i18n="mockBubbles.remindTitle">Pengingat Otomatis</strong>
+              <small data-i18n="mockBubbles.remindSub">H-7, H-1 & Hari H</small>
+            </div>
+          </div>
+
+          <div class="floating-bubble bubble-right">
+            <span class="bubble-icon">☁️</span>
+            <div class="bubble-info">
+              <strong data-i18n="mockBubbles.driveTitle">Sync Google Drive</strong>
+              <small data-i18n="mockBubbles.driveSub">Data Tersimpan Aman</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Campaign Section: Mengapa MomentaX Berbeda? -->
+    <section class="campaign-section" id="campaign">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="campaign.tag">KAMPANYE KELUARGA & KENANGAN</span>
+          <h2 class="section-title" data-i18n="campaign.title">Mengapa Anda Membutuhkan MomentaX?</h2>
+          <p class="section-subtitle" data-i18n="campaign.subtitle">
+            Kalender biasa sering melupakan momen yang benar-benar bermakna. MomentaX dirancang khusus untuk merawat ikatan silaturahmi dan kenangan keluarga abadi.
+          </p>
+        </div>
+
+        <div class="campaign-grid">
+          <!-- Column 1: Kalender Biasa vs MomentaX -->
+          <div class="comparison-card card-ordinary">
+            <div class="comparison-header">
+              <span class="comp-badge bad">✕ Kalender Biasa</span>
+              <h3 data-i18n="campaign.ordinaryTitle">Aplikasi Kalender Umum</h3>
+            </div>
+            <ul class="comp-list">
+              <li data-i18n="campaign.ord1">❌ Hanya mendukung kalender Masehi standar.</li>
+              <li data-i18n="campaign.ord2">❌ Repot menghitung tanggal Haul atau Milad Hijriyah yang bergeser tiap tahun.</li>
+              <li data-i18n="campaign.ord3">❌ Data keluarga sering tersimpan di cloud pihak ketiga yang tidak jelas.</li>
+              <li data-i18n="campaign.ord4">❌ Tidak ada ruang untuk menyimpan foto kenangan berharga dan catatan emosional.</li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Solusi MomentaX -->
+          <div class="comparison-card card-momentax">
+            <div class="comparison-header">
+              <span class="comp-badge good">✓ Solusi MomentaX</span>
+              <h3 data-i18n="campaign.momentaxTitle">Keunggulan Spesial MomentaX</h3>
+            </div>
+            <ul class="comp-list">
+              <li data-i18n="campaign.mom1">✅ <strong>Dukungan Penuh Hijriyah & Masehi:</strong> Haul dan milad dihitung otomatis berulang setiap tahun Hijriyah.</li>
+              <li data-i18n="campaign.mom2">✅ <strong>100% Privasi & Offline-First:</strong> Data disimpan di database SQLite lokal di ponsel Anda.</li>
+              <li data-i18n="campaign.mom3">✅ <strong>Buku Kenangan Pribadi:</strong> Simpan foto kenangan, catatan wasiat, atau cerita di setiap momen penting.</li>
+              <li data-i18n="campaign.mom4">✅ <strong>Cadangan ke Google Drive Anda:</strong> Anda memegang kendali penuh atas data cadangan tanpa biaya server pihak ketiga.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="features.tag">FITUR LENGKAP</span>
+          <h2 class="section-title" data-i18n="features.title">Semua yang Anda Butuhkan untuk Merawat Kenangan</h2>
+          <p class="section-subtitle" data-i18n="features.subtitle">
+            Didesain intuitif, ringan, dan sarat fitur penting bagi keluarga muslim dan masyarakat umum.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1: Dual Calendar -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-hijri">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title" data-i18n="features.f1Title">Kalender Ganda (Masehi & Hijriyah)</h3>
+            <p class="feature-desc" data-i18n="features.f1Desc">
+              Pilihan konversi tanggal Masehi dan Hijriyah secara akurat. Pengingat tahunan Hijriyah akan bergeser otomatis mengikuti perhitungan kalender Islam setiap tahunnya.
+            </p>
+          </div>
+
+          <!-- Feature 2: Smart Reminders -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-notification">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title" data-i18n="features.f2Title">Notifikasi & Pengingat Terjadwal</h3>
+            <p class="feature-desc" data-i18n="features.f2Desc">
+              Dapatkan peringatan tepat waktu mulai dari 7 hari sebelum, 1 hari sebelum, hingga hari H sehingga Anda memiliki waktu cukup untuk mempersiapkan doa atau tasyakuran.
+            </p>
+          </div>
+
+          <!-- Feature 3: Photo Keepsakes & Journal -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-photos">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                <circle cx="9" cy="9" r="2"></circle>
+                <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title" data-i18n="features.f3Title">Buku Kenangan & Arsip Foto</h3>
+            <p class="feature-desc" data-i18n="features.f3Desc">
+              Bukan sekadar alarm angka. Lampirkan foto kenangan lama dan catatan cerita menyentuh hati di setiap momen agar kisah keluarga tetap abadi antar generasi.
+            </p>
+          </div>
+
+          <!-- Feature 4: Offline SQLite & Privacy -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-privacy">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title" data-i18n="features.f4Title">100% Privasi & Offline-First</h3>
+            <p class="feature-desc" data-i18n="features.f4Desc">
+              Data Anda adalah milik Anda. Seluruh catatan tersimpan di basis data lokal SQLite di ponsel tanpa ketergantungan kuota internet. Tidak ada pelacakan data pribadi.
+            </p>
+          </div>
+
+          <!-- Feature 5: Google Drive Backup -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-drive">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title" data-i18n="features.f5Title">Cadangan Google Drive</h3>
+            <p class="feature-desc" data-i18n="features.f5Desc">
+              Ganti HP tanpa khawatir kehilangan kenangan. Buat cadangan terenkripsi ke akun Google Drive pribadi Anda dengan satu sentuhan dan pulihkan kapan saja.
+            </p>
+          </div>
+
+          <!-- Feature 6: Relations & Categories -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper icon-relations">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title" data-i18n="features.f6Title">Pengelompokan Relasi & Kategori</h3>
+            <p class="feature-desc" data-i18n="features.f6Desc">
+              Kelola kategori acara (Haul, Ulang Tahun, Pernikahan, Peringatan) dan hubungan kekerabatan (Keluarga Inti, Kerabat, Sahabat) dengan label warna yang rapi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="how.tag">MUDAH & CEPAT</span>
+          <h2 class="section-title" data-i18n="how.title">3 Langkah Menjaga Momen Anda</h2>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h3 class="step-title" data-i18n="how.s1Title">Pasang MomentaX</h3>
+            <p class="step-desc" data-i18n="how.s1Desc">Unduh gratis langsung dari Google Play Store ke smartphone Android Anda.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h3 class="step-title" data-i18n="how.s2Title">Catat Momen Keluarga</h3>
+            <p class="step-desc" data-i18n="how.s2Desc">Masukkan tanggal (Masehi / Hijriyah), tentukan kategori, lampirkan foto dan catatan kenangan.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h3 class="step-title" data-i18n="how.s3Title">Dapatkan Pengingat</h3>
+            <p class="step-desc" data-i18n="how.s3Desc">Notifikasi cerdas akan mengingatkan Anda tepat waktu. Kenangan keluarga tersimpan abadi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="container faq-container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="faq.tag">TANYA JAWAB</span>
+          <h2 class="section-title" data-i18n="faq.title">Pertanyaan yang Sering Diajukan</h2>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q1">Apakah MomentaX memerlukan koneksi internet untuk digunakan?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq.a1">
+                Tidak sama sekali. MomentaX mengusung arsitektur offline-first dengan database SQLite lokal. Seluruh fitur pencatatan momen, kalender, dan notifikasi berjalan lancar tanpa kuota internet. Koneksi internet hanya dibutuhkan ketika Anda ingin mencadangkan data ke Google Drive.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q2">Bagaimana cara kerja pengingat tahunan Kalender Hijriyah?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq.a2">
+                MomentaX memiliki algoritma konversi penanggalan Hijriyah bawaan. Ketika Anda menandai momen dengan kalender Hijriyah (misal: 10 Muharram atau 15 Ramadhan), sistem secara otomatis mengkalkulasi tanggal Masehi yang bersesuaian pada tahun berikutnya, sehingga pengingat akan selalu berbunyi tepat waktu.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q3">Apakah data saya aman dan tidak disalahgunakan?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq.a3">
+                Keamanan privasi Anda adalah prioritas utama kami. MomentaX tidak mengumpulkan, menjual, atau menyimpan data keluarga Anda di server pihak ketiga. File cadangan Anda langsung tersimpan di akun Google Drive pribadi milik Anda sendiri.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q4">Apakah aplikasi MomentaX gratis?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq.a4">
+                Ya! MomentaX dapat diunduh dan digunakan secara gratis di Google Play Store untuk perangkat Android.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Banner CTA Section -->
+    <section class="download-banner-section" id="download">
+      <div class="container">
+        <div class="download-card">
+          <div class="download-content">
+            <h2 class="download-title" data-i18n="downloadBanner.title">Mulai Rawat Kenangan Berharga Keluarga Anda Hari Ini</h2>
+            <p class="download-subtitle" data-i18n="downloadBanner.subtitle">
+              Jangan biarkan momen penting terlewat begitu saja. Pasang MomentaX dan nikmati kemudahan mencatat haul, milad, dan hari bahagia.
+            </p>
+
+            <div class="download-actions">
+              <a href="https://play.google.com/store/apps/details?id=com.adefathudin.momentax" target="_blank" rel="noopener noreferrer" class="btn btn-google-play btn-large">
+                <svg class="gp-icon" viewBox="0 0 512 512" width="32" height="32" fill="none">
+                  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z" fill="#00e3ff"/>
+                  <path d="M47 38.8C35.1 52.4 28 72.8 28 97.4v317.2c0 24.6 7.1 45 19 58.6L274.6 246 47 38.8z" fill="#00d478"/>
+                  <path d="M385.4 337.8L104.6 499l220.7-221.3 60.1 60.1z" fill="#ff3a44"/>
+                  <path d="M480.9 237.9c14.7 8.5 23.1 22.8 23.1 38.1 0 15.3-8.4 29.6-23.1 38.1l-95.5 54.8-60.1-60.1 60.1-60.1 95.5 29.2z" fill="#ffc800"/>
+                </svg>
+                <div class="gp-text">
+                  <span class="gp-label" data-i18n="hero.gpAvailable">TERSEDIA DI</span>
+                  <span class="gp-store" data-i18n="hero.gpTitle">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- App Icon Card Highlight -->
+          <div class="download-badge-visual">
+            <div class="icon-halo-wrapper">
+              <img src="assets/icon.png" alt="MomentaX Icon" class="large-app-icon" width="140" height="140">
+            </div>
+            <div class="version-tag">Version 1.0.0 • Android</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <img src="assets/icon.png" alt="MomentaX Logo" width="36" height="36">
+          <span class="footer-name">Momenta<span class="cyan">X</span></span>
+        </div>
+        <p class="footer-tagline" data-i18n="footer.tagline">Menjaga momen, merawat kenangan keluarga di setiap langkah kehidupan.</p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 data-i18n="footer.navTitle">Navigasi</h4>
+        <ul>
+          <li><a href="#hero" data-i18n="footer.home">Beranda</a></li>
+          <li><a href="#features" data-i18n="nav.features">Fitur Unggulan</a></li>
+          <li><a href="#campaign" data-i18n="nav.whyMomenta">Mengapa MomentaX</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">Tanya Jawab</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 data-i18n="footer.legalTitle">Legalitas & Dukungan</h4>
+        <ul>
+          <li><a href="privacy-policy.html" data-i18n="footer.privacyPolicy">Kebijakan Privasi</a></li>
+          <li><a href="delete-account.html" data-i18n="footer.deleteAccount">Hapus Akun & Data</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">Tanya Jawab</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 data-i18n="footer.downloadTitle">Unduh</h4>
+        <ul>
+          <li><a href="https://play.google.com/store/apps/details?id=com.adefathudin.momentax" target="_blank" rel="noopener noreferrer">Google Play Store</a></li>
+          <li><span class="package-name">com.adefathudin.momentax</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; <span id="current-year">2026</span> MomentaX. <span data-i18n="footer.rights">Hak cipta dilindungi undang-undang.</span></p>
+        <p class="dev-credit">Developed with care by Ade Fathudin</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
