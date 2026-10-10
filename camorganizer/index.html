@@ -43,14 +43,13 @@
 
             <nav class="nav-links">
                 <a href="#features">Features</a>
-                <a href="#how-it-works">How it works</a>
-                <a href="#privacy">Privacy</a>
+                <a href="#how-it-works">How It Works</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
             </nav>
 
             <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer"
                 class="btn btn-primary nav-cta" target="_blank" rel="noopener">
-                Get the app
+                Get the App
                 <span>↗</span>
             </a>
 
@@ -91,11 +90,13 @@
 
                         <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer"
                             class="btn btn-primary btn-large" target="_blank" rel="noopener">
-                            <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M3.8 3.1c-.5.4-.8 1-.8 1.8v14.2c0 .8.3 1.4.8 1.8L13.7 12 3.8 3.1Zm11.1 10.1-2.5-2.2L5.2 4.2l10.6 6 2.7 1.5-2.7 1.5-2.4 1.4 1.5-1.4Z" />
+                            <svg class="play-icon" viewBox="0 0 512 512" width="22" height="22" aria-hidden="true">
+                                <path fill="#4285F4" d="M32.5 12.3c-4.9 5.3-7.5 12.9-7.5 22.3v442.8c0 9.4 2.6 17 7.5 22.3l1.8 1.8 248.3-248.3v-5.8L34.3 10.5l-1.8 1.8z"/>
+                                <path fill="#FBBC04" d="M365.1 369.8l-82.5-82.5v-6.6l82.5-82.5 2 1.1 97.8 55.6c27.9 15.9 27.9 41.8 0 57.7l-97.8 55.6-2 1.1z"/>
+                                <path fill="#EA4335" d="M367.1 368.7L282.6 284 32.5 534.1c9.2 9.8 24.4 11 41.6 1.3l293-166.7z"/>
+                                <path fill="#34A853" d="M367.1 143.3L74.1 9.6C56.9-.1 41.7 1.1 32.5 10.9L282.6 261l84.5-84.7v-33z"/>
                             </svg>
-                            Get it on Google Play
+                            <span>Get it on Google Play</span>
                         </a>
 
                         <a href="#features" class="btn btn-ghost btn-large">
@@ -491,7 +492,13 @@
 
                         <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer"
                             class="btn btn-white btn-large" target="_blank" rel="noopener">
-                            Get CamOrganizer
+                            <svg viewBox="0 0 512 512" width="22" height="22" aria-hidden="true">
+                                <path fill="#4285F4" d="M32.5 12.3c-4.9 5.3-7.5 12.9-7.5 22.3v442.8c0 9.4 2.6 17 7.5 22.3l1.8 1.8 248.3-248.3v-5.8L34.3 10.5l-1.8 1.8z"/>
+                                <path fill="#FBBC04" d="M365.1 369.8l-82.5-82.5v-6.6l82.5-82.5 2 1.1 97.8 55.6c27.9 15.9 27.9 41.8 0 57.7l-97.8 55.6-2 1.1z"/>
+                                <path fill="#EA4335" d="M367.1 368.7L282.6 284 32.5 534.1c9.2 9.8 24.4 11 41.6 1.3l293-166.7z"/>
+                                <path fill="#34A853" d="M367.1 143.3L74.1 9.6C56.9-.1 41.7 1.1 32.5 10.9L282.6 261l84.5-84.7v-33z"/>
+                            </svg>
+                            <span>Download on Google Play</span>
                             <span>↗</span>
                         </a>
 
@@ -513,7 +520,7 @@
 
             <div class="footer-brand">
 
-                <a href="#" class="brand">
+                <a href="index.html" class="brand">
                     <span class="brand-mark">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <path
@@ -524,7 +531,7 @@
                 </a>
 
                 <p>
-                    Capture, organize, and keep your media under control.
+                    Capture, organize, and keep your media under control directly from your Android camera.
                 </p>
 
             </div>
@@ -534,10 +541,10 @@
                 <div>
                     <span class="footer-heading">Product</span>
                     <a href="#features">Features</a>
-                    <a href="#how-it-works">How it works</a>
+                    <a href="#how-it-works">How It Works</a>
                     <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer" target="_blank"
                         rel="noopener">
-                        Google Play
+                        Google Play Store
                     </a>
                 </div>
 
@@ -552,7 +559,7 @@
 
         <div class="container footer-bottom">
             <span>© 2026 CamOrganizer. All rights reserved.</span>
-            <span>Made for Android.</span>
+            <span>Made with precision for Android.</span>
         </div>
 
     </footer>
@@ -571,6 +578,14 @@
             link.addEventListener('click', () => {
                 navLinks.classList.remove('open');
                 menuButton.classList.remove('open');
+            });
+        });
+
+        const steps = document.querySelectorAll('.step');
+        steps.forEach((step) => {
+            step.addEventListener('click', () => {
+                steps.forEach(s => s.classList.remove('active'));
+                step.classList.add('active');
             });
         });
     </script>

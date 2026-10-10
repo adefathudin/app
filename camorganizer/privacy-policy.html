@@ -3,44 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Privacy Policy - CamOrganizer</title>
+    <meta name="description" content="Official Privacy Policy for CamOrganizer. Local-first Android camera app with zero external media collection, minimal permissions, and transparent data practices.">
+    <meta name="theme-color" content="#080B12">
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet"
-    >
 <style>
     /* =========================================
-       PRIVACY POLICY PAGE
+       PRIVACY POLICY PAGE ENHANCEMENTS
     ========================================= */
 
     .privacy-page {
         min-height: calc(100vh - 76px);
-        padding: 90px 0 100px;
-
+        padding: 70px 0 100px;
         background:
             radial-gradient(
                 circle at 50% 0%,
-                rgba(52, 151, 255, 0.08),
-                transparent 35%
+                rgba(52, 151, 255, 0.1),
+                transparent 45%
             );
     }
 
     .privacy-container {
-        width: min(900px, calc(100% - 48px));
+        width: min(940px, calc(100% - 40px));
         margin: 0 auto;
     }
 
     /* Header */
-
     .privacy-header {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         text-align: center;
     }
 
@@ -48,152 +44,203 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-
         margin-bottom: 18px;
-        padding: 8px 14px;
-
-        border: 1px solid rgba(83, 166, 255, 0.16);
+        padding: 8px 16px;
+        border: 1px solid rgba(83, 166, 255, 0.2);
         border-radius: 999px;
-
         color: #9dcfff;
-        background: rgba(70, 157, 255, 0.07);
-
+        background: rgba(70, 157, 255, 0.08);
         font-size: 12px;
         font-weight: 700;
-
-        letter-spacing: 0.12em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
     }
 
     .privacy-label-dot {
-        width: 7px;
-        height: 7px;
-
+        width: 8px;
+        height: 8px;
         border-radius: 50%;
-
         background: #55d6a5;
-
-        box-shadow: 0 0 10px #55d6a5;
+        box-shadow: 0 0 12px #55d6a5;
     }
 
     .privacy-header h1 {
         margin: 0;
-
         font-family: "Space Grotesk", sans-serif;
-
-        font-size: clamp(42px, 5vw, 58px);
-        line-height: 1.05;
-
-        letter-spacing: -0.05em;
+        font-size: clamp(38px, 5vw, 56px);
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        color: #ffffff;
     }
 
     .privacy-header p {
-        max-width: 650px;
-
-        margin: 22px auto 0;
-
-        color: var(--text-muted);
-
+        max-width: 660px;
+        margin: 18px auto 0;
+        color: var(--text-soft);
         font-size: 17px;
-        line-height: 1.75;
+        line-height: 1.7;
     }
 
-    .privacy-date {
-        margin-top: 14px !important;
-
-        color: #68778a !important;
-
-        font-size: 13px !important;
+    .privacy-meta-badge {
+        margin-top: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 13px;
+        color: #8da2bb;
+        background: rgba(255, 255, 255, 0.035);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 6px 16px;
+        border-radius: 999px;
     }
 
+    /* SUMMARY CARDS GRID */
+    .privacy-summary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-bottom: 36px;
+    }
 
-    /* Main card */
+    .summary-card {
+        padding: 22px 18px;
+        background: rgba(16, 23, 34, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        backdrop-filter: blur(14px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: transform 0.25s ease, border-color 0.25s ease;
+    }
 
+    .summary-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(90, 168, 255, 0.3);
+    }
+
+    .summary-card-icon {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: rgba(90, 168, 255, 0.12);
+        color: #70b8ff;
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .summary-card h4 {
+        margin: 0 0 6px;
+        font-size: 15px;
+        font-family: "Space Grotesk", sans-serif;
+        color: #f1f5f9;
+    }
+
+    .summary-card p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--text-muted);
+    }
+
+    /* TABLE OF CONTENTS */
+    .policy-toc-card {
+        background: rgba(14, 20, 30, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 20px;
+        padding: 24px 28px;
+        margin-bottom: 36px;
+    }
+
+    .policy-toc-card h3 {
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #94a3b8;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .toc-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 10px 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .toc-grid a {
+        color: #70b8ff;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.2s ease, transform 0.2s ease;
+        display: inline-block;
+    }
+
+    .toc-grid a:hover {
+        color: #a6d4ff;
+        transform: translateX(3px);
+    }
+
+    /* Main Policy Article Card */
     .privacy-card {
-        padding: 52px;
-
+        padding: 56px 48px;
         border: 1px solid rgba(255, 255, 255, 0.085);
         border-radius: 28px;
-
         background:
             linear-gradient(
                 145deg,
                 rgba(255, 255, 255, 0.035),
                 rgba(255, 255, 255, 0.012)
             );
-
         box-shadow:
-            0 30px 90px rgba(0, 0, 0, 0.22),
-            inset 0 1px 0 rgba(255, 255, 255, 0.025);
+            0 30px 90px rgba(0, 0, 0, 0.25),
+            inset 0 1px 0 rgba(255, 255, 255, 0.03);
     }
 
-
-    /* Individual sections */
-
     .privacy-section {
-        padding: 0 0 42px;
-        margin-bottom: 42px;
-
-        border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+        padding: 0 0 44px;
+        margin-bottom: 44px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .privacy-section:last-child {
         padding-bottom: 0;
         margin-bottom: 0;
-
         border-bottom: none;
     }
-
-
-    /* Section icon */
 
     .privacy-icon {
         width: 44px;
         height: 44px;
-
         display: grid;
         place-items: center;
-
         margin-bottom: 18px;
-
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.09);
         border-radius: 12px;
-
         background: rgba(255, 255, 255, 0.035);
-
-        font-size: 18px;
+        font-size: 19px;
     }
-
-
-    /* Section title */
 
     .privacy-section h2 {
         margin: 0 0 16px;
-
         color: #f7f9fc;
-
         font-family: "Space Grotesk", sans-serif;
-
-        font-size: 23px;
+        font-size: 24px;
         line-height: 1.3;
-
-        letter-spacing: -0.025em;
+        letter-spacing: -0.02em;
     }
-
-
-    /* Paragraph */
 
     .privacy-section p {
         margin: 0 0 16px;
-
         color: #a9b5c5;
-
         font-size: 16px;
         line-height: 1.85;
-    }
-
-    .privacy-section p:last-child {
-        margin-bottom: 0;
     }
 
     .privacy-section strong {
@@ -201,167 +248,140 @@
         font-weight: 600;
     }
 
+    /* Structured Permissions Table */
+    .permissions-table-wrap {
+        overflow-x: auto;
+        margin: 24px 0 18px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+    }
 
-    /* List */
+    .permissions-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14.5px;
+        text-align: left;
+    }
 
-    .privacy-section ul {
-        margin: 18px 0 0;
-        padding-left: 25px;
+    .permissions-table th {
+        background: rgba(255, 255, 255, 0.04);
+        color: #f1f5f9;
+        font-weight: 700;
+        padding: 14px 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        letter-spacing: 0.02em;
+    }
 
+    .permissions-table td {
+        padding: 14px 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         color: #a9b5c5;
-
-        font-size: 16px;
-        line-height: 1.85;
+        line-height: 1.6;
     }
 
-    .privacy-section li {
-        padding-left: 6px;
-        margin-bottom: 12px;
+    .permissions-table tr:last-child td {
+        border-bottom: none;
     }
 
-    .privacy-section li:last-child {
-        margin-bottom: 0;
+    .perm-badge {
+        font-family: monospace;
+        font-weight: 700;
+        color: #70b8ff;
+        background: rgba(90, 168, 255, 0.1);
+        padding: 3px 8px;
+        border-radius: 6px;
+        border: 1px solid rgba(90, 168, 255, 0.2);
     }
 
-    .privacy-section li::marker {
-        color: #54aaff;
-    }
-
-
-    /* Links */
-
-    .privacy-link {
-        color: #69baff;
-
-        font-size: 16px;
-
-        text-decoration: none;
-
-        transition:
-            color 180ms ease,
-            opacity 180ms ease;
-    }
-
-    .privacy-link:hover {
-        color: #9bd5ff;
-    }
-
-
-    /* Contact */
-
-    .privacy-contact {
-        margin-top: 22px;
-        padding: 19px 21px;
-
-        border: 1px solid rgba(255, 255, 255, 0.07);
-        border-radius: 13px;
-
-        background: rgba(255, 255, 255, 0.025);
-    }
-
-    .privacy-contact-label {
-        display: block;
-
-        margin-bottom: 7px;
-
-        color: #68778a;
-
+    .perm-type {
+        display: inline-block;
         font-size: 11px;
-        font-weight: 800;
-
-        letter-spacing: 0.12em;
+        font-weight: 700;
         text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 999px;
+        background: rgba(34, 197, 94, 0.12);
+        color: #4ade80;
     }
 
-    .privacy-contact a {
-        color: #70bcff;
+    /* Highlight Callout Box */
+    .callout-box {
+        background: rgba(30, 60, 95, 0.25);
+        border-left: 4px solid #5aa8ff;
+        border-radius: 0 14px 14px 0;
+        padding: 18px 22px;
+        margin: 20px 0;
+    }
 
-        font-size: 16px;
+    .callout-box p {
+        margin: 0;
+        color: #dbeafe;
+        font-size: 15px;
+    }
+
+    /* Developer Contact Box */
+    .privacy-contact-card {
+        margin-top: 24px;
+        padding: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.025);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+    }
+
+    .contact-cell {
+        background: rgba(10, 15, 22, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 14px 16px;
+    }
+
+    .contact-cell-label {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #64748b;
+        font-weight: 700;
+        margin-bottom: 4px;
+    }
+
+    .contact-cell-val {
+        font-size: 15px;
         font-weight: 600;
+        color: #f1f5f9;
+        word-break: break-all;
+    }
 
+    .contact-cell-val a {
+        color: #70b8ff;
         text-decoration: none;
     }
 
-    .privacy-contact a:hover {
-        color: #a1d7ff;
+    .contact-cell-val a:hover {
+        text-decoration: underline;
     }
 
-
-    /* =========================================
-       MOBILE
-    ========================================= */
-
-    @media (max-width: 700px) {
-
+    @media (max-width: 768px) {
         .privacy-page {
-            padding: 60px 0 70px;
-        }
-
-        .privacy-container {
-            width: min(100% - 30px, 900px);
-        }
-
-        .privacy-header {
-            margin-bottom: 32px;
-        }
-
-        .privacy-header h1 {
-            font-size: 40px;
-        }
-
-        .privacy-header p {
-            font-size: 16px;
-            line-height: 1.7;
+            padding: 50px 0 70px;
         }
 
         .privacy-card {
-            padding: 30px 23px;
-
-            border-radius: 21px;
+            padding: 32px 20px;
+            border-radius: 20px;
         }
 
-        .privacy-section {
-            padding-bottom: 32px;
-            margin-bottom: 32px;
+        .privacy-header h1 {
+            font-size: 36px;
         }
 
-        .privacy-icon {
-            width: 42px;
-            height: 42px;
-
-            margin-bottom: 16px;
-        }
-
-        .privacy-section h2 {
-            font-size: 20px;
-        }
-
-        .privacy-section p {
-            font-size: 15.5px;
-            line-height: 1.8;
-        }
-
-        .privacy-section ul {
-            font-size: 15.5px;
-            line-height: 1.8;
-
-            padding-left: 22px;
-        }
-
-        .privacy-section li {
-            margin-bottom: 10px;
-        }
-
-        .privacy-link {
-            font-size: 15.5px;
-        }
-
-        .privacy-contact a {
-            font-size: 15.5px;
+        .toc-grid {
+            grid-template-columns: 1fr;
         }
     }
 </style>
-
 </head>
 
 <body>
@@ -370,471 +390,329 @@
     <div class="ambient ambient-1"></div>
     <div class="ambient ambient-2"></div>
 
-
     <!-- Navigation -->
     <header class="navbar">
-
         <div class="container nav-container">
 
-            <a href="index.html" class="brand">
-
+            <a href="index.html" class="brand" aria-label="CamOrganizer home">
                 <span class="brand-mark">
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
-                        <path d="M9 3L7.6 5H5C3.9 5 3 5.9 3 7v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2h-2.6L15 3H9zm3 4.5A4.5 4.5 0 1 1 12 16.5a4.5 4.5 0 0 1 0-9zm0 2A2.5 2.5 0 1 0 12 14.5 2.5 2.5 0 0 0 12 9.5z"/>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7.5 6.5h2l1.1-2h3l1.1 2h2.8A3.5 3.5 0 0 1 21 10v7.5a3.5 3.5 0 0 1-3.5 3.5h-11A3.5 3.5 0 0 1 3 17.5V10a3.5 3.5 0 0 1 3.5-3.5ZM12 9a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
                     </svg>
                 </span>
-
                 <span>CamOrganizer</span>
-
             </a>
 
-
             <nav class="nav-links">
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a
-                    href="privacy.html"
-                    style="color: #ffffff;"
-                >
-                    Privacy Policy
-                </a>
-
-                <a
-                    href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer"
-                    class="btn btn-primary"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    Get the App
-                </a>
-
+                <a href="index.html">← Back to Home</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="privacy-policy.html" style="color: #ffffff;">Privacy Policy</a>
             </nav>
 
+            <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer"
+                class="btn btn-primary nav-cta" target="_blank" rel="noopener">
+                Google Play
+                <span>↗</span>
+            </a>
 
-            <button
-                class="mobile-menu"
-                type="button"
-                aria-label="Open menu"
-                aria-expanded="false"
-            >
+            <button class="mobile-menu" type="button" aria-label="Open menu" aria-expanded="false">
                 <span></span>
                 <span></span>
             </button>
 
         </div>
-
     </header>
 
-
-    <!-- Privacy Policy -->
+    <!-- Privacy Policy Main Content -->
     <main class="privacy-page">
-
         <div class="privacy-container">
 
             <!-- Header -->
             <header class="privacy-header">
-
                 <div class="privacy-label">
                     <span class="privacy-label-dot"></span>
-                    Privacy
+                    Official Privacy Policy
                 </div>
 
-                <h1>
-                    Privacy Policy
-                </h1>
+                <h1>Privacy Policy</h1>
 
                 <p>
-                    We believe your photos and videos should stay under
-                    your control. This policy explains how CamOrganizer
-                    handles your information and device permissions.
+                    We believe your photos and videos should stay strictly under your personal control. This policy explains how CamOrganizer handles information and device permissions.
                 </p>
 
-                <p class="privacy-date">
-                    Effective Date: September 26, 2026
-                </p>
-
+                <div class="privacy-meta-badge">
+                    <span>📅 Effective Date: September 26, 2026</span>
+                    <span>•</span>
+                    <span>📱 Android Application</span>
+                </div>
             </header>
 
+            <!-- 4 Summary Cards -->
+            <div class="privacy-summary-grid">
+                <div class="summary-card">
+                    <div class="summary-card-icon">📁</div>
+                    <h4>100% Local Storage</h4>
+                    <p>All photos and videos stay securely on your device. We never upload or view your media.</p>
+                </div>
 
-            <!-- Policy -->
+                <div class="summary-card">
+                    <div class="summary-card-icon">🛡️</div>
+                    <h4>Zero Personal Tracking</h4>
+                    <p>No user account, login, email, phone number, or biometric data is ever required or collected.</p>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-card-icon">📢</div>
+                    <h4>AdMob Advertising</h4>
+                    <p>Displays ads via Google AdMob compliant with Google Play Developer Policies.</p>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-card-icon">⚙️</div>
+                    <h4>Essential Permissions</h4>
+                    <p>Camera and microphone are used solely when capturing photos and recording videos.</p>
+                </div>
+            </div>
+
+            <!-- Table of Contents -->
+            <nav class="policy-toc-card">
+                <h3>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                    Table of Contents
+                </h3>
+                <div class="toc-grid">
+                    <a href="#section-1">1. Introduction</a>
+                    <a href="#section-2">2. Data Collection & Storage</a>
+                    <a href="#section-3">3. Permissions Requested</a>
+                    <a href="#section-4">4. Advertising via Google AdMob</a>
+                    <a href="#section-5">5. Children's Privacy</a>
+                    <a href="#section-6">6. Changes to This Policy</a>
+                    <a href="#section-7">7. Developer Contact & Support</a>
+                </div>
+            </nav>
+
+            <!-- Policy Body -->
             <article class="privacy-card">
 
-
                 <!-- 1 -->
-                <section class="privacy-section">
-
-                    <div class="privacy-icon">
-                        👋
-                    </div>
-
-                    <h2>
-                        1. Introduction
-                    </h2>
-
+                <section class="privacy-section" id="section-1">
+                    <div class="privacy-icon">👋</div>
+                    <h2>1. Introduction</h2>
                     <p>
-                        Welcome to
-                        <strong>CamOrganizer</strong>
-                        ("we," "our," or "us").
-                        We are committed to protecting your privacy.
-                        This Privacy Policy explains how our Android
-                        application handles information when you use
-                        CamOrganizer.
+                        Welcome to <strong>CamOrganizer</strong> (package: <code>com.adefathudin.camorganizer</code>), developed by <strong>Ade Fathudin</strong> ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how our Android application handles data and permissions when you capture, organize, and manage media.
                     </p>
-
                 </section>
-
 
                 <!-- 2 -->
-                <section class="privacy-section">
-
-                    <div class="privacy-icon">
-                        🔒
+                <section class="privacy-section" id="section-2">
+                    <div class="privacy-icon">🔒</div>
+                    <h2>2. Data Collection and Storage</h2>
+                    <div class="callout-box">
+                        <p>
+                            <strong>Key Principle:</strong> CamOrganizer does not collect, store, transmit, or monetize your photos, videos, or camera feed on any external server.
+                        </p>
                     </div>
-
-                    <h2>
-                        2. Data Collection and Storage
-                    </h2>
-
                     <p>
-                        <strong>
-                            CamOrganizer does not collect, store, or
-                            transmit your photos or videos to our own
-                            external servers.
-                        </strong>
+                        Photos, videos, folder configurations, and tags created through CamOrganizer are saved <strong>locally on your Android device</strong> in standard folders (such as <code>DCIM</code> or locations chosen via the Android Storage Access Framework).
                     </p>
-
                     <p>
-                        Photos, videos, folder configurations, and
-                        camera-related content created through
-                        CamOrganizer are stored locally on your device
-                        or in the storage location selected by you.
+                        Because your media is stored purely on your hardware, we have no access, ownership, or ability to view your captured content.
                     </p>
-
-                    <p>
-                        We do not have direct access to your private
-                        media files or camera feed.
-                    </p>
-
                 </section>
-
 
                 <!-- 3 -->
-                <section class="privacy-section">
-
-                    <div class="privacy-icon">
-                        🛡️
-                    </div>
-
-                    <h2>
-                        3. Permissions Requested
-                    </h2>
-
+                <section class="privacy-section" id="section-3">
+                    <div class="privacy-icon">🛡️</div>
+                    <h2>3. Permissions Requested</h2>
                     <p>
-                        CamOrganizer requests certain Android permissions
-                        to provide its core camera and media organization
-                        functionality.
+                        CamOrganizer requests only the minimal Android permissions necessary to perform its core camera and file organization features:
                     </p>
 
-                    <ul>
+                    <div class="permissions-table-wrap">
+                        <table class="permissions-table">
+                            <thead>
+                                <tr>
+                                    <th>Permission</th>
+                                    <th>Classification</th>
+                                    <th>Purpose & Usage in CamOrganizer</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="perm-badge">CAMERA</span></td>
+                                    <td><span class="perm-type">Core</span></td>
+                                    <td>Required to preview camera feed, snap photos, and record video clips.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-badge">RECORD_AUDIO</span></td>
+                                    <td><span class="perm-type">Core</span></td>
+                                    <td>Required to capture audio sound when you record video.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-badge">Storage / SAF</span></td>
+                                    <td><span class="perm-type">Core</span></td>
+                                    <td>Allows the app to write captured files directly into your selected custom folders.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-badge">INTERNET</span></td>
+                                    <td><span class="perm-type" style="background: rgba(148, 163, 184, 0.15); color: #94a3b8;">Supporting</span></td>
+                                    <td>Used exclusively to fetch and display banner/interstitial ads via Google AdMob.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                        <li>
-                            <strong>CAMERA</strong>
-                            — Required to capture photos and record
-                            videos inside the app.
-                        </li>
-
-                        <li>
-                            <strong>RECORD_AUDIO</strong>
-                            — Required to capture sound during
-                            video recording.
-                        </li>
-
-                        <li>
-                            <strong>
-                                Storage / Storage Access Framework
-                            </strong>
-                            — Used to save photos and videos and manage
-                            folders in locations selected by the user.
-                        </li>
-
-                        <li>
-                            <strong>INTERNET</strong>
-                            — Used for services such as displaying
-                            advertisements through Google AdMob.
-                        </li>
-
-                    </ul>
-
+                    <p>
+                        We do not request sensitive background location permissions, contact list access, phone call logs, or SMS data.
+                    </p>
                 </section>
-
 
                 <!-- 4 -->
-                <section class="privacy-section">
-
-                    <div class="privacy-icon">
-                        📢
-                    </div>
-
-                    <h2>
-                        4. Advertising
-                    </h2>
-
+                <section class="privacy-section" id="section-4">
+                    <div class="privacy-icon">📢</div>
+                    <h2>4. Advertising via Google AdMob</h2>
                     <p>
-                        CamOrganizer uses
-                        <strong>Google AdMob</strong>
-                        to display advertisements.
+                        CamOrganizer uses <strong>Google AdMob</strong> (Google Mobile Ads SDK) to serve advertisements that support ongoing development and maintenance of the application.
                     </p>
-
                     <p>
-                        Google and its advertising partners may process
-                        information such as device identifiers, IP
-                        address, advertising identifiers, and
-                        advertising-related usage information in
-                        accordance with their applicable policies.
+                        Google and its certified advertising partners may collect and process device identifiers (such as the Android Advertising ID), coarse network info (IP address), and generic app telemetry in accordance with Google's privacy guidelines.
                     </p>
-
                     <p>
-                        For more information about how Google handles
-                        information for advertising, please visit:
+                        You can learn more about how Google handles ad data or adjust your advertising personalization preferences by visiting:
                     </p>
-
                     <p>
-                        <a
-                            class="privacy-link"
-                            href="https://policies.google.com/technologies/ads"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            Google Advertising Privacy & Terms →
+                        <a class="privacy-link" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">
+                            Google Advertising Privacy & Terms ↗
                         </a>
                     </p>
-
                 </section>
-
 
                 <!-- 5 -->
-                <section class="privacy-section">
-
-                    <div class="privacy-icon">
-                        👨‍👩‍👧
-                    </div>
-
-                    <h2>
-                        5. Children's Privacy
-                    </h2>
-
+                <section class="privacy-section" id="section-5">
+                    <div class="privacy-icon">👨‍👩‍👧</div>
+                    <h2>5. Children's Privacy</h2>
                     <p>
-                        CamOrganizer is intended for a general audience.
-                        We do not knowingly collect personal information
-                        directly from children.
+                        CamOrganizer is designed for a general audience and does not intentionally collect personal identification information from children under the age of 13.
                     </p>
-
                     <p>
-                        If you believe that a child has provided personal
-                        information through the app, please contact us
-                        so that we can review the situation and take
-                        appropriate action.
+                        If you are a parent or guardian and believe that your child has provided personal information to us, please contact us immediately so we can investigate and address the matter promptly.
                     </p>
-
                 </section>
-
 
                 <!-- 6 -->
-                <section class="privacy-section">
-
-                    <div class="privacy-icon">
-                        🔄
-                    </div>
-
-                    <h2>
-                        6. Changes to This Policy
-                    </h2>
-
+                <section class="privacy-section" id="section-6">
+                    <div class="privacy-icon">🔄</div>
+                    <h2>6. Changes to This Policy</h2>
                     <p>
-                        We may update this Privacy Policy from time to
-                        time. When changes are made, the updated version
-                        will be published on this page and the effective
-                        date will be updated accordingly.
+                        We may update this Privacy Policy periodically to reflect new features, updated operating system permissions, or evolving legal standards.
                     </p>
-
+                    <p>
+                        Any revisions will be posted directly to this web page with a refreshed "Effective Date." We recommend reviewing this document occasionally to stay informed.
+                    </p>
                 </section>
-
 
                 <!-- 7 -->
-                <section class="privacy-section">
-
-                    <div class="privacy-icon">
-                        ✉️
-                    </div>
-
-                    <h2>
-                        7. Contact Us
-                    </h2>
-
+                <section class="privacy-section" id="section-7">
+                    <div class="privacy-icon">✉️</div>
+                    <h2>7. Developer Contact & Support</h2>
                     <p>
-                        If you have any questions, concerns, or suggestions
-                        regarding this Privacy Policy, please contact us.
+                        If you have questions, feedback, or need clarification regarding this Privacy Policy or CamOrganizer, feel free to contact us directly:
                     </p>
 
-                    <div class="privacy-contact">
+                    <div class="privacy-contact-card">
+                        <div class="contact-cell">
+                            <div class="contact-cell-label">Developer</div>
+                            <div class="contact-cell-val">Ade Fathudin</div>
+                        </div>
 
-                        <span class="privacy-contact-label">
-                            Email
-                        </span>
+                        <div class="contact-cell">
+                            <div class="contact-cell-label">Support Email</div>
+                            <div class="contact-cell-val">
+                                <a href="mailto:aftissoftware@gmail.com">aftissoftware@gmail.com</a>
+                            </div>
+                        </div>
 
-                        <a href="mailto:aftissoftware@gmail.com">
-                            aftissoftware@gmail.com
-                        </a>
+                        <div class="contact-cell">
+                            <div class="contact-cell-label">Google Play Package</div>
+                            <div class="contact-cell-val">com.adefathudin.camorganizer</div>
+                        </div>
 
+                        <div class="contact-cell">
+                            <div class="contact-cell-label">Store Listing</div>
+                            <div class="contact-cell-val">
+                                <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer" target="_blank" rel="noopener">View on Google Play ↗</a>
+                            </div>
+                        </div>
                     </div>
-
                 </section>
-
 
             </article>
 
         </div>
-
     </main>
-
 
     <!-- Footer -->
     <footer class="footer">
-
         <div class="container footer-main">
 
             <div class="footer-brand">
-
                 <a href="index.html" class="brand">
-
                     <span class="brand-mark">
-                        <svg
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
-                        >
-                            <path d="M9 3L7.6 5H5C3.9 5 3 5.9 3 7v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2h-2.6L15 3H9zm3 4.5A4.5 4.5 0 1 1 12 16.5a4.5 4.5 0 0 1 0-9zm0 2A2.5 2.5 0 1 0 12 14.5 2.5 2.5 0 0 0 12 9.5z"/>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7.5 6.5h2l1.1-2h3l1.1 2h2.8A3.5 3.5 0 0 1 21 10v7.5a3.5 3.5 0 0 1-3.5 3.5h-11A3.5 3.5 0 0 1 3 17.5V10a3.5 3.5 0 0 1 3.5-3.5ZM12 9a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
                         </svg>
                     </span>
-
                     <span>CamOrganizer</span>
-
                 </a>
-
                 <p>
-                    A simple camera designed to keep your photos
-                    and videos organized from the moment you capture them.
+                    A smart Android camera designed to keep your photos and videos organized from the moment you capture them.
                 </p>
-
             </div>
-
 
             <div class="footer-links">
-
                 <div>
-
-                    <span class="footer-heading">
-                        Product
-                    </span>
-
-                    <a href="index.html">
-                        Home
+                    <span class="footer-heading">Product</span>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#how-it-works">How It Works</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer" target="_blank" rel="noopener">
+                        Google Play Store
                     </a>
-
-                    <a href="index.html#features">
-                        Features
-                    </a>
-
-                    <a
-                        href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        Google Play
-                    </a>
-
                 </div>
 
-
                 <div>
-
-                    <span class="footer-heading">
-                        Legal
-                    </span>
-
-                    <a href="privacy.html">
-                        Privacy Policy
-                    </a>
-
+                    <span class="footer-heading">Legal</span>
+                    <a href="privacy-policy.html">Privacy Policy</a>
                 </div>
-
             </div>
 
         </div>
 
-
         <div class="container footer-bottom">
-
-            <span>
-                © 2026 CamOrganizer. All rights reserved.
-            </span>
-
-            <span>
-                Built for Android.
-            </span>
-
+            <span>© 2026 CamOrganizer. All rights reserved.</span>
+            <span>Built with precision for Android.</span>
         </div>
-
     </footer>
-
 
     <script>
         const menuButton = document.querySelector(".mobile-menu");
         const navLinks = document.querySelector(".nav-links");
 
         if (menuButton && navLinks) {
-
             menuButton.addEventListener("click", () => {
-
-                const isOpen =
-                    navLinks.classList.toggle("open");
-
-                menuButton.classList.toggle(
-                    "open",
-                    isOpen
-                );
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    String(isOpen)
-                );
-
+                const isOpen = navLinks.classList.toggle("open");
+                menuButton.classList.toggle("open", isOpen);
+                menuButton.setAttribute("aria-expanded", String(isOpen));
             });
 
-            navLinks
-                .querySelectorAll("a")
-                .forEach((link) => {
-
-                    link.addEventListener("click", () => {
-
-                        navLinks.classList.remove("open");
-
-                        menuButton.classList.remove("open");
-
-                        menuButton.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                    });
-
+            navLinks.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("open");
+                    menuButton.classList.remove("open");
+                    menuButton.setAttribute("aria-expanded", "false");
                 });
-
+            });
         }
     </script>
 

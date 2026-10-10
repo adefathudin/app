@@ -1,330 +1,851 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kebijakan Privasi - Tebak Gambar Bahasa Arab</title>
+    <meta name="description"
+        content="Kebijakan Privasi resmi aplikasi Tebak Gambar Bahasa Arab. Dibuat untuk semua umur dengan komitmen perlindungan privasi anak dan keluarga sesuai Google Play Families Policy.">
+    <link rel="icon" type="image/png" href="assets/app-logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
-        * { box-sizing: border-box; }
-        body {
+        :root {
+            --primary: #1d6e4f;
+            --primary-dark: #124b35;
+            --primary-light: #eaf6ef;
+            --accent-coral: #e76f51;
+            --text-main: #1e2925;
+            --text-muted: #4e635a;
+            --bg-page: #f6f9f7;
+            --card-bg: #ffffff;
+            --border-color: rgba(29, 110, 79, 0.12);
+            --shadow-sm: 0 4px 12px rgba(20, 60, 44, 0.05);
+            --shadow-md: 0 12px 28px rgba(20, 60, 44, 0.08);
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 32px;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f4f4;
-            color: #333;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
             line-height: 1.8;
         }
-        .page {
-            max-width: 900px;
+
+        .container {
+            max-width: 980px;
             margin: 0 auto;
-            padding: 24px;
+            padding: 0 24px;
         }
-        header {
-            background: linear-gradient(135deg, #1d5b47 0%, #2d8659 100%);
-            color: white;
-            padding: 40px 24px;
-            text-align: center;
-            border-radius: 18px;
-            margin-bottom: 30px;
+
+        /* TOP NAVIGATION */
+        header.policy-header {
+            background: rgba(246, 249, 247, 0.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 16px 0;
         }
-        header h1 {
-            margin: 0 0 12px;
-            font-size: 2.2rem;
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
         }
-        header p {
-            margin: 0;
-            font-size: 1.1rem;
-            opacity: 0.95;
+
+        .back-home-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.2s ease, transform 0.2s ease;
         }
-        .back-link {
+
+        .back-home-link:hover {
+            color: var(--primary);
+            transform: translateX(-3px);
+        }
+
+        .brand-pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--primary-dark);
+        }
+
+        .brand-logo-small {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            object-fit: cover;
+        }
+
+        .btn-play-small {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 20px;
-            color: #1d5b47;
+            background: #0f172a;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 700;
             text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-play-small:hover {
+            background: #1e293b;
+            transform: translateY(-2px);
+        }
+
+        /* HERO HERO HEADER */
+        .policy-hero {
+            padding: 40px 0 28px;
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 48px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .badge-family {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(8px);
+            color: #d1fae5;
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 3.2vw, 2.7rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #d1fae5;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        .hero-meta-row {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 0.86rem;
+            color: #a7f3d0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* HIGHLIGHT CARDS */
+        .summary-cards-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 16px;
+            margin-bottom: 36px;
+        }
+
+        .summary-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .summary-icon {
+            font-size: 1.6rem;
+            background: var(--primary-light);
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .summary-text h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+        }
+
+        .summary-text p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+        }
+
+        /* MAIN POLICY CONTENT */
+        .content-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            margin-bottom: 48px;
+        }
+
+        /* TABLE OF CONTENTS */
+        .toc-box {
+            background: #f8faf9;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 36px;
+            border: 1px solid var(--border-color);
+        }
+
+        .toc-box h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 8px 16px;
+        }
+
+        .toc-list a {
+            text-decoration: none;
+            color: var(--primary);
+            font-size: 0.92rem;
             font-weight: 600;
             transition: color 0.2s;
         }
-        .back-link:hover {
-            color: #2d8659;
+
+        .toc-list a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
         }
-        .content {
-            background: white;
-            padding: 36px;
-            border-radius: 18px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+        /* POLICY TYPOGRAPHY */
+        .policy-section {
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #edf2ef;
         }
-        .last-updated {
-            background: #f0f7f3;
-            padding: 16px 20px;
-            border-left: 4px solid #2d8659;
-            border-radius: 8px;
-            margin-bottom: 28px;
-            font-size: 0.95rem;
-            color: #2d5c52;
+
+        .policy-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
-        h2 {
-            margin: 32px 0 16px;
-            font-size: 1.6rem;
-            color: #1d5b47;
-            border-bottom: 2px solid #a8d5ba;
-            padding-bottom: 10px;
+
+        h2.section-heading {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            letter-spacing: -0.01em;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        h2:first-of-type {
-            margin-top: 0;
+
+        h3.sub-heading {
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 20px 0 10px;
         }
-        h3 {
-            margin: 20px 0 12px;
-            font-size: 1.15rem;
-            color: #2d8659;
-        }
+
         p {
-            margin: 12px 0;
-            color: #555;
-            line-height: 1.9;
+            color: #374151;
+            margin-bottom: 14px;
+            font-size: 1rem;
         }
-        ul, ol {
-            margin: 12px 0;
+
+        ul,
+        ol {
             padding-left: 24px;
-            color: #555;
+            margin-bottom: 18px;
+            color: #374151;
         }
+
         li {
-            margin: 8px 0;
-            line-height: 1.7;
+            margin-bottom: 8px;
         }
+
         strong {
-            color: #1d5b47;
+            color: var(--primary-dark);
         }
-        .highlight-box {
-            background: linear-gradient(135deg, #f5fbf7 0%, #edf8f1 100%);
-            padding: 20px;
-            border-radius: 12px;
+
+        /* CALLOUT BOXES */
+        .notice-box {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            border-radius: 0 14px 14px 0;
+            padding: 18px 22px;
             margin: 20px 0;
-            border-left: 4px solid #2d8659;
         }
-        .highlight-box p {
+
+        .notice-box p {
             margin: 0;
-            color: #1d5b47;
+            color: #166534;
+            font-size: 0.95rem;
         }
-        footer {
-            margin-top: 40px;
-            padding-top: 24px;
-            border-top: 1px solid #e0e0e0;
+
+        .notice-badge {
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.78rem;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 4px;
+            color: #15803d;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.94rem;
+        }
+
+        .info-table th,
+        .info-table td {
+            border: 1px solid #e5e7eb;
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        .info-table th {
+            background: #f8faf9;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        /* CONTACT CARD */
+        .contact-box {
+            background: linear-gradient(135deg, #f0f9f4 0%, #e8f5ec 100%);
+            border: 1px solid rgba(29, 110, 79, 0.2);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin-top: 24px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .contact-item {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border: 1px solid rgba(29, 110, 79, 0.1);
+        }
+
+        .contact-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            margin-bottom: 4px;
+        }
+
+        .contact-val {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            word-break: break-all;
+        }
+
+        /* FOOTER */
+        footer.policy-footer {
+            background: #0f241a;
+            color: #9cb5aa;
+            padding: 40px 0;
             text-align: center;
-            color: #666;
             font-size: 0.9rem;
         }
-        footer p {
-            margin: 8px 0;
+
+        footer.policy-footer a {
+            color: #d1fae5;
+            text-decoration: none;
+            font-weight: 600;
         }
+
+        footer.policy-footer a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
-            .page { padding: 16px; }
-            .content { padding: 24px; }
-            header h1 { font-size: 1.6rem; }
-            h2 { font-size: 1.3rem; }
+            .hero-banner {
+                padding: 36px 20px;
+            }
+
+            .content-card {
+                padding: 28px 20px;
+            }
+
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="page">
-        <a href="index.html" class="back-link">← Kembali ke Beranda</a>
 
-        <header>
-            <h1>🔒 Kebijakan Privasi</h1>
-            <p>Tebak Gambar Bahasa Arab</p>
-        </header>
+    <!-- TOP NAVIGATION -->
+    <header class="policy-header">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="index.html" class="back-home-link" id="navBackHome">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                    <span>Kembali ke Beranda</span>
+                </a>
 
-        <div class="content">
-            <div class="last-updated">
-                <strong>Terakhir diperbarui:</strong> Oktober 2024
+                <a href="index.html" class="brand-pill">
+                    <img src="assets/app-logo.png" alt="Logo" class="brand-logo-small">
+                    <strong style="font-size: 0.95rem;">Tebak Gambar Arab</strong>
+                </a>
+
+                <a href="https://play.google.com/store/apps/details?id=com.adefathudin.tebakgambararab" target="_blank"
+                    rel="noopener noreferrer" class="btn-play-small" id="navPlayStore">
+                    <span>Google Play</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                    </svg>
+                </a>
             </div>
-
-            <h2>1. Pengenalan</h2>
-            <p>
-                Selamat datang di <strong>Tebak Gambar Bahasa Arab</strong> (selanjutnya disebut "Aplikasi"). Kami berkomitmen untuk melindungi privasi pengguna kami. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda.
-            </p>
-
-            <h2>2. Informasi yang Kami Kumpulkan</h2>
-            <p>Kami dapat mengumpulkan informasi berikut:</p>
-            
-            <h3>a. Informasi yang Anda Berikan Secara Langsung</h3>
-            <ul>
-                <li>Nama pengguna dan email (jika diperlukan untuk registrasi)</li>
-                <li>Informasi profil pengguna</li>
-                <li>Data permainan dan skor yang Anda capai</li>
-                <li>Feedback dan pertanyaan yang Anda kirimkan</li>
-            </ul>
-
-            <h3>b. Informasi yang Dikumpulkan Secara Otomatis</h3>
-            <ul>
-                <li>Data perangkat (model, sistem operasi, versi aplikasi)</li>
-                <li>Log akses aplikasi</li>
-                <li>Statistik penggunaan aplikasi</li>
-                <li>Informasi tautan yang Anda klik di dalam aplikasi</li>
-                <li>Durasi dan frekuensi penggunaan</li>
-            </ul>
-
-            <h3>c. Informasi Lokasi</h3>
-            <p>
-                Aplikasi ini tidak memerlukan akses ke lokasi Anda secara real-time. Namun, kami mungkin mengumpulkan informasi lokasi umum berdasarkan alamat IP untuk keperluan analitik dan penyajian konten yang relevan.
-            </p>
-
-            <h2>3. Bagaimana Kami Menggunakan Informasi Anda</h2>
-            <p>Kami menggunakan informasi yang kami kumpulkan untuk:</p>
-            <ul>
-                <li>Menyediakan, memelihara, dan meningkatkan layanan aplikasi</li>
-                <li>Mempersonalisasi pengalaman pengguna dan konten yang ditampilkan</li>
-                <li>Mengirimkan notifikasi tentang pembaruan aplikasi atau fitur baru</li>
-                <li>Menganalisis penggunaan aplikasi untuk meningkatkan kualitas dan fitur</li>
-                <li>Mencegah penipuan dan melindungi keamanan pengguna</li>
-                <li>Mematuhi persyaratan hukum yang berlaku</li>
-                <li>Menghubungi Anda untuk dukungan pelanggan atau masalah teknis</li>
-                <li>Memahami preferensi pengguna dan tren penggunaan</li>
-            </ul>
-
-            <h2>4. Berbagi Data Dengan Pihak Ketiga</h2>
-            <p>
-                Kami <strong>tidak menjual, menyewakan, atau membagikan informasi pribadi Anda</strong> kepada pihak ketiga tanpa persetujuan eksplisit Anda, kecuali:
-            </p>
-            <ul>
-                <li>Untuk penyedia layanan yang membantu kami menjalankan aplikasi (dengan perjanjian kerahasiaan yang ketat)</li>
-                <li>Untuk mematuhi keharusan hukum atau keputusan pengadilan</li>
-                <li>Untuk melindungi hak, privasi, keamanan kami atau pengguna lain</li>
-                <li>Dalam hal penggabungan atau akuisisi perusahaan</li>
-            </ul>
-
-            <h2>5. Keamanan Data</h2>
-            <p>
-                Kami menggunakan berbagai teknologi keamanan untuk melindungi informasi pribadi Anda:
-            </p>
-            <ul>
-                <li>Enkripsi data dalam transit dan saat istirahat</li>
-                <li>Kontrol akses yang ketat ke data pengguna</li>
-                <li>Audit keamanan reguler</li>
-                <li>Penyimpanan aman di server yang terlindungi dan tersertifikasi</li>
-                <li>Protokol keamanan berlapis untuk mencegah akses tidak sah</li>
-            </ul>
-            <p>
-                Meskipun kami mengambil langkah-langkah yang masuk akal, tidak ada sistem yang 100% aman. Kami tidak dapat menjamin keamanan mutlak data Anda, namun kami terus meningkatkan protokol keamanan kami.
-            </p>
-
-            <h2>6. Penyimpanan Data</h2>
-            <p>
-                Kami menyimpan data Anda selama Anda menggunakan aplikasi dan untuk periode waktu yang wajar setelahnya untuk keperluan bisnis yang sah, termasuk:
-            </p>
-            <ul>
-                <li>Pemeliharaan rekam jejak akun Anda</li>
-                <li>Kepatuhan terhadap kewajiban hukum</li>
-                <li>Analisis historis untuk perbaikan layanan</li>
-            </ul>
-            <p>
-                Anda dapat meminta penghapusan data pribadi Anda kapan saja melalui pengaturan aplikasi atau dengan menghubungi kami di email support.
-            </p>
-
-            <h2>7. Hak Pengguna</h2>
-            <p>
-                Anda memiliki hak untuk:
-            </p>
-            <ul>
-                <li>Mengakses informasi pribadi yang kami miliki tentang Anda</li>
-                <li>Meminta koreksi informasi yang tidak akurat atau tidak lengkap</li>
-                <li>Menghapus akun dan data pribadi Anda</li>
-                <li>Mengekspor data pribadi Anda dalam format yang dapat dibaca mesin</li>
-                <li>Menarik persetujuan Anda atas pemrosesan data kapan saja</li>
-                <li>Menolak komunikasi pemasaran</li>
-            </ul>
-            <p>
-                Untuk menggunakan hak-hak ini, silakan hubungi kami menggunakan informasi kontak di bagian akhir kebijakan ini.
-            </p>
-
-            <h2>8. Iklan dan Analytics</h2>
-            <p>
-                Aplikasi kami menggunakan layanan analytics pihak ketiga (seperti Google Analytics) untuk memahami cara pengguna menggunakan aplikasi kami. Penyedia layanan ini dapat mengumpulkan informasi anonim tentang aktivitas Anda di aplikasi.
-            </p>
-            <p>
-                Kami dapat menampilkan iklan yang dipersonalisasi berdasarkan informasi yang kami kumpulkan. Anda dapat mengelola preferensi iklan di:
-            </p>
-            <ul>
-                <li>Pengaturan perangkat Anda</li>
-                <li>Pengaturan aplikasi</li>
-                <li>Pusat privasi Google (untuk pengguna Android)</li>
-            </ul>
-
-            <h2>9. Privasi Anak-Anak</h2>
-            <p>
-                Aplikasi kami dirancang untuk anak-anak dan keluarga. Kami tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak di bawah 13 tahun tanpa persetujuan orang tua atau wali.
-            </p>
-            <p>
-                <strong>Jika Anda adalah orang tua atau wali:</strong> Kami menyarankan Anda memantau penggunaan aplikasi oleh anak Anda dan mendiskusikan privasi online dengan mereka. Jika Anda percaya kami telah mengumpulkan informasi dari anak di bawah 13 tahun tanpa persetujuan, hubungi kami segera dan kami akan menghapusnya.
-            </p>
-
-            <h2>10. Tautan Eksternal</h2>
-            <p>
-                Aplikasi kami mungkin berisi tautan ke situs web atau layanan pihak ketiga, termasuk Google Play Store. Kami tidak bertanggung jawab atas praktik privasi situs web atau layanan tersebut. Kami menyarankan Anda meninjau kebijakan privasi mereka sebelum memberikan informasi pribadi.
-            </p>
-
-            <h2>11. Cookie dan Teknologi Serupa</h2>
-            <p>
-                Kami menggunakan cookie dan teknologi serupa (seperti pixel tracking) untuk:
-            </p>
-            <ul>
-                <li>Mengingat preferensi Anda</li>
-                <li>Memahami cara Anda menggunakan aplikasi</li>
-                <li>Menampilkan iklan yang relevan</li>
-            </ul>
-            <p>
-                Anda dapat mengatur perangkat Anda untuk menolak cookie, namun ini mungkin mempengaruhi fungsionalitas aplikasi.
-            </p>
-
-            <h2>12. Perubahan Kebijakan Privasi</h2>
-            <p>
-                Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu untuk mencerminkan perubahan praktik kami, perkembangan teknologi, atau peraturan yang berlaku. Kami akan memberitahu Anda tentang perubahan signifikan dengan:
-            </p>
-            <ul>
-                <li>Mengirimkan email pemberitahuan</li>
-                <li>Menampilkan pemberitahuan di aplikasi</li>
-                <li>Memperbarui tanggal "Terakhir diperbarui" di halaman ini</li>
-            </ul>
-            <p>
-                Penggunaan berkelanjutan atas aplikasi setelah perubahan kebijakan berarti Anda menerima perubahan tersebut.
-            </p>
-
-            <h2>13. Hubungi Kami</h2>
-            <p>
-                Jika Anda memiliki pertanyaan, kekhawatiran, atau permintaan tentang Kebijakan Privasi kami, silakan hubungi kami:
-            </p>
-            <ul>
-                <li><strong>Email:</strong> support@tebakgambarbahasa.app</li>
-                <li><strong>Aplikasi:</strong> <a href="https://play.google.com/store/apps/details?id=com.adefathudin.tebakgambararab" target="_blank" style="color: #2d8659; font-weight: 600;">Tebak Gambar Bahasa Arab di Google Play</a></li>
-                <li><strong>Formulir Kontak:</strong> Tersedia di dalam aplikasi</li>
-            </ul>
-            <p>
-                Kami berkomitmen untuk merespons permintaan Anda dalam waktu 30 hari kerja.
-            </p>
-
-            <h2>14. Kepatuhan Hukum</h2>
-            <p>
-                Kebijakan Privasi ini mematuhi:
-            </p>
-            <ul>
-                <li>Undang-Undang Perlindungan Data Pribadi (Indonesia)</li>
-                <li>GDPR (General Data Protection Regulation - untuk pengguna di Eropa)</li>
-                <li>COPPA - Children's Online Privacy Protection Act (untuk pengguna di AS)</li>
-                <li>Peraturan privasi data lokal yang berlaku di berbagai yurisdiksi</li>
-            </ul>
-
-            <div class="highlight-box">
-                <p>
-                    ✓ <strong>Privasi Anda adalah prioritas utama kami.</strong> Kami berkomitmen untuk menjaga kerahasiaan data Anda dan memberikan transparansi penuh tentang bagaimana data digunakan. Terima kasih telah mempercayai Tebak Gambar Bahasa Arab!
-                </p>
-            </div>
-
-            <footer>
-                <p><strong>Tebak Gambar Bahasa Arab</strong></p>
-                <p>Game Edukasi Kosakata Bahasa Arab yang Seru & Interaktif</p>
-                <p>&copy; 2024 Tebak Gambar Bahasa Arab. Semua hak cipta dilindungi.</p>
-            </footer>
         </div>
-    </div>
+    </header>
+
+    <!-- HERO HEADER -->
+    <section class="policy-hero">
+        <div class="container">
+            <div class="hero-banner">
+                <div class="badge-family">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    <span>Google Play Families Policy & COPPA Compliant</span>
+                </div>
+                <h1 class="hero-title">Kebijakan Privasi Resmi</h1>
+                <p class="hero-subtitle">
+                    Aplikasi <strong>Tebak Gambar Bahasa Arab</strong> dibuat untuk semua umur. Kami berdedikasi menjaga
+                    privasi, keamanan data anak, dan ketenangan seluruh keluarga.
+                </p>
+                <div class="hero-meta-row">
+                    <span>📅 Terakhir Diperbarui: 10 Oktober 2026</span>
+                    <span>•</span>
+                    <span>👨‍💻 Pengembang: Ade Fathudin</span>
+                    <span>•</span>
+                    <span>🎯 Rating: Semua Umur (All Ages / 3+)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <main class="container">
+        <!-- SUMMARY CARDS -->
+        <div class="summary-cards-section">
+            <div class="summary-card">
+                <div class="summary-icon">👨‍👩‍👧‍👦</div>
+                <div class="summary-text">
+                    <h4>Untuk Semua Umur</h4>
+                    <p>Konten edukatif aman tanpa unsur kekerasan, ramah anak dan keluarga.</p>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">🛡️</div>
+                <div class="summary-text">
+                    <h4>Tanpa Data Pribadi</h4>
+                    <p>Tidak meminta registrasi, nama, email, nomor HP, kontak, atau GPS.</p>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">📶</div>
+                <div class="summary-text">
+                    <h4>100% Offline First</h4>
+                    <p>Skor dan progres belajar tersimpan secara lokal di ponsel Anda.</p>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">📢</div>
+                <div class="summary-text">
+                    <h4>Iklan Ramah Keluarga</h4>
+                    <p>Iklan AdMob disaring sesuai standar Google Play Families (non-personalized).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN POLICY CARD -->
+        <div class="content-card">
+            <!-- Table of Contents -->
+            <nav class="toc-box">
+                <h3>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="8" y1="6" x2="21" y2="6" />
+                        <line x1="8" y1="12" x2="21" y2="12" />
+                        <line x1="8" y1="18" x2="21" y2="18" />
+                        <line x1="3" y1="6" x2="3.01" y2="6" />
+                        <line x1="3" y1="12" x2="3.01" y2="12" />
+                        <line x1="3" y1="18" x2="3.01" y2="18" />
+                    </svg>
+                    Daftar Isi Kebijakan Privasi
+                </h3>
+                <ul class="toc-list">
+                    <li><a href="#pendahuluan">1. Pendahuluan & Klasifikasi Semua Umur</a></li>
+                    <li><a href="#data-pribadi">2. Data Pribadi yang Kami Kumpulkan</a></li>
+                    <li><a href="#penyimpanan-lokal">3. Penyimpanan Data & Progres Belajar</a></li>
+                    <li><a href="#iklan-admob">4. Kebijakan Iklan Google AdMob</a></li>
+                    <li><a href="#privasi-anak">5. Perlindungan Privasi Anak & COPPA</a></li>
+                    <li><a href="#izin-perangkat">6. Izin Akses Perangkat (Permissions)</a></li>
+                    <li><a href="#layanan-pihak-ketiga">7. Layanan Pihak Ketiga</a></li>
+                    <li><a href="#hak-pengguna">8. Hak Pengguna & Orang Tua</a></li>
+                    <li><a href="#keamanan">9. Keamanan Data</a></li>
+                    <li><a href="#perubahan">10. Perubahan Kebijakan</a></li>
+                    <li><a href="#kontak">11. Kontak Pengembang</a></li>
+                </ul>
+            </nav>
+
+            <!-- Section 1 -->
+            <section class="policy-section" id="pendahuluan">
+                <h2 class="section-heading">1. Pendahuluan & Klasifikasi Semua Umur</h2>
+                <p>
+                    Kebijakan Privasi ini berlaku untuk aplikasi seluler <strong>Tebak Gambar Bahasa Arab</strong> (nama
+                    paket: <code>com.adefathudin.tebakgambararab</code>) yang dikembangkan oleh <strong>Ade
+                        Fathudin</strong>.
+                </p>
+                <p>
+                    Aplikasi ini dirancang sebagai sarana edukasi kuis dan pengenalan kosakata (mufrodat) bahasa Arab
+                    bagi <strong>semua umur (anak-anak, pelajar, santri, orang tua, dan masyarakat umum)</strong>. Kami
+                    berkomitmen penuh untuk menciptakan lingkungan digital yang aman, bermanfaat, dan sepenuhnya
+                    menghormati hak privasi pengguna kami.
+                </p>
+                <div class="notice-box">
+                    <span class="notice-badge">Komitmen Keamanan Keluarga</span>
+                    <p>Aplikasi ini tunduk pada pedoman <strong>Google Play Families Policy</strong>, Undang-Undang
+                        Perlindungan Data Pribadi (UU PDP No. 27 Tahun 2022 Indonesia), dan Children's Online Privacy
+                        Protection Act (COPPA).</p>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="policy-section" id="data-pribadi">
+                <h2 class="section-heading">2. Data Pribadi yang Kami Kumpulkan</h2>
+                <p>
+                    Sebagai aplikasi edukasi offline-first, <strong>kami TIDAK mengumpulkan informasi pribadi yang dapat
+                        mengidentifikasi Anda atau anak Anda secara langsung (Personally Identifiable Information /
+                        PII)</strong>.
+                </p>
+                <p>Secara rinci:</p>
+                <ul>
+                    <li><strong>Tidak ada Registrasi Akun:</strong> Anda dapat memainkan seluruh kuis dan kategori tanpa
+                        perlu membuat akun, login, atau memasukkan email.</li>
+                    <li><strong>Tidak Mengumpulkan Identitas Diri:</strong> Kami tidak meminta nama lengkap, usia, jenis
+                        kelamin, alamat rumah, nomor telepon, atau identitas kependudukan.</li>
+                    <li><strong>Tidak Mengakses Data Sensitif:</strong> Aplikasi tidak meminta akses ke kontak telepon,
+                        galeri foto pribadi, rekaman mikrofon, maupun kamera.</li>
+                    <li><strong>Tidak Melacak Lokasi GPS:</strong> Aplikasi tidak memerlukan dan tidak pernah
+                        mengumpulkan data lokasi geografis presisi (GPS).</li>
+                </ul>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="policy-section" id="penyimpanan-lokal">
+                <h2 class="section-heading">3. Penyimpanan Data & Progres Belajar (Local Storage)</h2>
+                <p>
+                    Semua progres pembelajaran—seperti skor kuis, perolehan bintang, status kosakata yang sudah
+                    dikuasai, dan preferensi pengaturan suara—hanya disimpan <strong>secara lokal di memori internal
+                        perangkat pengguna</strong> (menggunakan teknologi Android <em>SharedPreferences</em>).
+                </p>
+                <p>
+                    Data tersebut tidak dikirimkan, tidak disinkronisasikan, dan tidak disimpan ke server cloud
+                    eksternal milik kami. Jika pengguna menghapus aplikasi atau membersihkan data aplikasi (<em>Clear
+                        App Data</em>) melalui pengaturan perangkat Android, data progres belajar tersebut akan terhapus
+                    secara otomatis dan permanen dari perangkat.
+                </p>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="policy-section" id="iklan-admob">
+                <h2 class="section-heading">4. Kebijakan Iklan Google AdMob (Families Compliant)</h2>
+                <p>
+                    Aplikasi ini dapat menampilkan iklan melalui jaringan periklanan resmi <strong>Google AdMob (Google
+                        Mobile Ads SDK)</strong> untuk mendukung kelangsungan pemeliharaan dan pengembangan aplikasi
+                    secara gratis bagi pengguna.
+                </p>
+                <p>
+                    Mengingat target audiens aplikasi mencakup <strong>semua umur dan anak-anak</strong>, implementasi
+                    iklan kami dikonfigurasikan secara ketat sesuai dengan <strong>Google Play Families Policy</strong>:
+                </p>
+                <ul>
+                    <li><strong>Iklan Ramah Keluarga (General Audience / Rating G):</strong> Filter kategori iklan
+                        diaktifkan sehingga materi iklan yang tayang aman untuk ditonton oleh anak-anak dan seluruh
+                        anggota keluarga, serta bebas dari konten dewasa, perjudian, alkohol, tembakau, atau konten
+                        sensitif lainnya.</li>
+                    <li><strong>Iklan Non-Personalisasi (Non-Personalized Ads / NPA):</strong> Permintaan iklan diatur
+                        agar tidak menggunakan profiling perilaku, riwayat penjelajahan, minat (interest-based), atau
+                        pelacakan identifikasi personal anak.</li>
+                    <li><strong>Kepatuhan COPPA:</strong> Permintaan iklan dikonfigurasi dengan flag
+                        <code>tagForChildDirectedTreatment</code> dan <code>tagForUnderAgeOfConsent</code> sesuai
+                        standar Google Play.</li>
+                    <li><strong>Format Iklan yang Aman:</strong> Iklan tidak mengganggu proses belajar secara agresif
+                        dan tidak menggunakan teknik manipulatif yang membingungkan anak-anak.</li>
+                </ul>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="policy-section" id="privasi-anak">
+                <h2 class="section-heading">5. Perlindungan Privasi Anak-Anak (Children's Privacy & COPPA)</h2>
+                <p>
+                    Kami menyadari pentingnya melindungi privasi anak-anak secara ekstra saat berinteraksi dengan
+                    teknologi seluler:
+                </p>
+                <ul>
+                    <li>Kami tidak dengan sengaja meminta atau mengumpulkan data pribadi dari anak di bawah usia 13
+                        tahun (atau batas usia yang ditetapkan oleh undang-undang di yurisdiksi Anda).</li>
+                    <li>Aplikasi ini tidak memiliki fitur obrolan (chat), jejaring sosial, maupun fitur publik yang
+                        memungkinkan anak membagikan informasi diri ke orang lain.</li>
+                    <li>Jika ada orang tua atau wali yang meyakini bahwa data anak telah dikirimkan secara tidak
+                        sengaja, silakan hubungi kami agar kami dapat segera mengambil langkah tindak lanjut yang
+                        diperlukan.</li>
+                </ul>
+            </section>
+
+            <!-- Section 6 -->
+            <section class="policy-section" id="izin-perangkat">
+                <h2 class="section-heading">6. Izin Akses Perangkat (Device Permissions)</h2>
+                <p>
+                    Aplikasi <strong>Tebak Gambar Bahasa Arab</strong> hanya meminta izin perangkat standar Android yang
+                    sangat minimal untuk operasional aplikasi:
+                </p>
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>Izin (Permission)</th>
+                            <th>Fungsi & Keperluan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>INTERNET</code></td>
+                            <td>Diperlukan untuk memuat iklan AdMob dan memperbarui informasi Google Play Store.</td>
+                        </tr>
+                        <tr>
+                            <td><code>ACCESS_NETWORK_STATE</code></td>
+                            <td>Mengecek ketersediaan koneksi internet untuk mengoptimalkan pemuatan layanan iklan
+                                secara efisien.</td>
+                        </tr>
+                        <tr>
+                            <td><code>WAKE_LOCK</code> / <code>VIBRATE</code> (Opsional)</td>
+                            <td>Memberikan getaran halus (haptic feedback) saat tombol kuis ditekan guna meningkatkan
+                                interaktivitas.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    Kami <strong>tidak pernah meminta</strong> izin berbahaya (<em>dangerous permissions</em>) seperti
+                    <code>READ_EXTERNAL_STORAGE</code>, <code>CAMERA</code>, <code>RECORD_AUDIO</code>,
+                    <code>READ_CONTACTS</code>, atau <code>ACCESS_FINE_LOCATION</code>.
+                </p>
+            </section>
+
+            <!-- Section 7 -->
+            <section class="policy-section" id="layanan-pihak-ketiga">
+                <h2 class="section-heading">7. Layanan Pihak Ketiga</h2>
+                <p>
+                    Aplikasi ini menggunakan layanan pihak ketiga terpercaya yang tunduk pada kebijakan privasi mereka
+                    masing-masing:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Google Play Services:</strong> Menyediakan infrastruktur dasar platform Android.
+                        Kebijakan Privasi: <a href="https://policies.google.com/privacy" target="_blank"
+                            rel="noopener noreferrer" style="color: var(--primary);">Google Privacy Policy</a>.
+                    </li>
+                    <li>
+                        <strong>Google AdMob:</strong> Penyedia jaringan periklanan ramah keluarga. Kebijakan Privasi:
+                        <a href="https://support.google.com/admob/answer/6128543" target="_blank"
+                            rel="noopener noreferrer" style="color: var(--primary);">AdMob Policy Overview</a>.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Section 8 -->
+            <section class="policy-section" id="hak-pengguna">
+                <h2 class="section-heading">8. Hak Pengguna & Panduan Orang Tua</h2>
+                <p>
+                    Pengguna dan orang tua memiliki kendali penuh atas penggunaan aplikasi ini:
+                </p>
+                <ul>
+                    <li><strong>Menghapus Data Belajar:</strong> Anda dapat menghapus riwayat belajar kapan saja dengan
+                        membuka menu <em>Pengaturan Telepon > Aplikasi > Tebak Gambar Bahasa Arab > Hapus Data (Clear
+                            Data)</em>.</li>
+                    <li><strong>Menghapus Aplikasi:</strong> Meng-uninstall aplikasi akan menghapus seluruh data lokal
+                        yang tersimpan di perangkat tanpa meninggalkan jejak di server kami.</li>
+                    <li><strong>Kontrol Pengiklanan:</strong> Anda dapat menyetel ulang Advertising ID atau
+                        menonaktifkan personalisasi iklan di menu pengaturan privasi perangkat Android Anda.</li>
+                </ul>
+            </section>
+
+            <!-- Section 9 -->
+            <section class="policy-section" id="keamanan">
+                <h2 class="section-heading">9. Keamanan Data</h2>
+                <p>
+                    Meskipun aplikasi ini beroperasi secara offline dan tidak mengelola database server untuk data
+                    pengguna, kami tetap menerapkan praktik terbaik dalam pengodean Android (seperti ProGuard/R8
+                    obfuscation dan enkripsi protokol HTTPS standar untuk komunikasi SDK Google) guna melindungi
+                    integritas aplikasi dari manipulasi pihak luar.
+                </p>
+            </section>
+
+            <!-- Section 10 -->
+            <section class="policy-section" id="perubahan">
+                <h2 class="section-heading">10. Perubahan pada Kebijakan Privasi Ini</h2>
+                <p>
+                    Kami dapat memperbarui Kebijakan Privasi ini secara berkala untuk mematuhi regulasi
+                    perundang-undangan terbaru, perubahan kebijakan Google Play Store, atau penambahan fitur aplikasi di
+                    masa mendatang.
+                </p>
+                <p>
+                    Setiap pembaruan akan dipublikasikan pada halaman web ini dengan memperbarui tanggal "Terakhir
+                    Diperbarui" di bagian atas halaman. Kami mendorong pengguna dan orang tua untuk meninjau halaman ini
+                    secara berkala.
+                </p>
+            </section>
+
+            <!-- Section 11 -->
+            <section class="policy-section" id="kontak">
+                <h2 class="section-heading">11. Kontak & Informasi Pengembang</h2>
+                <p>
+                    Jika Anda memiliki pertanyaan, saran, atau memerlukan informasi lebih lanjut mengenai Kebijakan
+                    Privasi ini, silakan menghubungi pengembang melalui kanal resmi berikut:
+                </p>
+
+                <div class="contact-box">
+                    <h3 style="color: var(--primary-dark); font-size: 1.15rem; margin-bottom: 6px;">Detail Kontak
+                        Pengembang</h3>
+                    <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 0;">Kami siap membantu dan
+                        menjawab pertanyaan Anda seputar perlindungan privasi.</p>
+
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <div class="contact-label">Nama Pengembang</div>
+                            <div class="contact-val">Ade Fathudin</div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-label">Paket Aplikasi</div>
+                            <div class="contact-val">com.adefathudin.tebakgambararab</div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-label">Google Play Store</div>
+                            <div class="contact-val">
+                                <a href="https://play.google.com/store/apps/details?id=com.adefathudin.tebakgambararab"
+                                    target="_blank" rel="noopener noreferrer"
+                                    style="color: var(--primary); text-decoration: none;">Buka Halaman Aplikasi ↗</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-label">Email Dukungan</div>
+                            <div class="contact-val">
+                                <a href="mailto:aftissoftware@gmail.com"
+                                    style="color: var(--primary); text-decoration: none;">adefathudin.dev@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="policy-footer">
+        <div class="container">
+            <p style="margin-bottom: 8px;"><strong>Tebak Gambar Bahasa Arab</strong> • Game Edukasi Mufrodat untuk Semua
+                Umur</p>
+            <p style="margin-bottom: 12px; color: #6ee7b7;">Dikembangkan oleh Ade Fathudin &copy; 2026. Hak Cipta
+                Dilindungi.</p>
+            <p>
+                <a href="index.html">← Kembali ke Beranda Aplikasi</a>
+            </p>
+        </div>
+    </footer>
+
 </body>
+
 </html>

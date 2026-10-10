@@ -3,377 +3,944 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tebak Gambar Bahasa Arab - Game Edukasi Kosakata</title>
+    <title>Tebak Gambar Bahasa Arab - Game Edukasi Kosakata untuk Semua Umur</title>
+    <meta name="description" content="Tebak Gambar Bahasa Arab adalah game edukasi interaktif ramah keluarga dan anak-anak untuk belajar kosakata Arab secara visual, offline, dan menyenangkan.">
+    <link rel="icon" type="image/png" href="assets/app-logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@700&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; }
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f4f4;
-            color: #1f2d2a;
-            line-height: 1.6;
+        :root {
+            --primary: #1d6e4f;
+            --primary-dark: #124b35;
+            --primary-light: #eaf6ef;
+            --primary-tint: #c5e7d5;
+            --accent-coral: #e76f51;
+            --accent-coral-hover: #d5593b;
+            --accent-gold: #f4a261;
+            --text-main: #192a24;
+            --text-muted: #536b62;
+            --bg-page: #f6f9f7;
+            --card-bg: #ffffff;
+            --border-color: rgba(29, 110, 79, 0.1);
+            --shadow-sm: 0 4px 12px rgba(20, 60, 44, 0.05);
+            --shadow-md: 0 12px 28px rgba(20, 60, 44, 0.08);
+            --shadow-lg: 0 24px 48px rgba(20, 60, 44, 0.12);
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 32px;
         }
-        .page {
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 24px;
+            padding: 0 24px;
         }
-        .hero {
-            background: linear-gradient(135deg, #b9d9c1 0%, #dfeee3 100%);
-            border-radius: 24px;
-            padding: 30px 28px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+
+        /* HEADER / NAVBAR */
+        header.site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(246, 249, 247, 0.88);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
         }
-        .topbar {
+
+        .navbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 12px;
-            margin-bottom: 18px;
-            color: #1d5b47;
-            font-weight: 600;
+            padding: 16px 0;
         }
-        .brand {
+
+        .brand-link {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 1.1rem;
-        }
-        .logo {
-            width: 42px;
-            height: 42px;
-            border-radius: 14px;
-            background: linear-gradient(135deg, #7bba8e, #9ad3a8);
-            display: grid;
-            place-items: center;
-            font-size: 1.4rem;
-        }
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.3fr 0.9fr;
-            gap: 24px;
-            align-items: center;
-        }
-        h1 {
-            margin: 0 0 12px;
-            font-size: clamp(2rem, 4vw, 3rem);
-            line-height: 1.1;
-            color: #1a4f3e;
-        }
-        .subtitle {
-            font-size: 1.15rem;
-            color: #2b5d4d;
-            margin-bottom: 18px;
-        }
-        .description {
-            margin-bottom: 18px;
-            color: #355c51;
-            font-size: 1rem;
-        }
-        .cta-row {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 18px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 14px 24px;
-            border-radius: 999px;
-            font-weight: 700;
+            gap: 14px;
             text-decoration: none;
-            transition: transform 0.2s ease;
+            color: var(--text-main);
         }
-        .btn:hover { transform: translateY(-1px); }
-        .btn-primary {
-            background: linear-gradient(135deg, #2d8b5e, #1c6d4d);
-            color: white;
-        }
-        .btn-secondary {
-            background: rgba(255,255,255,0.65);
-            color: #1a4f3e;
-            border: 1px solid rgba(26,79,62,0.12);
-        }
-        .mockup {
-            background: rgba(255,255,255,0.22);
-            border-radius: 28px;
-            padding: 24px;
-            min-height: 360px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .phone {
-            width: 260px;
-            background: #f6f3ee;
-            border-radius: 28px;
-            border: 8px solid #1d1d1d;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.13);
-            overflow: hidden;
-        }
-        .statusbar {
-            background: #f6f3ee;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 12px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #222;
-        }
-        .screen {
-            background: #f7efe4;
-            padding: 16px 12px 20px;
-        }
-        .greeting {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 14px;
-            font-weight: 700;
-        }
-        .info-badge {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: #90d0a2;
-            display: grid;
-            place-items: center;
-            font-weight: 700;
-            color: #1b5f46;
-        }
-        .stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-bottom: 16px;
-        }
-        .stat-card {
-            background: #eaf6ee;
+
+        .brand-logo-img {
+            width: 46px;
+            height: 46px;
             border-radius: 14px;
-            padding: 12px;
-            min-height: 70px;
+            box-shadow: 0 6px 14px rgba(29, 110, 79, 0.18);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-link:hover .brand-logo-img {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .brand-text-group {
             display: flex;
             flex-direction: column;
-            justify-content: center;
         }
-        .stat-card strong {
-            font-size: 1.1rem;
+
+        .brand-name {
+            font-weight: 800;
+            font-size: 1.15rem;
+            color: var(--primary-dark);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
         }
-        .study-panel {
-            background: #d5ebd4;
-            border-radius: 18px;
-            padding: 16px 12px;
-            margin-bottom: 16px;
-            text-align: center;
+
+        .brand-tag {
+            font-size: 0.76rem;
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
-        .arabic-word {
-            font-size: 2.3rem;
-            margin-top: 8px;
-            font-family: 'Tahoma', 'Arial', sans-serif;
-            color: #163f39;
-        }
-        .play-box {
-            background: #ef8b73;
-            color: #fff;
-            border-radius: 18px;
-            padding: 16px 12px;
+
+        .nav-links {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 18px;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-header-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: #ffffff !important;
+            padding: 10px 20px;
+            border-radius: 999px;
             font-weight: 700;
+            box-shadow: 0 4px 14px rgba(29, 110, 79, 0.25);
+            transition: all 0.25s ease;
         }
-        .play-btn {
-            width: 42px;
-            height: 42px;
+
+        .btn-header-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(29, 110, 79, 0.35);
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            padding: 48px 0 64px;
+            position: relative;
+        }
+
+        .hero-banner {
+            background: linear-gradient(145deg, #cbe5d4 0%, #dff0e4 45%, #f2f8f4 100%);
+            border-radius: var(--radius-lg);
+            padding: 56px 48px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(231, 111, 81, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .age-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 20px;
+            border: 1px solid rgba(29, 110, 79, 0.15);
+        }
+
+        .age-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
             border-radius: 50%;
-            background: rgba(255,255,255,0.9);
-            color: #ef8b73;
+            display: inline-block;
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--primary-dark);
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+        }
+
+        .hero-title span.highlight {
+            color: var(--accent-coral);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .hero-bullets {
             display: grid;
-            place-items: center;
-            font-size: 1.1rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 18px;
+            margin-bottom: 32px;
         }
-        .categories {
-            margin-top: 32px;
-            padding-top: 24px;
-        }
-        .categories h2 {
-            margin: 0 0 20px;
-            color: #204f44;
-            font-size: clamp(1.6rem, 2vw, 2.2rem);
-        }
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 18px;
-        }
-        .card {
-            background: #fff;
-            border-radius: 18px;
-            padding: 18px;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.04);
-            border: 1px solid rgba(0,0,0,0.03);
-        }
-        .card-header {
+
+        .hero-bullet-item {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 10px;
+            font-size: 0.94rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .bullet-icon {
+            width: 24px;
+            height: 24px;
+            background: #ffffff;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            flex-shrink: 0;
+        }
+
+        /* CTA BUTTONS */
+        .cta-group {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .btn-playstore {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: #0f172a;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 16px;
+            text-decoration: none;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+            transition: all 0.25s ease;
+        }
+
+        .btn-playstore:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.35);
+            background: #020617;
+        }
+
+        .playstore-icon {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        .playstore-text-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .playstore-sub {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #cbd5e1;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .playstore-main {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+            margin-top: 2px;
+        }
+
+        .btn-secondary-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.85);
+            color: var(--primary-dark);
+            padding: 14px 24px;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: 1px solid rgba(29, 110, 79, 0.15);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.25s ease;
+        }
+
+        .btn-secondary-link:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+            color: var(--primary);
+        }
+
+        /* HERO DEVICE MOCKUP */
+        .mockup-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .mockup-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.4s ease;
+        }
+
+        .mockup-wrapper:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        .app-mockup-img {
+            display: block;
+            width: 100%;
+            max-width: 310px;
+            height: auto;
+            /* Transparent PNG drop-shadow outlines the phone shape naturally */
+            filter: drop-shadow(0 24px 38px rgba(18, 75, 53, 0.22));
+            transition: filter 0.4s ease;
+        }
+
+        .mockup-wrapper:hover .app-mockup-img {
+            filter: drop-shadow(0 32px 50px rgba(18, 75, 53, 0.32));
+        }
+
+        /* Clean feature highlights pill below the mockup */
+        .mockup-features-strip {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        .mockup-chip {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(29, 110, 79, 0.15);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            box-shadow: 0 4px 10px rgba(20, 60, 44, 0.05);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* SECTION HEADINGS */
+        .section-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 48px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 6px 14px;
+            border-radius: 999px;
             margin-bottom: 12px;
         }
-        .emoji {
+
+        .section-title {
+            font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+            font-weight: 800;
+            color: var(--primary-dark);
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+        }
+
+        /* CATEGORIES SHOWCASE */
+        .categories-section {
+            padding: 60px 0;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .cat-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(29, 110, 79, 0.3);
+        }
+
+        .cat-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .cat-card-icon {
             width: 52px;
             height: 52px;
             border-radius: 14px;
-            background: #f0efe8;
-            display: grid;
-            place-items: center;
-            font-size: 1.8rem;
+            background: #f5f5f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
         }
-        .stars {
-            color: #f3b84f;
-            letter-spacing: 1px;
+
+        .cat-card-stars {
+            color: #fbbf24;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+        }
+
+        .cat-card-arabic {
+            font-family: 'Amiri', 'Segoe UI', serif;
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            line-height: 1.2;
+            margin: 6px 0 4px;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .cat-card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        .cat-card-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        .cat-card-footer {
+            margin-top: auto;
+            border-top: 1px solid #f1f5f3;
+            padding-top: 14px;
+        }
+
+        .cat-progress-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .cat-progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e7eee9;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .cat-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #48bb78, #22c55e);
+            border-radius: 999px;
+        }
+
+        /* FEATURES SECTION */
+        .features-section {
+            padding: 60px 0;
+            background: linear-gradient(180deg, rgba(234, 246, 239, 0.4) 0%, rgba(246, 249, 247, 1) 100%);
+            border-radius: var(--radius-lg);
+            margin: 40px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-md);
+            padding: 32px 28px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon-box {
+            width: 58px;
+            height: 58px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .icon-green { background: #dcfce7; color: #166534; }
+        .icon-coral { background: #ffe4e6; color: #9f1239; }
+        .icon-amber { background: #fef3c7; color: #92400e; }
+        .icon-blue  { background: #e0f2fe; color: #075985; }
+        .icon-purple{ background: #f3e8ff; color: #6b21a8; }
+        .icon-teal  { background: #ccfbf1; color: #115e59; }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 0.94rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* AUDIENCE SECTION (SEMUA UMUR) */
+        .audience-section {
+            padding: 60px 0;
+        }
+
+        .audience-box {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 24px;
+            margin-top: 36px;
+        }
+
+        .audience-item {
+            text-align: center;
+            padding: 24px 18px;
+            border-radius: var(--radius-md);
+            background: var(--bg-page);
+            border: 1px solid var(--border-color);
+        }
+
+        .audience-avatar {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .audience-item h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .audience-item p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        /* CTA BANNER BOTTOM */
+        .cta-bottom-section {
+            padding: 40px 0 80px;
+        }
+
+        .cta-bottom-card {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            border-radius: var(--radius-lg);
+            padding: 60px 48px;
+            color: #ffffff;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-bottom-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .cta-bottom-logo {
+            width: 76px;
+            height: 76px;
+            border-radius: 22px;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .cta-bottom-title {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .cta-bottom-subtitle {
+            font-size: 1.15rem;
+            color: #d1fae5;
+            max-width: 620px;
+            margin: 0 auto 36px;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        footer.site-footer {
+            background: #0f241a;
+            color: #9cb5aa;
+            padding: 64px 0 32px;
+            font-size: 0.92rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer-logo-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #ffffff;
+            font-weight: 700;
             font-size: 1.1rem;
         }
-        .card h3 {
-            margin: 0 0 10px;
-            font-size: 1.3rem;
-            color: #143d39;
+
+        .footer-logo-img {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
         }
-        .card .arabic {
-            font-size: 2.1rem;
-            margin: 8px 0 10px;
-            font-family: 'Tahoma', 'Arial', sans-serif;
-            color: #143d39;
+
+        .footer-desc {
+            line-height: 1.6;
+            max-width: 360px;
+            font-size: 0.9rem;
         }
-        .card p {
-            margin: 0;
-            color: #4e5e5b;
-            font-size: 0.98rem;
+
+        .footer-col h5 {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 18px;
         }
-        .card .meta {
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-col ul a {
+            color: #9cb5aa;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 28px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 16px;
-            color: #4e5e5b;
+            flex-wrap: wrap;
+            gap: 16px;
             font-size: 0.85rem;
         }
-        .progress {
-            width: 100%;
-            height: 10px;
-            background: #edf1ef;
-            border-radius: 999px;
-            overflow: hidden;
-            margin-top: 8px;
-        }
-        .progress > span {
-            display: block;
-            height: 100%;
-            width: 30%;
-            background: linear-gradient(90deg, #81d39c, #59b97f);
-            border-radius: 999px;
-        }
-        .features {
-            margin-top: 34px;
-        }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-            margin-top: 22px;
-        }
-        .feature-box {
-            background: linear-gradient(180deg, #f5fbf7, #edf8f1);
-            padding: 20px;
-            border-radius: 18px;
-            border: 1px solid rgba(66,139,104,0.1);
-        }
-        .feature-box h4 {
-            margin: 0 0 10px;
-            font-size: 1.12rem;
-            color: #1d5b47;
-        }
-        .feature-box p {
-            margin: 0;
-            color: #556864;
-        }
-        footer {
-            margin-top: 36px;
-            background: #1d5b47;
-            color: white;
-            border-radius: 18px;
-            padding: 26px 20px;
-            text-align: center;
-        }
-        footer a {
-            color: #dff5ea;
-            text-decoration: none;
-        }
-        @media (max-width: 820px) {
+
+        /* RESPONSIVE BREAKPOINTS */
+        @media (max-width: 960px) {
             .hero-grid {
                 grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
             }
-            .page { padding: 16px; }
-            .hero { padding: 20px 18px; }
+
+            .hero-bullets {
+                justify-content: center;
+            }
+
+            .cta-group {
+                justify-content: center;
+            }
+
+            .mockup-container {
+                margin-top: 10px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-banner {
+                padding: 36px 20px;
+            }
+
+            .hero-bullets {
+                grid-template-columns: 1fr;
+            }
+
+            .app-mockup-img {
+                max-width: 260px;
+            }
+
+            .mockup-features-strip {
+                margin-top: 14px;
+                gap: 8px;
+            }
+
+            .audience-box {
+                padding: 28px 20px;
+            }
+
+            .cta-bottom-card {
+                padding: 40px 20px;
+            }
+
+            .nav-links {
+                display: none; /* mobile navigation simplified */
+            }
         }
     </style>
 </head>
 <body>
-    <div class="page">
-        <section class="hero">
-            <div class="topbar">
-                <div class="brand">
-                    <div class="logo">🧠</div>
-                    <span>Tebak Gambar Bahasa Arab</span>
-                </div>
-                <div>🎯 Belajar sambil bermain</div>
-            </div>
 
-            <div class="hero-grid">
-                <div>
-                    <h1>Belajar Bahasa Arab<br>jadi lebih seru dan mudah!</h1>
-                    <div class="subtitle">Aplikasi game edukasi interaktif untuk hafal kosakata Arab lewat gambar</div>
-                    <div class="description">
-                        Dengan visual yang menarik, setiap kata disajikan lengkap dengan teks Arab berharakat,
-                        transliterasi latin, dan arti dalam bahasa Indonesia agar pemula bisa belajar dengan cepat dan nyaman.
+    <!-- SITE HEADER / NAVBAR -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="brand-link" id="brandLogo">
+                    <img src="assets/app-logo.png" alt="Logo Tebak Gambar Bahasa Arab" class="brand-logo-img">
+                    <div class="brand-text-group">
+                        <span class="brand-name">Tebak Gambar Arab</span>
+                        <span class="brand-tag">Game Edukasi Semua Umur</span>
                     </div>
-                    <div class="cta-row">
-                        <a class="btn btn-primary" href="#download">Unduh Sekarang</a>
-                        <a class="btn btn-secondary" href="privacy-policy.html">Lihat Privacy Policy</a>
-                    </div>
-                </div>
+                </a>
 
-                <div class="mockup">
-                    <div class="phone">
-                        <div class="statusbar">
-                            <span>07:31</span>
-                            <span>📶 🔋</span>
-                        </div>
-                        <div class="screen">
-                            <div class="greeting">
-                                <span>Halo, Sahlan</span>
-                                <div class="info-badge">i</div>
+                <ul class="nav-links">
+                    <li><a href="#fitur">Fitur</a></li>
+                    <li><a href="#kategori">Kategori</a></li>
+                    <li><a href="#semua-umur">Semua Umur</a></li>
+                    <li><a href="privacy-policy.html">Kebijakan Privasi</a></li>
+                    <li>
+                        <a href="https://play.google.com/store/apps/details?id=com.adefathudin.tebakgambararab" target="_blank" rel="noopener noreferrer" class="btn-header-cta" id="headerDownloadBtn">
+                            <span>Unduh Gratis</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-banner">
+                    <div class="hero-grid">
+                        <!-- Hero Info -->
+                        <div class="hero-content">
+                            <div class="age-badge">
+                                <span class="age-badge-dot"></span>
+                                <span>Dirancang untuk Semua Umur (Anak-anak & Keluarga)</span>
                             </div>
-                            <div class="stats">
-                                <div class="stat-card">
-                                    <strong>3</strong>
-                                    <span>Bintang</span>
+
+                            <h1 class="hero-title">
+                                Belajar Bahasa Arab Jadi Lebih <span class="highlight">Mudah & Seru!</span>
+                            </h1>
+
+                            <p class="hero-subtitle">
+                                Game tebak gambar edukatif interaktif dengan visual menarik, harakat lengkap, audio pelafalan, dan transliterasi latin untuk membantu menghafal mufrodat dengan cepat.
+                            </p>
+
+                            <div class="hero-bullets">
+                                <div class="hero-bullet-item">
+                                    <span class="bullet-icon">✓</span>
+                                    <span>300+ Kosakata Terpilih</span>
                                 </div>
-                                <div class="stat-card">
-                                    <strong>8</strong>
-                                    <span>Kata</span>
+                                <div class="hero-bullet-item">
+                                    <span class="bullet-icon">✓</span>
+                                    <span>100% Offline Tanpa Kuota</span>
+                                </div>
+                                <div class="hero-bullet-item">
+                                    <span class="bullet-icon">✓</span>
+                                    <span>Kuis & Pilihan Ganda Seru</span>
+                                </div>
+                                <div class="hero-bullet-item">
+                                    <span class="bullet-icon">✓</span>
+                                    <span>Tanpa Registrasi / Akun</span>
                                 </div>
                             </div>
-                            <div class="study-panel">
-                                <div style="font-size: 0.78rem; letter-spacing: 1px; color: #285d49; font-weight: 700;">KATA HARI INI</div>
-                                <div class="arabic-word">مِفْتَاح</div>
-                                <div style="font-size: 1.08rem; font-weight: 700; color: #2e574a;">Kunci (Miftah)</div>
+
+                            <div class="cta-group">
+                                <a href="https://play.google.com/store/apps/details?id=com.adefathudin.tebakgambararab" target="_blank" rel="noopener noreferrer" class="btn-playstore" id="heroPlaystoreBtn">
+                                    <svg class="playstore-icon" viewBox="0 0 512 512">
+                                        <path fill="#4285F4" d="M32.5 12.3c-4.9 5.3-7.5 12.9-7.5 22.3v442.8c0 9.4 2.6 17 7.5 22.3l1.8 1.8 248.3-248.3v-5.8L34.3 10.5l-1.8 1.8z"/>
+                                        <path fill="#FBBC04" d="M365.1 369.8l-82.5-82.5v-6.6l82.5-82.5 2 1.1 97.8 55.6c27.9 15.9 27.9 41.8 0 57.7l-97.8 55.6-2 1.1z"/>
+                                        <path fill="#EA4335" d="M367.1 368.7L282.6 284 32.5 534.1c9.2 9.8 24.4 11 41.6 1.3l293-166.7z"/>
+                                        <path fill="#34A853" d="M367.1 143.3L74.1 9.6C56.9-.1 41.7 1.1 32.5 10.9L282.6 261l84.5-84.7v-33z"/>
+                                    </svg>
+                                    <div class="playstore-text-group">
+                                        <span class="playstore-sub">Temukan di</span>
+                                        <span class="playstore-main">Google Play</span>
+                                    </div>
+                                </a>
+
+                                <a href="privacy-policy.html" class="btn-secondary-link" id="heroPrivacyBtn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    <span>Kebijakan Privasi</span>
+                                </a>
                             </div>
-                            <div class="play-box">
-                                <span>Tantangan Tebak Gambar</span>
-                                <div class="play-btn">▶</div>
+                        </div>
+
+                        <!-- Real App Mockup (Stand-alone phone device with natural shadow) -->
+                        <div class="mockup-container">
+                            <div class="mockup-wrapper">
+                                <img src="assets/app-screenshot.png" alt="Tampilan Aplikasi Tebak Gambar Bahasa Arab" class="app-mockup-img">
+                            </div>
+                            <div class="mockup-features-strip">
+                                <span class="mockup-chip">⭐ Skor & Bintang</span>
+                                <span class="mockup-chip">🔊 Audio Harakat</span>
+                                <span class="mockup-chip">📶 100% Offline</span>
                             </div>
                         </div>
                     </div>
@@ -381,76 +948,307 @@
             </div>
         </section>
 
-        <section class="categories">
-            <h2>17 Kategori Kosakata</h2>
-            <div class="cards">
-                <article class="card">
-                    <div class="card-header">
-                        <div class="emoji">🦁</div>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                    <h3>Hewan & Satwa</h3>
-                    <div class="arabic">الحَيَوَانَات</div>
-                    <p>Kosakata aneka hewan liar, rumah, dan hewan ternak.</p>
-                    <div class="meta">
-                        <span>2 / 25</span>
-                        <span>8%</span>
-                    </div>
-                    <div class="progress"><span></span></div>
-                </article>
+        <!-- CATEGORIES SECTION -->
+        <section class="categories-section" id="kategori">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Kosakata Lengkap</span>
+                    <h2 class="section-title">17 Kategori Kosakata Tematik</h2>
+                    <p class="section-desc">Materi disusun secara tematik mulai dari benda sehari-hari, hewan, buah, hingga perlengkapan belajar untuk mempermudah daya ingat anak dan pemula.</p>
+                </div>
 
-                <article class="card">
-                    <div class="card-header">
-                        <div class="emoji">🍎</div>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                    <h3>Buah-Buahan</h3>
-                    <div class="arabic">الفَوَاكِه</div>
-                    <p>Ragam nama buah-buahan segar dan populer.</p>
-                    <div class="meta">
-                        <span>0 / 20</span>
-                        <span>0%</span>
-                    </div>
-                    <div class="progress"><span style="width: 0%;"></span></div>
-                </article>
+                <div class="categories-grid">
+                    <!-- Category 1 -->
+                    <article class="cat-card">
+                        <div>
+                            <div class="cat-card-header">
+                                <div class="cat-card-icon">🦁</div>
+                                <div class="cat-card-stars">★★★</div>
+                            </div>
+                            <div class="cat-card-arabic">الحَيَوَانَات</div>
+                            <h3 class="cat-card-title">Hewan & Satwa</h3>
+                            <p class="cat-card-desc">Kosakata aneka satwa darat, air, dan burung beserta suara pengucapan.</p>
+                        </div>
+                        <div class="cat-card-footer">
+                            <div class="cat-progress-meta">
+                                <span>25 Kosakata</span>
+                                <span>Tersedia</span>
+                            </div>
+                            <div class="cat-progress-bar"><div class="cat-progress-fill" style="width: 85%;"></div></div>
+                        </div>
+                    </article>
+
+                    <!-- Category 2 -->
+                    <article class="cat-card">
+                        <div>
+                            <div class="cat-card-header">
+                                <div class="cat-card-icon">🍎</div>
+                                <div class="cat-card-stars">★★★</div>
+                            </div>
+                            <div class="cat-card-arabic">الفَوَاكِه</div>
+                            <h3 class="cat-card-title">Buah-Buahan</h3>
+                            <p class="cat-card-desc">Ragam nama buah-buahan segar seperti apel, kurma, anggur, dan pisang.</p>
+                        </div>
+                        <div class="cat-card-footer">
+                            <div class="cat-progress-meta">
+                                <span>20 Kosakata</span>
+                                <span>Tersedia</span>
+                            </div>
+                            <div class="cat-progress-bar"><div class="cat-progress-fill" style="width: 70%;"></div></div>
+                        </div>
+                    </article>
+
+                    <!-- Category 3 -->
+                    <article class="cat-card">
+                        <div>
+                            <div class="cat-card-header">
+                                <div class="cat-card-icon">🥦</div>
+                                <div class="cat-card-stars">★★★</div>
+                            </div>
+                            <div class="cat-card-arabic">الخُضْرَاوَات</div>
+                            <h3 class="cat-card-title">Sayur-Mayur</h3>
+                            <p class="cat-card-desc">Kosakata sayuran dapur sehat lengkap dengan gambar visual nyata.</p>
+                        </div>
+                        <div class="cat-card-footer">
+                            <div class="cat-progress-meta">
+                                <span>20 Kosakata</span>
+                                <span>Tersedia</span>
+                            </div>
+                            <div class="cat-progress-bar"><div class="cat-progress-fill" style="width: 65%;"></div></div>
+                        </div>
+                    </article>
+
+                    <!-- Category 4 -->
+                    <article class="cat-card">
+                        <div>
+                            <div class="cat-card-header">
+                                <div class="cat-card-icon">🚗</div>
+                                <div class="cat-card-stars">★★★</div>
+                            </div>
+                            <div class="cat-card-arabic">وَسَائِلُ النَّقْل</div>
+                            <h3 class="cat-card-title">Transportasi</h3>
+                            <p class="cat-card-desc">Mobil, sepeda, pesawat, kapal, dan aneka kendaraan transportasi.</p>
+                        </div>
+                        <div class="cat-card-footer">
+                            <div class="cat-progress-meta">
+                                <span>18 Kosakata</span>
+                                <span>Tersedia</span>
+                            </div>
+                            <div class="cat-progress-bar"><div class="cat-progress-fill" style="width: 80%;"></div></div>
+                        </div>
+                    </article>
+
+                    <!-- Category 5 -->
+                    <article class="cat-card">
+                        <div>
+                            <div class="cat-card-header">
+                                <div class="cat-card-icon">✏️</div>
+                                <div class="cat-card-stars">★★★</div>
+                            </div>
+                            <div class="cat-card-arabic">الأَدَوَاتُ المَدْرَسِيَّة</div>
+                            <h3 class="cat-card-title">Peralatan Sekolah</h3>
+                            <p class="cat-card-desc">Buku, pensil, tas, papan tulis, penggaris, dan perlengkapan kelas santri.</p>
+                        </div>
+                        <div class="cat-card-footer">
+                            <div class="cat-progress-meta">
+                                <span>22 Kosakata</span>
+                                <span>Tersedia</span>
+                            </div>
+                            <div class="cat-progress-bar"><div class="cat-progress-fill" style="width: 90%;"></div></div>
+                        </div>
+                    </article>
+
+                    <!-- Category 6 -->
+                    <article class="cat-card">
+                        <div>
+                            <div class="cat-card-header">
+                                <div class="cat-card-icon">🎨</div>
+                                <div class="cat-card-stars">★★★</div>
+                            </div>
+                            <div class="cat-card-arabic">الأَلْوَان</div>
+                            <h3 class="cat-card-title">Warna-Warni</h3>
+                            <p class="cat-card-desc">Pengenalan aneka warna dasar dan sekunder dalam bahasa Arab yang cerah.</p>
+                        </div>
+                        <div class="cat-card-footer">
+                            <div class="cat-progress-meta">
+                                <span>15 Kosakata</span>
+                                <span>Tersedia</span>
+                            </div>
+                            <div class="cat-progress-bar"><div class="cat-progress-fill" style="width: 75%;"></div></div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <section class="features">
-            <h2 style="margin:0; color:#204f44; font-size: clamp(1.6rem, 2vw, 2rem);">Fitur Unggulan</h2>
-            <div class="feature-grid">
-                <div class="feature-box">
-                    <h4>📚 300+ Kosakata</h4>
-                    <p>Lebih dari 300 kata dalam 17 kategori tematik yang lengkap dan mudah dipelajari.</p>
+        <!-- FEATURES SECTION -->
+        <section class="features-section" id="fitur">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Kelebihan Aplikasi</span>
+                    <h2 class="section-title">Fitur Unggulan Belajar Ceria</h2>
+                    <p class="section-desc">Dikembangkan dengan pendekatan belajar aktif yang dirancang menyenangkan dan nyaman digunakan siapa saja.</p>
                 </div>
-                <div class="feature-box">
-                    <h4>🎮 Kuis Tebak Gambar</h4>
-                    <p>Uji kemampuan hafalanmu lewat pertanyaan pilihan ganda yang seru dan interaktif.</p>
-                </div>
-                <div class="feature-box">
-                    <h4>💡 50:50</h4>
-                    <p>Gunakan bantuan untuk mengurangi pilihan jawaban saat ragu.</p>
-                </div>
-                <div class="feature-box">
-                    <h4>📶 Offline 100%</h4>
-                    <p>Semua data sudah terunduh dan bisa dipelajari tanpa kuota internet.</p>
-                </div>
-                <div class="feature-box">
-                    <h4>🎨 Desain Modern</h4>
-                    <p>Tampilan yang ramah untuk anak, santri, pelajar, dan pemula dari semua usia.</p>
-                </div>
-                <div class="feature-box">
-                    <h4>📝 Terjemahan Mudah</h4>
-                    <p>Setiap kata disertai teks Arab, transliterasi, dan arti dalam Bahasa Indonesia.</p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-box icon-green">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                        </div>
+                        <h3>300+ Kosakata Terstruktur</h3>
+                        <p>Koleksi kosakata bahasa Arab penting sehari-hari yang dikelompokkan dalam belasan kategori tematik yang rapi dan mudah dicerna.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box icon-coral">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                        </div>
+                        <h3>Kuis Tebak Gambar Seru</h3>
+                        <p>Menguji ingatan visual dengan kuis tebakan gambar pilihan ganda. Sistem skor dan bintang memotivasi anak untuk terus berlatih.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box icon-amber">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                        </div>
+                        <h3>Bantuan 50:50</h3>
+                        <p>Bingung dengan jawaban? Gunakan fitur bantuan 50:50 untuk memangkas opsi salah dan meningkatkan rasa percaya diri anak.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box icon-teal">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.56 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                        </div>
+                        <h3>100% Offline Tanpa Internet</h3>
+                        <p>Semua gambar dan materi langsung terpasang di perangkat. Belajar lancar kapan saja dan di mana saja tanpa khawatir kuota internet habis.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box icon-blue">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                        </div>
+                        <h3>Audio Jernih & Harakat Jelas</h3>
+                        <p>Teks Arab berharakat tajam memudahkan membaca makhraj yang tepat, ditambah transliterasi latin dan arti bahasa Indonesia.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box icon-purple">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Aman & Ramah Keluarga</h3>
+                        <p>Dirancang sesuai standar keluarga Google Play untuk semua umur. Tanpa pengumpulan data pribadi sensitif dan bebas konten negatif.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <footer id="download">
-            <h3 style="margin:0 0 12px;">Ayo tingkatkan perbendaharaan kosakata Bahasa Arab sekarang juga!</h3>
-            <p style="margin:0 0 14px; color:#dcefe3;">Unduh Tebak Gambar Bahasa Arab dan mulailah belajar sambil bermain.</p>
-            <a href="privacy-policy.html">Kebijakan Privasi</a>
-        </footer>
-    </div>
+        <!-- AUDIENCE / SEMUA UMUR SECTION -->
+        <section class="audience-section" id="semua-umur">
+            <div class="container">
+                <div class="audience-box">
+                    <div class="section-header" style="margin-bottom: 24px;">
+                        <span class="section-label">Aplikasi Ramah Keluarga</span>
+                        <h2 class="section-title">Dibuat untuk Semua Kalangan Usia</h2>
+                        <p class="section-desc">Dengan antarmuka yang bersih, intuitif, dan ramah pengguna, aplikasi ini dapat dinikmati oleh berbagai kalangan:</p>
+                    </div>
+
+                    <div class="audience-grid">
+                        <div class="audience-item">
+                            <span class="audience-avatar">👶</span>
+                            <h4>Anak-Anak & Balita</h4>
+                            <p>Visual gambar kartun lucu memancing minat belajar bahasa Arab sejak usia dini.</p>
+                        </div>
+
+                        <div class="audience-item">
+                            <span class="audience-avatar">🎒</span>
+                            <h4>Santri & Pelajar</h4>
+                            <p>Membantu muroja'ah hafalan mufrodat madrasah diniyah atau pelajaran sekolah.</p>
+                        </div>
+
+                        <div class="audience-item">
+                            <span class="audience-avatar">👨‍👩‍👧</span>
+                            <h4>Orang Tua & Pendidik</h4>
+                            <p>Media pendamping edukatif yang aman digunakan bersama buah hati di rumah.</p>
+                        </div>
+
+                        <div class="audience-item">
+                            <span class="audience-avatar">📖</span>
+                            <h4>Pemula Dewasa</h4>
+                            <p>Metode ringan dan santai untuk siapa saja yang ingin mulai mengenal bahasa Al-Qur'an.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA DOWNLOAD BOTTOM -->
+        <section class="cta-bottom-section">
+            <div class="container">
+                <div class="cta-bottom-card">
+                    <img src="assets/app-logo.png" alt="App Icon" class="cta-bottom-logo">
+                    <h2 class="cta-bottom-title">Mulai Belajar Bahasa Arab Hari Ini!</h2>
+                    <p class="cta-bottom-subtitle">Unduh aplikasi Tebak Gambar Bahasa Arab gratis sekarang di Google Play Store dan rasakan serunya menghafal kosakata sambil bermain.</p>
+                    
+                    <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                        <a href="https://play.google.com/store/apps/details?id=com.adefathudin.tebakgambararab" target="_blank" rel="noopener noreferrer" class="btn-playstore" id="footerPlaystoreBtn">
+                            <svg class="playstore-icon" viewBox="0 0 512 512">
+                                <path fill="#4285F4" d="M32.5 12.3c-4.9 5.3-7.5 12.9-7.5 22.3v442.8c0 9.4 2.6 17 7.5 22.3l1.8 1.8 248.3-248.3v-5.8L34.3 10.5l-1.8 1.8z"/>
+                                <path fill="#FBBC04" d="M365.1 369.8l-82.5-82.5v-6.6l82.5-82.5 2 1.1 97.8 55.6c27.9 15.9 27.9 41.8 0 57.7l-97.8 55.6-2 1.1z"/>
+                                <path fill="#EA4335" d="M367.1 368.7L282.6 284 32.5 534.1c9.2 9.8 24.4 11 41.6 1.3l293-166.7z"/>
+                                <path fill="#34A853" d="M367.1 143.3L74.1 9.6C56.9-.1 41.7 1.1 32.5 10.9L282.6 261l84.5-84.7v-33z"/>
+                            </svg>
+                            <div class="playstore-text-group">
+                                <span class="playstore-sub">Unduh di</span>
+                                <span class="playstore-main">Google Play Store</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-info">
+                    <div class="footer-logo-row">
+                        <img src="assets/app-logo.png" alt="Logo" class="footer-logo-img">
+                        <span>Tebak Gambar Bahasa Arab</span>
+                    </div>
+                    <p class="footer-desc">
+                        Game edukasi interaktif untuk mengenalkan mufrodat / kosakata bahasa Arab kepada anak-anak, santri, dan pemula dari semua rentang umur.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Navigasi</h5>
+                    <ul>
+                        <li><a href="#fitur">Fitur Utama</a></li>
+                        <li><a href="#kategori">Kategori Kosakata</a></li>
+                        <li><a href="#semua-umur">Tentang Semua Umur</a></li>
+                        <li><a href="privacy-policy.html">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Informasi Aplikasi</h5>
+                    <ul>
+                        <li><span>Pengembang: Ade Fathudin</span></li>
+                        <li><span>Paket: com.adefathudin.tebakgambararab</span></li>
+                        <li><span>Rating Usia: Semua Umur (3+)</span></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.adefathudin.tebakgambararab" target="_blank" rel="noopener noreferrer">Halaman Google Play</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tebak Gambar Bahasa Arab by Ade Fathudin. Hak cipta dilindungi undang-undang.</p>
+                <p><a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Kebijakan Privasi (Privacy Policy)</a></p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
