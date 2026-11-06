@@ -1,344 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - CamOrganizer</title>
-    <meta name="description" content="Official Terms of Service and Trader Status Declaration for CamOrganizer under Google Play policies and EU Digital Services Act (DSA).">
+    <meta name="description"
+        content="Official Terms of Service and Trader Status Declaration for CamOrganizer under Google Play policies and EU Digital Services Act (DSA).">
     <meta name="theme-color" content="#080B12">
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-<style>
-    /* =========================================
+    <style>
+        /* =========================================
        TERMS OF SERVICE PAGE STYLES
     ========================================= */
 
-    .privacy-page {
-        min-height: calc(100vh - 76px);
-        padding: 70px 0 100px;
-        background:
-            radial-gradient(
-                circle at 50% 0%,
-                rgba(52, 151, 255, 0.1),
-                transparent 45%
-            );
-    }
-
-    .privacy-container {
-        width: min(940px, calc(100% - 40px));
-        margin: 0 auto;
-    }
-
-    /* Header */
-    .privacy-header {
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .privacy-label {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 18px;
-        padding: 8px 16px;
-        border: 1px solid rgba(83, 166, 255, 0.2);
-        border-radius: 999px;
-        color: #9dcfff;
-        background: rgba(70, 157, 255, 0.08);
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-    }
-
-    .privacy-label-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #55d6a5;
-        box-shadow: 0 0 12px #55d6a5;
-    }
-
-    .privacy-header h1 {
-        margin: 0;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: clamp(38px, 5vw, 56px);
-        line-height: 1.1;
-        letter-spacing: -0.04em;
-        color: #ffffff;
-    }
-
-    .privacy-header p {
-        max-width: 660px;
-        margin: 18px auto 0;
-        color: var(--text-soft);
-        font-size: 17px;
-        line-height: 1.7;
-    }
-
-    .privacy-meta-badge {
-        margin-top: 14px;
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        font-size: 13px;
-        color: #8da2bb;
-        background: rgba(255, 255, 255, 0.035);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        padding: 6px 16px;
-        border-radius: 999px;
-    }
-
-    /* SUMMARY CARDS GRID */
-    .privacy-summary-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 16px;
-        margin-bottom: 36px;
-    }
-
-    .summary-card {
-        padding: 22px 18px;
-        background: rgba(16, 23, 34, 0.7);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 20px;
-        backdrop-filter: blur(14px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-
-    .summary-card:hover {
-        transform: translateY(-3px);
-        border-color: rgba(90, 168, 255, 0.3);
-    }
-
-    .summary-card-icon {
-        width: 40px;
-        height: 40px;
-        display: grid;
-        place-items: center;
-        border-radius: 12px;
-        background: rgba(90, 168, 255, 0.12);
-        color: #70b8ff;
-        font-size: 20px;
-        margin-bottom: 12px;
-    }
-
-    .summary-card h4 {
-        margin: 0 0 6px;
-        font-size: 15px;
-        font-family: "Space Grotesk", sans-serif;
-        color: #f1f5f9;
-    }
-
-    .summary-card p {
-        margin: 0;
-        font-size: 13px;
-        line-height: 1.5;
-        color: var(--text-muted);
-    }
-
-    /* TABLE OF CONTENTS */
-    .policy-toc-card {
-        background: rgba(14, 20, 30, 0.65);
-        border: 1px solid rgba(255, 255, 255, 0.07);
-        border-radius: 20px;
-        padding: 24px 28px;
-        margin-bottom: 36px;
-    }
-
-    .policy-toc-card h3 {
-        font-size: 14px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: #94a3b8;
-        margin-bottom: 14px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .toc-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 10px 20px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .toc-grid a {
-        color: #70b8ff;
-        font-size: 14px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: color 0.2s ease, transform 0.2s ease;
-        display: inline-block;
-    }
-
-    .toc-grid a:hover {
-        color: #a6d4ff;
-        transform: translateX(3px);
-    }
-
-    /* Main Card */
-    .privacy-card {
-        padding: 56px 48px;
-        border: 1px solid rgba(255, 255, 255, 0.085);
-        border-radius: 28px;
-        background:
-            linear-gradient(
-                145deg,
-                rgba(255, 255, 255, 0.035),
-                rgba(255, 255, 255, 0.012)
-            );
-        box-shadow:
-            0 30px 90px rgba(0, 0, 0, 0.25),
-            inset 0 1px 0 rgba(255, 255, 255, 0.03);
-    }
-
-    .privacy-section {
-        padding: 0 0 44px;
-        margin-bottom: 44px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .privacy-section:last-child {
-        padding-bottom: 0;
-        margin-bottom: 0;
-        border-bottom: none;
-    }
-
-    .privacy-icon {
-        width: 44px;
-        height: 44px;
-        display: grid;
-        place-items: center;
-        margin-bottom: 18px;
-        border: 1px solid rgba(255, 255, 255, 0.09);
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.035);
-        font-size: 19px;
-    }
-
-    .privacy-section h2 {
-        margin: 0 0 16px;
-        color: #f7f9fc;
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 24px;
-        line-height: 1.3;
-        letter-spacing: -0.02em;
-    }
-
-    .privacy-section p {
-        margin: 0 0 16px;
-        color: #a9b5c5;
-        font-size: 16px;
-        line-height: 1.85;
-    }
-
-    .privacy-section strong {
-        color: #e5edf6;
-        font-weight: 600;
-    }
-
-    .privacy-section ul {
-        margin: 0 0 20px 20px;
-        padding: 0;
-        color: #a9b5c5;
-        font-size: 15.5px;
-        line-height: 1.8;
-    }
-
-    .privacy-section li {
-        margin-bottom: 8px;
-    }
-
-    /* Highlight Callout Box */
-    .callout-box {
-        background: rgba(30, 60, 95, 0.25);
-        border-left: 4px solid #5aa8ff;
-        border-radius: 0 14px 14px 0;
-        padding: 18px 22px;
-        margin: 20px 0;
-    }
-
-    .callout-box p {
-        margin: 0;
-        color: #dbeafe;
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    /* Developer Contact Box */
-    .privacy-contact-card {
-        margin-top: 24px;
-        padding: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.025);
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 16px;
-    }
-
-    .contact-cell {
-        background: rgba(10, 15, 22, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        padding: 14px 16px;
-    }
-
-    .contact-cell-label {
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: #64748b;
-        font-weight: 700;
-        margin-bottom: 4px;
-    }
-
-    .contact-cell-val {
-        font-size: 15px;
-        font-weight: 600;
-        color: #f1f5f9;
-        word-break: break-all;
-    }
-
-    .contact-cell-val a {
-        color: #70b8ff;
-        text-decoration: none;
-    }
-
-    .contact-cell-val a:hover {
-        text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
         .privacy-page {
-            padding: 50px 0 70px;
+            min-height: calc(100vh - 76px);
+            padding: 70px 0 100px;
+            background:
+                radial-gradient(circle at 50% 0%,
+                    rgba(52, 151, 255, 0.1),
+                    transparent 45%);
         }
 
-        .privacy-card {
-            padding: 32px 20px;
-            border-radius: 20px;
+        .privacy-container {
+            width: min(940px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .privacy-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .privacy-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 18px;
+            padding: 8px 16px;
+            border: 1px solid rgba(83, 166, 255, 0.2);
+            border-radius: 999px;
+            color: #9dcfff;
+            background: rgba(70, 157, 255, 0.08);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .privacy-label-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #55d6a5;
+            box-shadow: 0 0 12px #55d6a5;
         }
 
         .privacy-header h1 {
-            font-size: 36px;
+            margin: 0;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(38px, 5vw, 56px);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            color: #ffffff;
+        }
+
+        .privacy-header p {
+            max-width: 660px;
+            margin: 18px auto 0;
+            color: var(--text-soft);
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .privacy-meta-badge {
+            margin-top: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13px;
+            color: #8da2bb;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 6px 16px;
+            border-radius: 999px;
+        }
+
+        /* SUMMARY CARDS GRID */
+        .privacy-summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 36px;
+        }
+
+        .summary-card {
+            padding: 22px 18px;
+            background: rgba(16, 23, 34, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(90, 168, 255, 0.3);
+        }
+
+        .summary-card-icon {
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: rgba(90, 168, 255, 0.12);
+            color: #70b8ff;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .summary-card h4 {
+            margin: 0 0 6px;
+            font-size: 15px;
+            font-family: "Space Grotesk", sans-serif;
+            color: #f1f5f9;
+        }
+
+        .summary-card p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.5;
+            color: var(--text-muted);
+        }
+
+        /* TABLE OF CONTENTS */
+        .policy-toc-card {
+            background: rgba(14, 20, 30, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 20px;
+            padding: 24px 28px;
+            margin-bottom: 36px;
+        }
+
+        .policy-toc-card h3 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #94a3b8;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .toc-grid {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 10px 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-    }
-</style>
+
+        .toc-grid a {
+            color: #70b8ff;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s ease, transform 0.2s ease;
+            display: inline-block;
+        }
+
+        .toc-grid a:hover {
+            color: #a6d4ff;
+            transform: translateX(3px);
+        }
+
+        /* Main Card */
+        .privacy-card {
+            padding: 56px 48px;
+            border: 1px solid rgba(255, 255, 255, 0.085);
+            border-radius: 28px;
+            background:
+                linear-gradient(145deg,
+                    rgba(255, 255, 255, 0.035),
+                    rgba(255, 255, 255, 0.012));
+            box-shadow:
+                0 30px 90px rgba(0, 0, 0, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.03);
+        }
+
+        .privacy-section {
+            padding: 0 0 44px;
+            margin-bottom: 44px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .privacy-section:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        .privacy-icon {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.035);
+            font-size: 19px;
+        }
+
+        .privacy-section h2 {
+            margin: 0 0 16px;
+            color: #f7f9fc;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 24px;
+            line-height: 1.3;
+            letter-spacing: -0.02em;
+        }
+
+        .privacy-section p {
+            margin: 0 0 16px;
+            color: #a9b5c5;
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .privacy-section strong {
+            color: #e5edf6;
+            font-weight: 600;
+        }
+
+        .privacy-section ul {
+            margin: 0 0 20px 20px;
+            padding: 0;
+            color: #a9b5c5;
+            font-size: 15.5px;
+            line-height: 1.8;
+        }
+
+        .privacy-section li {
+            margin-bottom: 8px;
+        }
+
+        /* Highlight Callout Box */
+        .callout-box {
+            background: rgba(30, 60, 95, 0.25);
+            border-left: 4px solid #5aa8ff;
+            border-radius: 0 14px 14px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+        }
+
+        .callout-box p {
+            margin: 0;
+            color: #dbeafe;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Developer Contact Box */
+        .privacy-contact-card {
+            margin-top: 24px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.025);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .contact-cell {
+            background: rgba(10, 15, 22, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .contact-cell-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #64748b;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .contact-cell-val {
+            font-size: 15px;
+            font-weight: 600;
+            color: #f1f5f9;
+            word-break: break-all;
+        }
+
+        .contact-cell-val a {
+            color: #70b8ff;
+            text-decoration: none;
+        }
+
+        .contact-cell-val a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .privacy-page {
+                padding: 50px 0 70px;
+            }
+
+            .privacy-card {
+                padding: 32px 20px;
+                border-radius: 20px;
+            }
+
+            .privacy-header h1 {
+                font-size: 36px;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -354,7 +354,8 @@
             <a href="index.html" class="brand" aria-label="CamOrganizer home">
                 <span class="brand-mark">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7.5 6.5h2l1.1-2h3l1.1 2h2.8A3.5 3.5 0 0 1 21 10v7.5a3.5 3.5 0 0 1-3.5 3.5h-11A3.5 3.5 0 0 1 3 17.5V10a3.5 3.5 0 0 1 3.5-3.5ZM12 9a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
+                        <path
+                            d="M7.5 6.5h2l1.1-2h3l1.1 2h2.8A3.5 3.5 0 0 1 21 10v7.5a3.5 3.5 0 0 1-3.5 3.5h-11A3.5 3.5 0 0 1 3 17.5V10a3.5 3.5 0 0 1 3.5-3.5ZM12 9a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
                     </svg>
                 </span>
                 <span>CamOrganizer</span>
@@ -396,7 +397,8 @@
                 <h1>Terms of Service</h1>
 
                 <p>
-                    Please review these Terms of Service governing your use of CamOrganizer, including developer identification and trader status disclosures under the European Union Digital Services Act (DSA).
+                    Please review these Terms of Service governing your use of CamOrganizer, including developer
+                    identification and trader status disclosures under the European Union Digital Services Act (DSA).
                 </p>
 
                 <div class="privacy-meta-badge">
@@ -413,19 +415,22 @@
                 <div class="summary-card">
                     <div class="summary-card-icon">⚖️</div>
                     <h4>Trader Status</h4>
-                    <p>Declared as an Individual Trader on Google Play under EU Digital Services Act (DSA) requirements.</p>
+                    <p>Declared as an Individual Trader on Google Play under EU Digital Services Act (DSA) requirements.
+                    </p>
                 </div>
 
                 <div class="summary-card">
                     <div class="summary-card-icon">📸</div>
                     <h4>100% Local Media</h4>
-                    <p>You retain absolute ownership of all photos and videos captured. Files remain stored strictly on your device.</p>
+                    <p>You retain absolute ownership of all photos and videos captured. Files remain stored strictly on
+                        your device.</p>
                 </div>
 
                 <div class="summary-card">
                     <div class="summary-card-icon">💳</div>
                     <h4>Google Play Billing</h4>
-                    <p>All in-app purchases or optional Pro features are handled securely through official Google Play Billing.</p>
+                    <p>All in-app purchases or optional Pro features are handled securely through official Google Play
+                        Billing.</p>
                 </div>
 
                 <div class="summary-card">
@@ -438,7 +443,15 @@
             <!-- Table of Contents -->
             <nav class="policy-toc-card">
                 <h3>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="8" y1="6" x2="21" y2="6" />
+                        <line x1="8" y1="12" x2="21" y2="12" />
+                        <line x1="8" y1="18" x2="21" y2="18" />
+                        <line x1="3" y1="6" x2="3.01" y2="6" />
+                        <line x1="3" y1="12" x2="3.01" y2="12" />
+                        <line x1="3" y1="18" x2="3.01" y2="18" />
+                    </svg>
                     Table of Contents
                 </h3>
                 <div class="toc-grid">
@@ -464,12 +477,18 @@
                     <div class="privacy-icon">🏛️</div>
                     <h2>1. Trader Identification & Service Provider Declaration</h2>
                     <p>
-                        In compliance with Article 24(2) and Article 30 of the <strong>European Union Digital Services Act (EU Regulation 2022/2065 - DSA)</strong> and consumer protection regulations on digital marketplaces, the provider of the Android mobile application <strong>CamOrganizer</strong> (Package: <code>com.adefathudin.camorganizer</code>) hereby declares trader status as follows:
+                        In compliance with Article 24(2) and Article 30 of the <strong>European Union Digital Services
+                            Act (EU Regulation 2022/2065 - DSA)</strong> and consumer protection regulations on digital
+                        marketplaces, the provider of the Android mobile application <strong>CamOrganizer</strong>
+                        (Package: <code>com.adefathudin.camorganizer</code>) hereby declares trader status as follows:
                     </p>
 
                     <div class="callout-box">
                         <p>
-                            <strong>Trader Declaration:</strong> The developer, Ade Fathudin, acts as an individual trader (natural person engaging in commercial software distribution) offering the CamOrganizer application and associated digital services to consumers globally, including consumers residing within the European Economic Area (EEA).
+                            <strong>Trader Declaration:</strong> The developer, Ade Fathudin, acts as an individual
+                            trader (natural person engaging in commercial software distribution) offering the
+                            CamOrganizer application and associated digital services to consumers globally, including
+                            consumers residing within the European Economic Area (EEA).
                         </p>
                     </div>
 
@@ -503,13 +522,19 @@
                     <div class="privacy-icon">🤝</div>
                     <h2>2. Acceptance of Terms & Eligibility</h2>
                     <p>
-                        These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "you") and <strong>Ade Fathudin</strong> ("Developer", "Trader", "we", "us").
+                        These Terms of Service ("Terms") constitute a legally binding agreement between you ("User",
+                        "you") and <strong>Ade Fathudin</strong> ("Developer", "Trader", "we", "us").
                     </p>
                     <p>
-                        By downloading, installing, accessing, or using <strong>CamOrganizer</strong>, you confirm that you have read, understood, and agreed to be bound by these Terms and our <a href="privacy-policy.html">Privacy Policy</a>. If you do not agree to these Terms, you must not download, install, or use the application, and you should uninstall it from your devices immediately.
+                        By downloading, installing, accessing, or using <strong>CamOrganizer</strong>, you confirm that
+                        you have read, understood, and agreed to be bound by these Terms and our <a
+                            href="privacy-policy.html">Privacy Policy</a>. If you do not agree to these Terms, you must
+                        not download, install, or use the application, and you should uninstall it from your devices
+                        immediately.
                     </p>
                     <p>
-                        You represent that you have reached the age of majority in your jurisdiction, or that you have obtained verifiable consent from a parent or legal guardian to enter into these Terms.
+                        You represent that you have reached the age of majority in your jurisdiction, or that you have
+                        obtained verifiable consent from a parent or legal guardian to enter into these Terms.
                     </p>
                 </section>
 
@@ -518,13 +543,21 @@
                     <div class="privacy-icon">📷</div>
                     <h2>3. Scope & Nature of the Application</h2>
                     <p>
-                        <strong>CamOrganizer</strong> is a local-first Android camera utility application designed to help users capture and categorize multimedia content efficiently. Core features include:
+                        <strong>CamOrganizer</strong> is a local-first Android camera utility application designed to
+                        help users capture and categorize multimedia content efficiently. Core features include:
                     </p>
                     <ul>
-                        <li><strong>Direct Folder Routing:</strong> Capturing photos and recording video clips directly into pre-selected or newly created custom device folders (such as <code>DCIM/CamOrganizer</code> or custom directories selected via Android Storage Access Framework).</li>
-                        <li><strong>In-Camera Workflow:</strong> Custom folder selectors, session shortcuts, grid overlays, and camera settings adjustments.</li>
-                        <li><strong>100% Local-First Architecture:</strong> All captured photos and videos are written directly to your device storage without being transmitted to, analyzed by, or stored on any external server.</li>
-                        <li><strong>Optional Pro / Premium Upgrades:</strong> Optional enhancements, such as ad removal or advanced folder rules, made available via in-app purchases.</li>
+                        <li><strong>Direct Folder Routing:</strong> Capturing photos and recording video clips directly
+                            into pre-selected or newly created custom device folders (such as
+                            <code>DCIM/CamOrganizer</code> or custom directories selected via Android Storage Access
+                            Framework).</li>
+                        <li><strong>In-Camera Workflow:</strong> Custom folder selectors, session shortcuts, grid
+                            overlays, and camera settings adjustments.</li>
+                        <li><strong>100% Local-First Architecture:</strong> All captured photos and videos are written
+                            directly to your device storage without being transmitted to, analyzed by, or stored on any
+                            external server.</li>
+                        <li><strong>Optional Pro / Premium Upgrades:</strong> Optional enhancements, such as ad removal
+                            or advanced folder rules, made available via in-app purchases.</li>
                     </ul>
                 </section>
 
@@ -533,17 +566,24 @@
                     <div class="privacy-icon">📜</div>
                     <h2>4. End User License & Usage Restrictions</h2>
                     <p>
-                        Subject to your continuous compliance with these Terms, the developer grants you a personal, non-exclusive, non-transferable, revocable, and limited license to install and run CamOrganizer on compatible Android devices owned or controlled by you, solely for your personal and non-commercial purposes.
+                        Subject to your continuous compliance with these Terms, the developer grants you a personal,
+                        non-exclusive, non-transferable, revocable, and limited license to install and run CamOrganizer
+                        on compatible Android devices owned or controlled by you, solely for your personal and
+                        non-commercial purposes.
                     </p>
                     <p>
                         <strong>Prohibited Activities:</strong> You agree that you will NOT:
                     </p>
                     <ul>
-                        <li>Decompile, reverse engineer, disassemble, decrypt, or attempt to derive the source code of the application.</li>
+                        <li>Decompile, reverse engineer, disassemble, decrypt, or attempt to derive the source code of
+                            the application.</li>
                         <li>Modify, adapt, translate, or create derivative works of CamOrganizer.</li>
-                        <li>Redistribute, sublicense, rent, lease, sell, or commercially exploit the application or its installation files (APK/AAB) without prior written consent.</li>
-                        <li>Circumvent or disable any digital rights management, security checks, licensing verification, or advertising components.</li>
-                        <li>Use CamOrganizer for any unlawful purpose or in violation of any applicable local, national, or international privacy laws.</li>
+                        <li>Redistribute, sublicense, rent, lease, sell, or commercially exploit the application or its
+                            installation files (APK/AAB) without prior written consent.</li>
+                        <li>Circumvent or disable any digital rights management, security checks, licensing
+                            verification, or advertising components.</li>
+                        <li>Use CamOrganizer for any unlawful purpose or in violation of any applicable local, national,
+                            or international privacy laws.</li>
                     </ul>
                 </section>
 
@@ -552,10 +592,15 @@
                     <div class="privacy-icon">🔐</div>
                     <h2>5. User Media & Intellectual Property</h2>
                     <p>
-                        <strong>User Content Ownership:</strong> You retain full and exclusive ownership, intellectual property rights, and copyright to all photographs, video recordings, audio tracks, and folder naming schemes captured or configured using CamOrganizer. The developer does not claim any ownership rights over your media files.
+                        <strong>User Content Ownership:</strong> You retain full and exclusive ownership, intellectual
+                        property rights, and copyright to all photographs, video recordings, audio tracks, and folder
+                        naming schemes captured or configured using CamOrganizer. The developer does not claim any
+                        ownership rights over your media files.
                     </p>
                     <p>
-                        <strong>Application Intellectual Property:</strong> All rights, title, and interest in and to CamOrganizer — including source code, UI/UX designs, icons, logos, documentation, and graphical assets — remain the exclusive property of Ade Fathudin.
+                        <strong>Application Intellectual Property:</strong> All rights, title, and interest in and to
+                        CamOrganizer — including source code, UI/UX designs, icons, logos, documentation, and graphical
+                        assets — remain the exclusive property of Ade Fathudin.
                     </p>
                 </section>
 
@@ -564,12 +609,22 @@
                     <div class="privacy-icon">💳</div>
                     <h2>6. In-App Purchases, Subscriptions & Pricing</h2>
                     <p>
-                        CamOrganizer is provided as a free-to-download application supported by non-intrusive mobile advertising (Google AdMob). Optional premium upgrades (e.g., ad-free experience or Pro utilities) may be offered:
+                        CamOrganizer is provided as a free-to-download application supported by non-intrusive mobile
+                        advertising (Google AdMob). Optional premium upgrades (e.g., ad-free experience or Pro
+                        utilities) may be offered:
                     </p>
                     <ul>
-                        <li><strong>Official Google Play Billing:</strong> All financial transactions are managed and processed securely through Google Play Billing in accordance with Google Play's Terms of Service. The developer does not store, process, or have access to your credit card, bank, or payment credential details.</li>
-                        <li><strong>Clear & Transparent Pricing:</strong> Pricing, currency, billing intervals, and any trial terms are clearly displayed within Google Play prior to transaction confirmation. All prices include applicable value-added taxes (VAT) or sales taxes where required by law.</li>
-                        <li><strong>Subscription Cancellation:</strong> If you purchase an auto-renewing subscription, you may cancel it at any time directly through the Google Play Store under <em>Payments &amp; subscriptions &gt; Subscriptions</em>. Cancellation takes effect at the end of your current paid billing period.</li>
+                        <li><strong>Official Google Play Billing:</strong> All financial transactions are managed and
+                            processed securely through Google Play Billing in accordance with Google Play's Terms of
+                            Service. The developer does not store, process, or have access to your credit card, bank, or
+                            payment credential details.</li>
+                        <li><strong>Clear & Transparent Pricing:</strong> Pricing, currency, billing intervals, and any
+                            trial terms are clearly displayed within Google Play prior to transaction confirmation. All
+                            prices include applicable value-added taxes (VAT) or sales taxes where required by law.</li>
+                        <li><strong>Subscription Cancellation:</strong> If you purchase an auto-renewing subscription,
+                            you may cancel it at any time directly through the Google Play Store under <em>Payments
+                                &amp; subscriptions &gt; Subscriptions</em>. Cancellation takes effect at the end of
+                            your current paid billing period.</li>
                     </ul>
                 </section>
 
@@ -578,19 +633,32 @@
                     <div class="privacy-icon">🇪🇺</div>
                     <h2>7. Statutory Right of Withdrawal & Refund Policy (EU/EEA Consumers)</h2>
                     <p>
-                        As a declared trader on Google Play committed to European and international consumer protection standards:
+                        As a declared trader on Google Play committed to European and international consumer protection
+                        standards:
                     </p>
                     <div class="callout-box">
                         <p>
-                            <strong>Statutory 14-Day Right of Withdrawal:</strong> If you reside within the European Economic Area (EEA), European Union, or United Kingdom, you have the legal right to withdraw from a contract for the purchase of digital content or services within fourteen (14) calendar days from the date of purchase without giving any reason.
+                            <strong>Statutory 14-Day Right of Withdrawal:</strong> If you reside within the European
+                            Economic Area (EEA), European Union, or United Kingdom, you have the legal right to withdraw
+                            from a contract for the purchase of digital content or services within fourteen (14)
+                            calendar days from the date of purchase without giving any reason.
                         </p>
                     </div>
                     <p>
                         <strong>How to Request a Refund:</strong>
                     </p>
                     <ul>
-                        <li><strong>Via Google Play Order History:</strong> You can submit a refund request directly through your Google account at <a href="https://play.google.com/store/account/orderhistory" target="_blank" rel="noopener">Google Play Order History</a> or via the <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play Refund Support Page</a>. Requests submitted within 48 hours of purchase are generally resolved automatically by Google.</li>
-                        <li><strong>Direct Support Assistance:</strong> If you encounter any difficulty requesting a refund through Google Play, email us at <a href="mailto:aftissoftware@gmail.com">aftissoftware@gmail.com</a> with your Google Play Order Number (e.g., <code>GPA.xxxx-xxxx-xxxx-xxxxx</code>). As a declared trader, we will review and facilitate legitimate withdrawal and refund requests promptly.</li>
+                        <li><strong>Via Google Play Order History:</strong> You can submit a refund request directly
+                            through your Google account at <a href="https://play.google.com/store/account/orderhistory"
+                                target="_blank" rel="noopener">Google Play Order History</a> or via the <a
+                                href="https://support.google.com/googleplay/answer/2479637" target="_blank"
+                                rel="noopener">Google Play Refund Support Page</a>. Requests submitted within 48 hours
+                            of purchase are generally resolved automatically by Google.</li>
+                        <li><strong>Direct Support Assistance:</strong> If you encounter any difficulty requesting a
+                            refund through Google Play, email us at <a
+                                href="mailto:aftissoftware@gmail.com">aftissoftware@gmail.com</a> with your Google Play
+                            Order Number (e.g., <code>GPA.xxxx-xxxx-xxxx-xxxxx</code>). As a declared trader, we will
+                            review and facilitate legitimate withdrawal and refund requests promptly.</li>
                     </ul>
                 </section>
 
@@ -599,13 +667,23 @@
                     <div class="privacy-icon">⚠️</div>
                     <h2>8. Disclaimers & Limitation of Liability</h2>
                     <p>
-                        <strong>Warranty Disclaimer:</strong> To the maximum extent permitted by applicable law, CamOrganizer is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, whether express, statutory, or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
+                        <strong>Warranty Disclaimer:</strong> To the maximum extent permitted by applicable law,
+                        CamOrganizer is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong>
+                        basis without warranties of any kind, whether express, statutory, or implied, including but not
+                        limited to implied warranties of merchantability, fitness for a particular purpose, or
+                        non-infringement.
                     </p>
                     <p>
-                        <strong>Limitation of Liability:</strong> Under no circumstances shall Ade Fathudin be liable for any indirect, incidental, consequential, special, or exemplary damages, including data loss, hardware malfunction, storage corruption, or interruption of business resulting from your use or inability to use CamOrganizer.
+                        <strong>Limitation of Liability:</strong> Under no circumstances shall Ade Fathudin be liable
+                        for any indirect, incidental, consequential, special, or exemplary damages, including data loss,
+                        hardware malfunction, storage corruption, or interruption of business resulting from your use or
+                        inability to use CamOrganizer.
                     </p>
                     <p>
-                        <em>Consumer Protection Safeguard:</em> Nothing in these Terms shall exclude, restrict, or modify any non-waivable statutory consumer rights, mandatory consumer guarantees, or legal warranties granted to you under the consumer protection laws of your country of residence (including EU consumer rights directives).
+                        <em>Consumer Protection Safeguard:</em> Nothing in these Terms shall exclude, restrict, or
+                        modify any non-waivable statutory consumer rights, mandatory consumer guarantees, or legal
+                        warranties granted to you under the consumer protection laws of your country of residence
+                        (including EU consumer rights directives).
                     </p>
                 </section>
 
@@ -614,10 +692,14 @@
                     <div class="privacy-icon">🚪</div>
                     <h2>9. Termination & App Removal</h2>
                     <p>
-                        You may terminate these Terms at any time by simply uninstalling CamOrganizer from all your devices. Because CamOrganizer does not require mandatory cloud accounts, uninstalling the app immediately ends your active use. Any media files you captured remain saved in your device's standard photo folders according to your device's file storage rules.
+                        You may terminate these Terms at any time by simply uninstalling CamOrganizer from all your
+                        devices. Because CamOrganizer does not require mandatory cloud accounts, uninstalling the app
+                        immediately ends your active use. Any media files you captured remain saved in your device's
+                        standard photo folders according to your device's file storage rules.
                     </p>
                     <p>
-                        The developer reserves the right to suspend or discontinue support for CamOrganizer at any time, or terminate this license if you violate any provision of these Terms.
+                        The developer reserves the right to suspend or discontinue support for CamOrganizer at any time,
+                        or terminate this license if you violate any provision of these Terms.
                     </p>
                 </section>
 
@@ -626,10 +708,18 @@
                     <div class="privacy-icon">⚖️</div>
                     <h2>10. Governing Law & Dispute Resolution</h2>
                     <p>
-                        These Terms of Service are governed by and construed in accordance with the laws of the <strong>Republic of Indonesia</strong>, without regard to conflict of law principles. If you are a consumer residing in the European Union or other jurisdictions with mandatory statutory consumer protections, you also enjoy the protection of mandatory provisions of the law of your country of habitual residence.
+                        These Terms of Service are governed by and construed in accordance with the laws of the
+                        <strong>Republic of Indonesia</strong>, without regard to conflict of law principles. If you are
+                        a consumer residing in the European Union or other jurisdictions with mandatory statutory
+                        consumer protections, you also enjoy the protection of mandatory provisions of the law of your
+                        country of habitual residence.
                     </p>
                     <p>
-                        <strong>Online Dispute Resolution (ODR) for EU Consumers:</strong> If you reside in the European Economic Area, the European Commission provides an official platform for Online Dispute Resolution (ODR) accessible at: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>. Our official trader email for dispute communications is <a href="mailto:aftissoftware@gmail.com">aftissoftware@gmail.com</a>.
+                        <strong>Online Dispute Resolution (ODR) for EU Consumers:</strong> If you reside in the European
+                        Economic Area, the European Commission provides an official platform for Online Dispute
+                        Resolution (ODR) accessible at: <a href="https://ec.europa.eu/consumers/odr" target="_blank"
+                            rel="noopener">https://ec.europa.eu/consumers/odr</a>. Our official trader email for dispute
+                        communications is <a href="mailto:aftissoftware@gmail.com">aftissoftware@gmail.com</a>.
                     </p>
                 </section>
 
@@ -638,7 +728,8 @@
                     <div class="privacy-icon">📬</div>
                     <h2>11. Trader Contact & Customer Support</h2>
                     <p>
-                        For any inquiries regarding these Terms of Service, trader disclosures, technical support, or consumer rights, please contact the developer directly:
+                        For any inquiries regarding these Terms of Service, trader disclosures, technical support, or
+                        consumer rights, please contact the developer directly:
                     </p>
 
                     <div class="privacy-contact-card">
@@ -662,7 +753,8 @@
                         <div class="contact-cell">
                             <div class="contact-cell-label">Official Website</div>
                             <div class="contact-cell-val">
-                                <a href="https://adefathudin.github.io/app/camorganizer/" target="_blank" rel="noopener">Web Page ↗</a>
+                                <a href="https://app.adefathudin.my.id/camorganizer/" target="_blank" rel="noopener">Web
+                                    Page ↗</a>
                             </div>
                         </div>
                     </div>
@@ -681,13 +773,15 @@
                 <a href="index.html" class="brand">
                     <span class="brand-mark">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M7.5 6.5h2l1.1-2h3l1.1 2h2.8A3.5 3.5 0 0 1 21 10v7.5a3.5 3.5 0 0 1-3.5 3.5h-11A3.5 3.5 0 0 1 3 17.5V10a3.5 3.5 0 0 1 3.5-3.5ZM12 9a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
+                            <path
+                                d="M7.5 6.5h2l1.1-2h3l1.1 2h2.8A3.5 3.5 0 0 1 21 10v7.5a3.5 3.5 0 0 1-3.5 3.5h-11A3.5 3.5 0 0 1 3 17.5V10a3.5 3.5 0 0 1 3.5-3.5ZM12 9a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" />
                         </svg>
                     </span>
                     <span>CamOrganizer</span>
                 </a>
                 <p>
-                    A smart Android camera designed to keep your photos and videos organized from the moment you capture them.
+                    A smart Android camera designed to keep your photos and videos organized from the moment you capture
+                    them.
                 </p>
             </div>
 
@@ -697,7 +791,8 @@
                     <a href="index.html">Home</a>
                     <a href="index.html#features">Features</a>
                     <a href="index.html#how-it-works">How It Works</a>
-                    <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer" target="_blank" rel="noopener">
+                    <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer" target="_blank"
+                        rel="noopener">
                         Google Play Store
                     </a>
                 </div>
@@ -739,5 +834,5 @@
     </script>
 
 </body>
-</html>
 
+</html>
