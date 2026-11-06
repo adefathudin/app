@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="CamOrganizer is a smart Android camera app that lets you organize photos and videos directly into custom folders while you capture them.">
-    <meta name="theme-color" content="#080B12">
+        content="CamOrganizer is a smart Android camera app that lets you organize photos and videos directly into custom folders while you capture them. Local-first, private, and zero clutter.">
+    <meta name="theme-color" content="#06080d">
 
-    <title>CamOrganizer — Capture. Organize. Done.</title>
+    <title>CamOrganizer — Shoot with Purpose. Organized by Design.</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,20 +18,19 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-    <!-- Background glow -->
-    <div class="ambient ambient-1"></div>
-    <div class="ambient ambient-2"></div>
+    <!-- Ambient Lighting Glows -->
+    <div class="ambient ambient-1" aria-hidden="true"></div>
+    <div class="ambient ambient-2" aria-hidden="true"></div>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <header class="navbar">
         <div class="container nav-container">
 
-            <a href="#" class="brand" aria-label="CamOrganizer home">
+            <a href="index.html" class="brand" aria-label="CamOrganizer Home">
                 <span class="brand-mark">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path
@@ -39,21 +38,24 @@
                     </svg>
                 </span>
                 <span>CamOrganizer</span>
+                <span class="brand-badge">Pro Camera</span>
             </a>
 
             <nav class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#how-it-works">How It Works</a>
+                <a href="#comparison">Why CamOrganizer</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
             </nav>
 
             <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer"
                 class="btn btn-primary nav-cta" target="_blank" rel="noopener">
-                Get the App
+                <span>Get the App</span>
                 <span>↗</span>
             </a>
 
-            <button class="mobile-menu" aria-label="Open menu">
+            <button class="mobile-menu" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
             </button>
@@ -63,7 +65,7 @@
 
     <main>
 
-        <!-- Hero -->
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container hero-grid">
 
@@ -71,19 +73,17 @@
 
                     <div class="eyebrow">
                         <span class="status-dot"></span>
-                        Built for Android
+                        Built for Android · 100% Local-First
                     </div>
 
                     <h1>
-                        Capture it.
-                        <span class="gradient-text">Organize it.</span>
-                        Keep moving.
+                        Shoot with purpose.
+                        <span class="gradient-text">Organized by design.</span>
+                        Zero gallery clutter.
                     </h1>
 
                     <p class="hero-description">
-                        CamOrganizer puts your photos and videos exactly where
-                        they belong — while you shoot. Create folders, capture
-                        media, and keep your gallery organized from the start.
+                        Never spend hours sorting through thousands of unorganized camera roll photos again. CamOrganizer automatically directs every photo and video into your chosen folders as you tap the shutter.
                     </p>
 
                     <div class="hero-actions">
@@ -96,12 +96,12 @@
                                 <path fill="#EA4335" d="M367.1 368.7L282.6 284 32.5 534.1c9.2 9.8 24.4 11 41.6 1.3l293-166.7z"/>
                                 <path fill="#34A853" d="M367.1 143.3L74.1 9.6C56.9-.1 41.7 1.1 32.5 10.9L282.6 261l84.5-84.7v-33z"/>
                             </svg>
-                            <span>Get it on Google Play</span>
+                            <span>Download on Google Play</span>
                         </a>
 
-                        <a href="#features" class="btn btn-ghost btn-large">
-                            Explore features
-                            <span class="arrow">↓</span>
+                        <a href="#features" class="btn btn-secondary btn-large">
+                            Explore Features
+                            <span>↓</span>
                         </a>
 
                     </div>
@@ -109,18 +109,23 @@
                     <div class="hero-meta">
                         <div class="meta-item">
                             <span class="meta-icon">✓</span>
-                            <span>Organize as you shoot</span>
+                            <span>Direct-to-Folder Routing</span>
                         </div>
 
                         <div class="meta-item">
                             <span class="meta-icon">✓</span>
-                            <span>Local-first media</span>
+                            <span>Zero Cloud Uploads</span>
+                        </div>
+
+                        <div class="meta-item">
+                            <span class="meta-icon">✓</span>
+                            <span>Smart Timestamps</span>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Camera Mockup -->
+                <!-- Pro Camera Smartphone Visual Simulator -->
                 <div class="hero-visual">
 
                     <div class="visual-glow"></div>
@@ -129,42 +134,54 @@
 
                         <div class="phone-frame">
 
-                            <div class="phone-notch"></div>
+                            <div class="phone-notch">
+                                <div class="notch-camera"></div>
+                            </div>
 
                             <div class="camera-screen">
 
+                                <!-- Viewfinder Rule of Thirds Grid -->
+                                <div class="viewfinder-grid" aria-hidden="true"></div>
+
+                                <!-- HUD Top Controls -->
                                 <div class="camera-top">
                                     <div class="camera-pill">
-                                        <span class="folder-symbol">⌂</span>
-                                        DCIM / Projects
+                                        <span class="folder-symbol">📁</span>
+                                        <span>DCIM / Receipts</span>
                                     </div>
 
-                                    <div class="camera-action">⋮</div>
+                                    <div class="camera-badge-rec">
+                                        <span class="rec-dot"></span>
+                                        <span>4K 60FPS</span>
+                                    </div>
                                 </div>
 
+                                <!-- Dynamic Toast Notification -->
+                                <div class="capture-toast">
+                                    <span class="toast-check">✓</span>
+                                    <span>Saved to <strong>/Receipts/REC_20261106.jpg</strong></span>
+                                </div>
+
+                                <!-- Viewfinder Center Focus Target -->
                                 <div class="camera-center">
                                     <div class="focus-ring"></div>
                                 </div>
 
+                                <!-- HUD Bottom Shutter Bar -->
                                 <div class="camera-bottom">
 
-                                    <div class="camera-option">
-                                        <span class="tiny-icon">▣</span>
+                                    <div class="camera-gallery-thumb" title="Recent media">
+                                        <span>🖼️</span>
                                     </div>
 
-                                    <div class="shutter">
+                                    <button class="shutter-btn" id="demo-shutter" aria-label="Camera Shutter Button">
                                         <div class="shutter-inner"></div>
+                                    </button>
+
+                                    <div class="camera-switch-btn" title="Switch lens">
+                                        <span>1x</span>
                                     </div>
 
-                                    <div class="camera-option">
-                                        <span class="flip-icon">↻</span>
-                                    </div>
-
-                                </div>
-
-                                <div class="capture-toast">
-                                    <span class="toast-check">✓</span>
-                                    Saved to <strong>Projects</strong>
                                 </div>
 
                             </div>
@@ -173,20 +190,20 @@
 
                     </div>
 
-                    <!-- Floating cards -->
+                    <!-- Floating Contextual Cards -->
                     <div class="float-card folder-card">
                         <div class="float-icon blue">📁</div>
                         <div>
-                            <span>Current folder</span>
-                            <strong>Projects</strong>
+                            <span>Target Directory</span>
+                            <strong>Tax Receipts (23 items)</strong>
                         </div>
                     </div>
 
                     <div class="float-card saved-card">
-                        <div class="saved-check">✓</div>
+                        <div class="float-icon blue" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.3);">⚡</div>
                         <div>
-                            <strong>Photo saved</strong>
-                            <span>Just now</span>
+                            <span>Instant Routing</span>
+                            <strong>Zero Post-Sorting Lag</strong>
                         </div>
                     </div>
 
@@ -196,112 +213,140 @@
         </section>
 
 
-        <!-- Trust strip -->
+        <!-- Trust Proof & Architecture Strip -->
         <section class="trust-strip">
             <div class="container trust-inner">
 
                 <div class="trust-label">
                     <span class="line"></span>
-                    LESS CLUTTER
+                    BUILT FOR SPEED &amp; PRIVACY
                 </div>
 
                 <div class="trust-items">
-                    <span>📁 Custom folders</span>
-                    <span>⚡ Instant saving</span>
-                    <span>🔒 Local-first</span>
-                    <span>🖼 Built-in gallery</span>
+                    <span class="trust-badge">📁 Custom Sub-Folders</span>
+                    <span class="trust-badge">⚡ Instant On-Device Saving</span>
+                    <span class="trust-badge">🔒 100% Local-First (No Cloud)</span>
+                    <span class="trust-badge">🏷️ Smart File Prefixing</span>
+                    <span class="trust-badge">🕒 Burn-In Timestamps</span>
                 </div>
 
             </div>
         </section>
 
 
-        <!-- Features -->
-        <section id="features" class="section features-section">
+        <!-- Features Bento Grid -->
+        <section id="features" class="section">
 
             <div class="container">
 
                 <div class="section-heading">
-                    <div class="section-label">FEATURES</div>
+                    <div class="section-label">KEY CAPABILITIES</div>
 
                     <h2>
-                        Your camera.
+                        Your camera workflow.
                         <span>Organized by design.</span>
                     </h2>
 
                     <p>
-                        Simple tools that remove the messy part of managing
-                        photos and videos after you've taken them.
+                        Engineered to eliminate the friction of organizing photos after a shoot. Everything goes exactly where you want it the moment you capture it.
                     </p>
                 </div>
 
                 <div class="features-grid">
 
+                    <!-- Bento Item 1 (Wide 2-col): Folder Routing -->
                     <article class="feature-card feature-large">
-                        <div class="feature-number">01</div>
+                        <div>
+                            <div class="feature-top">
+                                <span class="feature-number">01</span>
+                                <div class="feature-icon-wrap">📁</div>
+                            </div>
 
-                        <div class="feature-visual folder-visual">
-                            <div class="mini-folder folder-one">Work</div>
-                            <div class="mini-folder folder-two">Receipts</div>
-                            <div class="mini-folder folder-three">Projects</div>
-                            <div class="mini-folder folder-four">Personal</div>
-                        </div>
-
-                        <div class="feature-content">
-                            <div class="feature-icon">📁</div>
-                            <h3>Capture directly into folders</h3>
+                            <h3>Capture directly into custom folders</h3>
                             <p>
-                                Create and select folders before you shoot.
-                                Your new media goes straight where you expect it.
+                                Choose or create dedicated folders right on the camera interface before shooting. Perfect for property inspections, business expenses, work projects, or travel journals.
                             </p>
                         </div>
+
+                        <!-- Interactive Folder Dock Preview -->
+                        <div class="folder-dock-preview">
+                            <div class="dock-item active">
+                                <div class="dock-icon">🏗️</div>
+                                <span class="dock-name">Projects</span>
+                                <span class="dock-count">12 photos</span>
+                            </div>
+                            <div class="dock-item">
+                                <div class="dock-icon">🧾</div>
+                                <span class="dock-name">Receipts</span>
+                                <span class="dock-count">48 photos</span>
+                            </div>
+                            <div class="dock-item">
+                                <div class="dock-icon">🏡</div>
+                                <span class="dock-name">Properties</span>
+                                <span class="dock-count">23 photos</span>
+                            </div>
+                            <div class="dock-item">
+                                <div class="dock-icon">✈️</div>
+                                <span class="dock-name">Travel</span>
+                                <span class="dock-count">86 photos</span>
+                            </div>
+                        </div>
                     </article>
 
 
+                    <!-- Bento Item 2: Smart Filenames -->
                     <article class="feature-card">
-                        <div class="feature-number">02</div>
+                        <div>
+                            <div class="feature-top">
+                                <span class="feature-number">02</span>
+                                <div class="feature-icon-wrap">🏷️</div>
+                            </div>
 
-                        <div class="feature-icon standalone">🏷️</div>
-
-                        <h3>Smarter filenames</h3>
-                        <p>
-                            Keep files identifiable with folder-based prefixes
-                            and unique timestamps.
-                        </p>
+                            <h3>Smart folder prefixes</h3>
+                            <p>
+                                Automatically attach the folder name and exact timestamp as a file prefix so files stay instantly searchable on your PC or Drive.
+                            </p>
+                        </div>
 
                         <div class="filename-preview">
-                            <span>Projects_</span>2026-09-28_1409.jpg
+                            <span class="filename-prefix">Receipts_</span>20261106_0940.jpg
                         </div>
                     </article>
 
 
+                    <!-- Bento Item 3: Timestamp & Watermarks -->
                     <article class="feature-card">
-                        <div class="feature-number">03</div>
+                        <div>
+                            <div class="feature-top">
+                                <span class="feature-number">03</span>
+                                <div class="feature-icon-wrap">🕒</div>
+                            </div>
 
-                        <div class="feature-icon standalone">🕒</div>
-
-                        <h3>Optional timestamps</h3>
-                        <p>
-                            Add date and time information directly to captured
-                            photos whenever you need a visual record.
-                        </p>
+                            <h3>Burn-in timestamps</h3>
+                            <p>
+                                Need indisputable proof for field work or official records? Burn clear date and time stamps directly onto photo corners.
+                            </p>
+                        </div>
 
                         <div class="timestamp-preview">
-                            28 SEP 2026 · 14:09
+                            <span>📅</span> 06 NOV 2026 · 09:40:12 WIB
                         </div>
                     </article>
 
 
+                    <!-- Bento Item 4: Built-in Gallery -->
                     <article class="feature-card">
-                        <div class="feature-number">04</div>
+                        <div>
+                            <div class="feature-top">
+                                <span class="feature-number">04</span>
+                                <div class="feature-icon-wrap">🖼️</div>
+                            </div>
 
-                        <div class="feature-icon standalone">🖼️</div>
-
-                        <h3>Built-in gallery</h3>
-                        <p>
-                            Browse photos and videos from your active folders
-                            without leaving the app.
-                        </p>
+                            <h3>Folder-segregated gallery</h3>
+                            <p>
+                                Browse media strictly inside your active folder without wading through unrelated family photos or screenshots.
+                            </p>
+                        </div>
 
                         <div class="gallery-preview">
                             <span></span>
@@ -312,41 +357,45 @@
                     </article>
 
 
+                    <!-- Bento Item 5: Batch Operations -->
                     <article class="feature-card">
-                        <div class="feature-number">05</div>
+                        <div>
+                            <div class="feature-top">
+                                <span class="feature-number">05</span>
+                                <div class="feature-icon-wrap">⚡</div>
+                            </div>
 
-                        <div class="feature-icon standalone">✓</div>
-
-                        <h3>Batch actions</h3>
-                        <p>
-                            Select multiple items and share or delete them
-                            together instead of handling files one by one.
-                        </p>
+                            <h3>Power batch operations</h3>
+                            <p>
+                                Select multiple photos with a swipe. Move, share via WhatsApp/Email, or batch delete in one unified action.
+                            </p>
+                        </div>
 
                         <div class="selection-preview">
-                            <span class="selected">✓</span>
-                            <span class="selected">✓</span>
-                            <span></span>
-                            <span class="selected">✓</span>
+                            <div class="selection-chip selected">✓ 3 Selected</div>
+                            <div class="selection-chip">Share</div>
+                            <div class="selection-chip">Move</div>
+                            <div class="selection-chip" style="color: #f87171;">Delete</div>
                         </div>
                     </article>
 
 
-                    <article id="privacy" class="feature-card privacy-card">
-                        <div class="feature-number">06</div>
+                    <!-- Bento Item 6: Absolute Local Privacy -->
+                    <article class="feature-card">
+                        <div>
+                            <div class="feature-top">
+                                <span class="feature-number">06</span>
+                                <div class="feature-icon-wrap">🛡️</div>
+                            </div>
 
-                        <div class="privacy-orbit">
-                            <div class="privacy-lock">⌑</div>
+                            <h3>100% Local-first privacy</h3>
+                            <p>
+                                No user accounts, no analytics tracking, no external server uploads. Your personal media stays strictly inside your device.
+                            </p>
                         </div>
 
-                        <h3>Designed with privacy in mind</h3>
-                        <p>
-                            Your personal photos and videos stay on your device.
-                            CamOrganizer is built around local media management.
-                        </p>
-
-                        <div class="privacy-badge">
-                            <span>●</span> Local-first
+                        <div class="privacy-badge-box">
+                            <span>●</span> Encrypted Local Storage · Offline Only
                         </div>
                     </article>
 
@@ -357,7 +406,7 @@
         </section>
 
 
-        <!-- How it works -->
+        <!-- How it works (Interactive Step Workflow) -->
         <section id="how-it-works" class="section workflow-section">
 
             <div class="container">
@@ -369,38 +418,37 @@
                         <div class="section-label">HOW IT WORKS</div>
 
                         <h2>
-                            From camera to
+                            From camera shutter to
                             <span>organized folder.</span>
                         </h2>
 
                         <p>
-                            No sorting marathon after a shoot. Set your folder,
-                            capture your media, and continue with your day.
+                            No sorting marathon at midnight. Pick a folder once, capture your media normally, and continue your day with total confidence.
                         </p>
 
-                        <div class="steps">
+                        <div class="steps-list">
 
-                            <div class="step active">
+                            <div class="step-card active" data-step="1">
                                 <div class="step-number">01</div>
-                                <div>
-                                    <h3>Choose a folder</h3>
-                                    <p>Select an existing folder or create a new one.</p>
+                                <div class="step-content">
+                                    <h3>Choose or create your target folder</h3>
+                                    <p>Select an existing destination like "Receipts" or create a new client folder in seconds.</p>
                                 </div>
                             </div>
 
-                            <div class="step">
+                            <div class="step-card" data-step="2">
                                 <div class="step-number">02</div>
-                                <div>
-                                    <h3>Take your photo</h3>
-                                    <p>Capture photos and videos normally with the camera.</p>
+                                <div class="step-content">
+                                    <h3>Capture photos &amp; videos</h3>
+                                    <p>Use the full-featured camera normally. Take single shots, bursts, or high-res video clips.</p>
                                 </div>
                             </div>
 
-                            <div class="step">
+                            <div class="step-card" data-step="3">
                                 <div class="step-number">03</div>
-                                <div>
-                                    <h3>It's already organized</h3>
-                                    <p>Your media is saved into the folder you selected.</p>
+                                <div class="step-content">
+                                    <h3>Instant organization complete</h3>
+                                    <p>All files are already indexed, prefixed, and saved into your selected directory.</p>
                                 </div>
                             </div>
 
@@ -408,54 +456,50 @@
 
                     </div>
 
+                    <!-- Workflow Window Mockup -->
                     <div class="workflow-card">
 
-                        <div class="workflow-window">
-
-                            <div class="window-top">
-                                <div class="window-dots">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                                <span>CamOrganizer</span>
+                        <div class="window-top">
+                            <div class="window-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
+                            <span class="window-title">CamOrganizer File Navigator</span>
+                            <span style="font-size: 11px; color: #10b981;">Online ●</span>
+                        </div>
 
-                            <div class="folder-tree">
+                        <div class="folder-tree-box">
 
-                                <div class="tree-title">MY FOLDERS</div>
+                            <div class="tree-title">ACTIVE DIRECTORIES (/DCIM/)</div>
 
+                            <div class="tree-list">
                                 <div class="tree-item selected">
-                                    <span>📁</span>
-                                    Projects
-                                    <b>12</b>
+                                    <span>📁 Projects / Client_Alpha</span>
+                                    <span class="tree-badge">18 items</span>
                                 </div>
 
                                 <div class="tree-item">
-                                    <span>📁</span>
-                                    Work
-                                    <b>48</b>
+                                    <span>📁 Tax_Receipts_2026</span>
+                                    <span class="tree-badge">42 items</span>
                                 </div>
 
                                 <div class="tree-item">
-                                    <span>📁</span>
-                                    Receipts
-                                    <b>23</b>
+                                    <span>📁 Field_Inspection_Sites</span>
+                                    <span class="tree-badge">29 items</span>
                                 </div>
 
                                 <div class="tree-item">
-                                    <span>📁</span>
-                                    Personal
-                                    <b>86</b>
+                                    <span>📁 Personal_Archive</span>
+                                    <span class="tree-badge">94 items</span>
                                 </div>
-
                             </div>
 
-                            <div class="window-status">
-                                <span class="status-green"></span>
-                                Ready to capture
-                            </div>
+                        </div>
 
+                        <div class="window-status">
+                            <span class="status-indicator"></span>
+                            <span>Target route active: /DCIM/Projects/Client_Alpha/</span>
                         </div>
 
                     </div>
@@ -467,7 +511,80 @@
         </section>
 
 
-        <!-- CTA -->
+        <!-- Comparison Section: Old Way vs CamOrganizer -->
+        <section id="comparison" class="section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div class="section-label">THE DIFFERENCE</div>
+
+                    <h2>
+                        Why photographers &amp; pros
+                        <span>switch to CamOrganizer.</span>
+                    </h2>
+
+                    <p>
+                        Compare the traditional photo chaos against our streamlined direct-to-folder capture experience.
+                    </p>
+                </div>
+
+                <div class="comparison-grid">
+
+                    <!-- Standard Camera -->
+                    <div class="comp-card bad">
+                        <span class="comp-badge">❌ Traditional Android Camera</span>
+                        <h3>The Unorganized Mess</h3>
+                        <ul class="comp-list">
+                            <li>
+                                <span class="comp-icon-x">✕</span>
+                                <span>5,000+ random photos dumped into a single generic <code>DCIM/Camera</code> folder.</span>
+                            </li>
+                            <li>
+                                <span class="comp-icon-x">✕</span>
+                                <span>Hours wasted scrolling and organizing receipts or work documents every month.</span>
+                            </li>
+                            <li>
+                                <span class="comp-icon-x">✕</span>
+                                <span>Work documents mixed with personal family photos and memes.</span>
+                            </li>
+                            <li>
+                                <span class="comp-icon-x">✕</span>
+                                <span>Cryptic filenames like <code>IMG_20260928_001.jpg</code> that are impossible to search.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- CamOrganizer -->
+                    <div class="comp-card good">
+                        <span class="comp-badge">✓ CamOrganizer Experience</span>
+                        <h3>Clean &amp; Organized from Day One</h3>
+                        <ul class="comp-list">
+                            <li>
+                                <span class="comp-icon-check">✓</span>
+                                <span>Every photo is routed to its designated folder the moment you tap the shutter.</span>
+                            </li>
+                            <li>
+                                <span class="comp-icon-check">✓</span>
+                                <span>Zero sorting required after your shoot. Everything is already organized.</span>
+                            </li>
+                            <li>
+                                <span class="comp-icon-check">✓</span>
+                                <span>Strict separation between personal media, work inspections, and tax receipts.</span>
+                            </li>
+                            <li>
+                                <span class="comp-icon-check">✓</span>
+                                <span>Descriptive filenames with folder prefixes and timestamps built-in.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Call to Action Banner -->
         <section class="cta-section">
 
             <div class="container">
@@ -478,29 +595,34 @@
 
                     <div class="cta-content">
 
-                        <div class="section-label">READY WHEN YOU ARE</div>
+                        <div class="section-label" style="color: #60a8ff;">GET STARTED IN SECONDS</div>
 
                         <h2>
                             Stop organizing
-                            <span>after the fact.</span>
+                            <span class="gradient-text">after the fact.</span>
                         </h2>
 
                         <p>
-                            Start putting every photo and video in the right
-                            place from the moment you capture it.
+                            Download CamOrganizer today and keep your camera roll structured, private, and effortless.
                         </p>
 
-                        <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer"
-                            class="btn btn-white btn-large" target="_blank" rel="noopener">
-                            <svg viewBox="0 0 512 512" width="22" height="22" aria-hidden="true">
-                                <path fill="#4285F4" d="M32.5 12.3c-4.9 5.3-7.5 12.9-7.5 22.3v442.8c0 9.4 2.6 17 7.5 22.3l1.8 1.8 248.3-248.3v-5.8L34.3 10.5l-1.8 1.8z"/>
-                                <path fill="#FBBC04" d="M365.1 369.8l-82.5-82.5v-6.6l82.5-82.5 2 1.1 97.8 55.6c27.9 15.9 27.9 41.8 0 57.7l-97.8 55.6-2 1.1z"/>
-                                <path fill="#EA4335" d="M367.1 368.7L282.6 284 32.5 534.1c9.2 9.8 24.4 11 41.6 1.3l293-166.7z"/>
-                                <path fill="#34A853" d="M367.1 143.3L74.1 9.6C56.9-.1 41.7 1.1 32.5 10.9L282.6 261l84.5-84.7v-33z"/>
-                            </svg>
-                            <span>Download on Google Play</span>
-                            <span>↗</span>
-                        </a>
+                        <div class="cta-actions">
+                            <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer"
+                                class="btn btn-white btn-large" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 512 512" width="22" height="22" aria-hidden="true">
+                                    <path fill="#4285F4" d="M32.5 12.3c-4.9 5.3-7.5 12.9-7.5 22.3v442.8c0 9.4 2.6 17 7.5 22.3l1.8 1.8 248.3-248.3v-5.8L34.3 10.5l-1.8 1.8z"/>
+                                    <path fill="#FBBC04" d="M365.1 369.8l-82.5-82.5v-6.6l82.5-82.5 2 1.1 97.8 55.6c27.9 15.9 27.9 41.8 0 57.7l-97.8 55.6-2 1.1z"/>
+                                    <path fill="#EA4335" d="M367.1 368.7L282.6 284 32.5 534.1c9.2 9.8 24.4 11 41.6 1.3l293-166.7z"/>
+                                    <path fill="#34A853" d="M367.1 143.3L74.1 9.6C56.9-.1 41.7 1.1 32.5 10.9L282.6 261l84.5-84.7v-33z"/>
+                                </svg>
+                                <span>Get on Google Play</span>
+                                <span>↗</span>
+                            </a>
+
+                            <a href="privacy-policy.html" class="btn btn-secondary btn-large">
+                                Read Privacy Policy
+                            </a>
+                        </div>
 
                     </div>
 
@@ -531,7 +653,7 @@
                 </a>
 
                 <p>
-                    Capture, organize, and keep your media under control directly from your Android camera.
+                    A high-precision, local-first Android camera utility designed to keep your media organized right as you capture it.
                 </p>
 
             </div>
@@ -542,6 +664,7 @@
                     <span class="footer-heading">Product</span>
                     <a href="#features">Features</a>
                     <a href="#how-it-works">How It Works</a>
+                    <a href="#comparison">Why Us</a>
                     <a href="https://play.google.com/store/apps/details?id=com.adefathudin.camorganizer" target="_blank"
                         rel="noopener">
                         Google Play Store
@@ -549,7 +672,8 @@
                 </div>
 
                 <div>
-                    <span class="footer-heading">Legal</span>
+                    <span class="footer-heading">Legal &amp; Policy</span>
+                    <a href="terms-of-service.html">Terms of Service</a>
                     <a href="privacy-policy.html">Privacy Policy</a>
                 </div>
 
@@ -558,34 +682,64 @@
         </div>
 
         <div class="container footer-bottom">
-            <span>© 2026 CamOrganizer. All rights reserved.</span>
-            <span>Made with precision for Android.</span>
+            <span>&copy; 2026 CamOrganizer. All rights reserved.</span>
+            <span>Crafted with precision for Android by Ade Fathudin.</span>
         </div>
 
     </footer>
 
 
+    <!-- Interactive Scripts -->
     <script>
+        // Mobile Navigation Toggle
         const menuButton = document.querySelector('.mobile-menu');
         const navLinks = document.querySelector('.nav-links');
 
         menuButton?.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-            menuButton.classList.toggle('open');
+            const isOpen = navLinks.classList.toggle('open');
+            menuButton.classList.toggle('open', isOpen);
+            menuButton.setAttribute('aria-expanded', String(isOpen));
         });
 
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('open');
                 menuButton.classList.remove('open');
+                menuButton.setAttribute('aria-expanded', 'false');
             });
         });
 
-        const steps = document.querySelectorAll('.step');
+        // Interactive Step Cards
+        const steps = document.querySelectorAll('.step-card');
         steps.forEach((step) => {
             step.addEventListener('click', () => {
                 steps.forEach(s => s.classList.remove('active'));
                 step.classList.add('active');
+            });
+        });
+
+        // Interactive Demo Shutter Click
+        const shutterBtn = document.getElementById('demo-shutter');
+        const captureToast = document.querySelector('.capture-toast');
+        shutterBtn?.addEventListener('click', () => {
+            shutterBtn.style.transform = 'scale(0.88)';
+            setTimeout(() => {
+                shutterBtn.style.transform = '';
+            }, 150);
+
+            if (captureToast) {
+                captureToast.style.animation = 'none';
+                captureToast.offsetHeight; // trigger reflow
+                captureToast.style.animation = 'slide-toast 3s ease-in-out';
+            }
+        });
+
+        // Interactive Folder Dock item clicks
+        const dockItems = document.querySelectorAll('.dock-item');
+        dockItems.forEach(item => {
+            item.addEventListener('click', () => {
+                dockItems.forEach(d => d.classList.remove('active'));
+                item.classList.add('active');
             });
         });
     </script>
