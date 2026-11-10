@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapStore — Play Store Screenshot Maker for Android</title>
+    <meta name="description"
+        content="Design stunning, high-converting Google Play Store screenshots in seconds directly on your Android device. Offline-first, fast, and customizable.">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="brand" aria-label="SnapStore Home">
+                <div class="brand-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                        </path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                </div>
+                <span>SnapStore</span>
+                <span class="brand-badge">App Store Creator</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </nav>
+
+            <a href="https://play.google.com/store/apps/details?id=com.adefathudin.snapstore"
+                class="btn btn-primary nav-cta" target="_blank" rel="noopener">
+                <span>Get on Google Play</span>
+                <span>↗</span>
+            </a>
+
+            <button class="mobile-toggle" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <span class="badge">
+                        <span class="badge-dot"></span>
+                        Fast, Offline &amp; Beautiful · Android App
+                    </span>
+
+                    <h1 class="hero-title">
+                        Create Play Store Screenshots
+                        <span class="gradient-text">That Convert</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        SnapStore makes it effortless to produce clean, high-converting Google Play screenshots in
+                        seconds.
+                        Wrap screenshots in modern smartphone frames, apply custom gradients, format crisp headlines,
+                        and export in full HD.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="https://play.google.com/store/apps/details?id=com.adefathudin.snapstore"
+                            class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 512 512" width="20" height="20" aria-hidden="true">
+                                <path fill="#ffffff"
+                                    d="M32.5 12.3c-4.9 5.3-7.5 12.9-7.5 22.3v442.8c0 9.4 2.6 17 7.5 22.3l1.8 1.8 248.3-248.3v-5.8L34.3 10.5l-1.8 1.8z" />
+                                <path fill="#ffffff" opacity="0.9"
+                                    d="M365.1 369.8l-82.5-82.5v-6.6l82.5-82.5 2 1.1 97.8 55.6c27.9 15.9 27.9 41.8 0 57.7l-97.8 55.6-2 1.1z" />
+                                <path fill="#ffffff" opacity="0.8"
+                                    d="M367.1 368.7L282.6 284 32.5 534.1c9.2 9.8 24.4 11 41.6 1.3l293-166.7z" />
+                                <path fill="#ffffff" opacity="0.85"
+                                    d="M367.1 143.3L74.1 9.6C56.9-.1 41.7 1.1 32.5 10.9L282.6 261l84.5-84.7v-33z" />
+                            </svg>
+                            <span>Download on Google Play</span>
+                        </a>
+
+                        <a href="#features" class="btn btn-secondary btn-lg">
+                            <span>Explore Features</span>
+                            <span>↓</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-trust">
+                        <div class="hero-trust-item">
+                            <span class="trust-check">✓</span>
+                            <span>100% Offline-First</span>
+                        </div>
+                        <div class="hero-trust-item">
+                            <span class="trust-check">✓</span>
+                            <span>Zero Account Required</span>
+                        </div>
+                        <div class="hero-trust-item">
+                            <span class="trust-check">✓</span>
+                            <span>High Resolution HD Export</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Showcase with Real App Screenshot -->
+                <div class="hero-preview">
+                    <div class="preview-glow-sphere"></div>
+
+                    <!-- Smartphone Mockup Displaying SnapStore App UI -->
+                    <div class="device-container">
+                        <div class="device-inner">
+                            <div class="device-notch">
+                                <div class="notch-camera-dot"></div>
+                            </div>
+                            <img src="assets/app-screenshot.jpg"
+                                alt="SnapStore App Interface - Play Store Screenshot Maker" class="device-screen-img"
+                                width="320" height="694" loading="eager">
+                        </div>
+                    </div>
+
+                    <!-- Floating Feature Badges -->
+                    <div class="floating-tool-badge badge-export">
+                        <div class="floating-icon purple">📤</div>
+                        <div>
+                            <span>One-Tap Save</span>
+                            <strong>4K Ultra HD Export</strong>
+                        </div>
+                    </div>
+
+                    <div class="floating-tool-badge badge-saved">
+                        <div class="floating-icon emerald">🛡️</div>
+                        <div>
+                            <span>Privacy Guarantee</span>
+                            <strong>100% Local Processing</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metrics & Trust Strip -->
+        <section class="metrics-strip">
+            <div class="container metrics-inner">
+                <div class="metric-item">
+                    <span class="metric-number">0s</span>
+                    <span class="metric-label">Cloud Upload Delay<br>Pure On-Device Render</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-number">4K</span>
+                    <span class="metric-label">Ultra HD Quality<br>Play Console Compliant</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-number">1-Tap</span>
+                    <span class="metric-label">Batch Slide Flow<br>Organize P1, P2, P3</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-number">100%</span>
+                    <span class="metric-label">Offline &amp; Private<br>Zero Server Tracking</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="badge">Built for Creators</span>
+                    <h2>Everything You Need for Store Listings</h2>
+                    <p>Designed specifically for indie developers and mobile app teams who want clean, professional app
+                        store graphics in minutes.</p>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Feature Large (2-col) -->
+                    <article class="feature-card feature-large">
+                        <div>
+                            <div class="feature-icon-box">🎨</div>
+                            <h3>Modern In-App Editor Suite</h3>
+                            <p>
+                                Switch effortlessly between tools: replace screenshots on the fly, fine-tune text
+                                typography, choose vibrant color backgrounds, and tweak layout margins with zero
+                                learning curve.
+                            </p>
+                        </div>
+
+                        <div class="feature-tabs-preview">
+                            <div class="tab-pill active">📸 Screenshot</div>
+                            <div class="tab-pill">✍️ Text</div>
+                            <div class="tab-pill">🌈 Background</div>
+                            <div class="tab-pill">📐 Layout</div>
+                        </div>
+                    </article>
+
+                    <!-- Feature 2 -->
+                    <article class="feature-card">
+                        <div>
+                            <div class="feature-icon-box">📱</div>
+                            <h3>Clean Smartphone Mockups</h3>
+                            <p>
+                                Wrap raw screenshots in realistic, minimalist Android device frames with subtle depth
+                                shadows and custom placement offsets.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 3 -->
+                    <article class="feature-card">
+                        <div>
+                            <div class="feature-icon-box">✍️</div>
+                            <h3>Expressive Typography</h3>
+                            <p>
+                                Add high-contrast headlines and complementary sub-headlines with clean line-heights,
+                                scaling, and smart margin controls.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 4 -->
+                    <article class="feature-card">
+                        <div>
+                            <div class="feature-icon-box">📐</div>
+                            <h3>Standard Play Store Ratios</h3>
+                            <p>
+                                Native aspect ratios calibrated for Google Play Console submissions — phone screens
+                                (9:16), 7-inch &amp; 10-inch tablets.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Feature 5 -->
+                    <article class="feature-card">
+                        <div>
+                            <div class="feature-icon-box">🔒</div>
+                            <h3>100% Offline &amp; Private</h3>
+                            <p>
+                                All rendering happens locally on your Android device memory. No cloud upload, no
+                                tracking SDKs, zero telemetry.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="section how-it-works-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="badge">Simple Workflow</span>
+                    <h2>3 Easy Steps to Beautiful Screenshots</h2>
+                    <p>From a plain screen capture to a polished Google Play asset ready for upload.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number-badge">1</div>
+                        <h3>Import Your Screenshots</h3>
+                        <p>Select single or multiple app screenshots directly from your Android device photo gallery.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number-badge">2</div>
+                        <h3>Customize Style &amp; Text</h3>
+                        <p>Choose eye-catching gradient presets, type value-driven headlines, and fine-tune device
+                            framing.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number-badge">3</div>
+                        <h3>Export in Full HD</h3>
+                        <p>Render high-resolution PNG images instantly, ready to publish directly on Google Play
+                            Console.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer & Trader Information Section -->
+        <section id="developer" class="dev-trader-section">
+            <div class="container">
+                <div class="trader-card">
+                    <div class="trader-info">
+                        <span class="badge" style="margin-bottom: 14px;">Official Developer Info</span>
+                        <h3>SnapStore by Ade Fathudin</h3>
+                        <p>
+                            SnapStore is developed and published by Ade Fathudin as an individual developer dedicated to
+                            building fast, privacy-first Android utilities.
+                        </p>
+                    </div>
+
+                    <div class="trader-meta-grid">
+                        <div class="trader-cell">
+                            <div class="trader-cell-label">Developer</div>
+                            <div class="trader-cell-val">Ade Fathudin</div>
+                        </div>
+
+                        <div class="trader-cell">
+                            <div class="trader-cell-label">Support Email</div>
+                            <div class="trader-cell-val">
+                                <a href="mailto:aftissoftware@gmail.com">aftissoftware@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="trader-cell">
+                            <div class="trader-cell-label">Google Play Package</div>
+                            <div class="trader-cell-val">com.adefathudin.snapstore</div>
+                        </div>
+
+                        <div class="trader-cell">
+                            <div class="trader-cell-label">Store Listing</div>
+                            <div class="trader-cell-val">
+                                <a href="https://play.google.com/store/apps/details?id=com.adefathudin.snapstore"
+                                    target="_blank" rel="noopener">View on Google Play ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="download" class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-content">
+                        <h2>Ready to Level Up Your App Listing?</h2>
+                        <p>
+                            Join developers who build eye-catching store graphics with SnapStore. Free to download on
+                            Google Play.
+                        </p>
+                        <div class="cta-actions">
+                            <a href="https://play.google.com/store/apps/details?id=com.adefathudin.snapstore"
+                                class="btn btn-white btn-lg" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 512 512" width="20" height="20" aria-hidden="true">
+                                    <path fill="#4285F4"
+                                        d="M32.5 12.3c-4.9 5.3-7.5 12.9-7.5 22.3v442.8c0 9.4 2.6 17 7.5 22.3l1.8 1.8 248.3-248.3v-5.8L34.3 10.5l-1.8 1.8z" />
+                                    <path fill="#FBBC04"
+                                        d="M365.1 369.8l-82.5-82.5v-6.6l82.5-82.5 2 1.1 97.8 55.6c27.9 15.9 27.9 41.8 0 57.7l-97.8 55.6-2 1.1z" />
+                                    <path fill="#EA4335"
+                                        d="M367.1 368.7L282.6 284 32.5 534.1c9.2 9.8 24.4 11 41.6 1.3l293-166.7z" />
+                                    <path fill="#34A853"
+                                        d="M367.1 143.3L74.1 9.6C56.9-.1 41.7 1.1 32.5 10.9L282.6 261l84.5-84.7v-33z" />
+                                </svg>
+                                <span>Download SnapStore</span>
+                                <span>↗</span>
+                            </a>
+                            <a href="privacy-policy.html" class="btn btn-ghost"
+                                style="color: #ffffff; border: 1px solid rgba(255,255,255,0.3);">
+                                Read Privacy Policy
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="index.html" class="brand">
+                    <div class="brand-icon-wrap">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                            </path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                    </div>
+                    <span>SnapStore</span>
+                </a>
+                <p class="footer-desc">
+                    Professional, privacy-first Google Play Store screenshot maker for Android creators and developers.
+                </p>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-links-group">
+                    <div>
+                        <div class="footer-title">Product</div>
+                        <a href="#features">Features</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.adefathudin.snapstore"
+                            target="_blank" rel="noopener">Google Play Store</a>
+                    </div>
+                    <div>
+                        <div class="footer-title">Legal</div>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="#developer">Developer Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; <span id="current-year">2026</span> SnapStore. All rights reserved.</p>
+            <p>Developed with care by Ade Fathudin</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
